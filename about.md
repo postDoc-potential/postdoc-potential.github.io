@@ -1,19 +1,21 @@
+--------
 layout: page
 
 title: "About Us"
 
-description: '''Aswin Sagar
+permalink: /about
+----------
+
+## Aswin Sagar
 Research Associate
 Indian Institute of Tropical Meteorology, Pune, India
 Email: aswinsagaran@gmail.com
 
-Arindam Das
+## Arindam Das
 Senior Research Fellow
 Indian Institute of Tropical Meteorology, Pune, India
 Email: arindamdas018@gmail.com
 
-Rituparna Sarkar
+## Rituparna Sarkar
 Independent Researcher,
-Email: rituparnasarkr@gmail.com'''
-
-permalink: /about
+Email: rituparnasarkr@gmail.com

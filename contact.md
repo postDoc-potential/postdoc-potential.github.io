@@ -1,7 +1,10 @@
+-----------
 layout: page
 
 title: "Contact"
 
-description: Email us @ postdoc.potential@gmail.com
-
 permalink: /contact
+------------------
+
+## Email
+postdoc.potential@gmail.com
