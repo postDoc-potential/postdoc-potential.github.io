@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
+minimal_mistakes_skin: "contrast"
 title: Home
 #description: A platform created for and by early-career researchers navigating postdoctoral research positions in Earth Science.
 repo_info: true
