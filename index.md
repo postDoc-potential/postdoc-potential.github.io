@@ -12,4 +12,4 @@ A platform created for and by early-career researchers navigating postdoctoral r
 
 ### Small image
 
-![wallpaper]/assets/IMG_20180621_164121832.jpg
+![wallpaper]({{ site.baseurl }}/assets/IMG_20180621_164121832.jpg
