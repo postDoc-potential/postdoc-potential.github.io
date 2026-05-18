@@ -4,6 +4,8 @@ layout: page
 title: "About Us"
 
 permalink: /about
+
+nav: True
 ---
 # About us
 ## Aswin Sagar
@@ -19,3 +21,5 @@ Email: arindamdas018@gmail.com
 ## Rituparna Sarkar
 Independent Researcher,
 Email: rituparnasarkr@gmail.com
+
+[back](./)

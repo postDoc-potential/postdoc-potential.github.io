@@ -5,8 +5,10 @@ title: "Contact"
 
 permalink: /contact
 
-.cm-line:has(.cm-hmd-frontmatter) { display: none !important; }
+nav: True
 ---
 # Contact us
 ## Email
 postdoc.potential@gmail.com
+
+[back](./)

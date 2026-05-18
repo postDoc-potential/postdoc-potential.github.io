@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
-title: PostDoc Potential
+title: Home
 logo: /assets/kbush58-stick-people-2324013_1920.png
 #description: A platform created for and by early-career researchers navigating postdoctoral research positions in Earth Science.
-exclude: [["README.md", "**/README.md"]]
+exclude: [["README.md", "**/README.md","index.md","**/index.md"]]
 #repo_info: true
 nav: true
 remote_theme: pages-themes/minimal@v0.2.0
