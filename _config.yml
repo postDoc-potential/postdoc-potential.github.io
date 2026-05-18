@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
-title: PostDoc Potential
+title: Home
 description: A platform created for and by early-career researchers navigating postdoctoral research positions in Earth Science.
+repo_info: true
+nav: true

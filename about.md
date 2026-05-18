@@ -1,12 +1,10 @@
---------
+---
 layout: page
 
 title: "About Us"
 
 permalink: /about
-
-.cm-line:has(.cm-hmd-frontmatter) { display: none !important; }
-----------
+---
 
 ## Aswin Sagar
 Research Associate
