@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 
 title: "About Us"
 
@@ -8,7 +8,7 @@ permalink: /about
 nav: True
 ---
 # About us
-![image](/assets/kbush58-stick-people-2324013_1920.png)
+![image](/assets/kbush58-stick-people-2324013_1920.png){: "width=250" }
 ## Aswin Sagar
 Research Associate
 Indian Institute of Tropical Meteorology, Pune, India
