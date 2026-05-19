@@ -41,7 +41,9 @@
       </header>
       <section>
 
-      <!-- {{ content }} -->
+        {% include navigation.html %}
+
+        {{ content }}
 
       </section>
       <footer>
@@ -52,7 +54,7 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    {% include navigation.html %}
-    {{ content }}
+    <!-- {% include navigation.html %}
+    {{ content }} -->
   </body>
 </html>
