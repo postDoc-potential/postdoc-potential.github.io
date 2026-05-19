@@ -5,7 +5,6 @@ title: "Contact"
 
 permalink: /contact
 
-nav: True
 ---
 # Contact us
 ## Email

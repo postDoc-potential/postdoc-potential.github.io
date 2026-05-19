@@ -5,7 +5,6 @@ title: "About Us"
 
 permalink: /about
 
-nav: True
 ---
 # About us
 ![image](/assets/kbush58-stick-people-2324013_1920.png){: "width=25" }
