@@ -19,7 +19,7 @@ Indian Institute of Tropical Meteorology, Pune, India\
 Email: arindamdas018@gmail.com
 
 ## Rituparna Sarkar
-Independent Researcher,\
+Independent Researcher\
 Email: rituparnasarkr@gmail.com
 
 ### [back](./)
