@@ -67,3 +67,30 @@ fetch("survey.json")
     <script src="index.js"></script>
   </body>
 </html>
+
+<script>
+async function loadSurvey() {
+  const response = await fetch("survey.json");
+  const surveyJson = await response.json();
+
+  const survey = new Survey.Model(surveyJson);
+
+  // ✅ ADD THIS BLOCK HERE
+  survey.onComplete.add(async (sender) => {
+    await fetch("https://script.google.com/macros/s/AKfycbxiZpQmYw_P5r2zhQxet9jp7uk3-kBXMPmWZ31g_T11ojKO_XMEaF7mtJ3j12zjqScZ0A/exec", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(sender.data)
+    });
+
+    alert("Thank you for submitting!");
+  });
+
+  // render survey
+  survey.render(document.getElementById("surveyContainer"));
+}
+
+loadSurvey();
+</script>
