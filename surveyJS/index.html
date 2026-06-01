@@ -22,7 +22,7 @@ async function loadSurvey() {
 loadSurvey();
 </script>i -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -31,10 +31,10 @@ loadSurvey();
   <script src="https://unpkg.com/survey-core/survey.core.min.js"></script>
   <script src="https://unpkg.com/survey-js-ui/survey-js-ui.min.js"></script>
 </head>
-<body>
+<body> -->
 
 <!-- <div id="surveyContainer"></div> -->
-<div id="surveyContainer" style="max-width:900px;margin:auto;"></div>
+<!-- <div id="surveyContainer" style="max-width:900px;margin:auto;"></div>
 <script>
 fetch("survey.json")
   .then(r => r.json())
@@ -46,4 +46,24 @@ fetch("survey.json")
 </script>
 
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/survey-core@2.5.25/survey.core.min.js"></script>
+    <script src="https://unpkg.com/survey-core@2.5.25/survey.i18n.min.js"></script>
+    <script src="https://unpkg.com/survey-core@2.5.25/themes/index.min.js"></script>
+    <script src="https://unpkg.com/survey-js-ui@2.5.25/survey-js-ui.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/survey-core@2.5.25/survey-core.min.css" />
+    <link rel="stylesheet" href ="index.css" />
+  </head>
+  <body>
+    <div id="surveyElement" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; min-height: 100%; height:100%"></div>
+    <script src="json.js"></script>
+    <script src="theme.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
