@@ -1,4 +1,4 @@
-<link rel="stylesheet"
+<!-- <link rel="stylesheet"
       href="https://unpkg.com/survey-core/defaultV2.min.css">
 
 <script src="https://unpkg.com/survey-core/survey.core.min.js"></script>
@@ -8,7 +8,7 @@
 
 <script>
 async function loadSurvey() {
-  const response = await fetch("./survey.json");
+  const response = await fetch("survey.json");
   const surveyJson = await response.json();
 
   const survey = new Survey.Model(surveyJson);
@@ -20,4 +20,30 @@ async function loadSurvey() {
 }
 
 loadSurvey();
+</script>i -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet"
+        href="https://unpkg.com/survey-core/defaultV2.min.css">
+  <script src="https://unpkg.com/survey-core/survey.core.min.js"></script>
+  <script src="https://unpkg.com/survey-js-ui/survey-js-ui.min.js"></script>
+</head>
+<body>
+
+<!-- <div id="surveyContainer"></div> -->
+<div id="surveyContainer" style="max-width:900px;margin:auto;"></div>
+<script>
+fetch("survey.json")
+  .then(r => r.json())
+  .then(json => {
+    const survey = new Survey.Model(json);
+    survey.render(document.getElementById("surveyContainer"));
+  })
+  .catch(console.error);
 </script>
+
+</body>
+</html>
