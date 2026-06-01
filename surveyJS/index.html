@@ -79,6 +79,7 @@ async function loadSurvey() {
   survey.onComplete.add(async (sender) => {
     await fetch("https://script.google.com/macros/s/AKfycbxiZpQmYw_P5r2zhQxet9jp7uk3-kBXMPmWZ31g_T11ojKO_XMEaF7mtJ3j12zjqScZ0A/exec", {
       method: "POST",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json"
       },
