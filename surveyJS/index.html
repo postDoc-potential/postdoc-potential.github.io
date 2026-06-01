@@ -1,0 +1,23 @@
+<link rel="stylesheet"
+      href="https://unpkg.com/survey-core/defaultV2.min.css">
+
+<script src="https://unpkg.com/survey-core/survey.core.min.js"></script>
+<script src="https://unpkg.com/survey-js-ui/survey-js-ui.min.js"></script>
+
+<div id="surveyContainer"></div>
+
+<script>
+async function loadSurvey() {
+  const response = await fetch("./survey.json");
+  const surveyJson = await response.json();
+
+  const survey = new Survey.Model(surveyJson);
+
+  SurveyUI.renderSurvey(
+    survey,
+    document.getElementById("surveyContainer")
+  );
+}
+
+loadSurvey();
+</script>
