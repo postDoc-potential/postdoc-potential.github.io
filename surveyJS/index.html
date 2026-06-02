@@ -1,53 +1,3 @@
-<!-- <link rel="stylesheet"
-      href="https://unpkg.com/survey-core/defaultV2.min.css">
-
-<script src="https://unpkg.com/survey-core/survey.core.min.js"></script>
-<script src="https://unpkg.com/survey-js-ui/survey-js-ui.min.js"></script>
-
-<div id="surveyContainer"></div>
-
-<script>
-async function loadSurvey() {
-  const response = await fetch("survey.json");
-  const surveyJson = await response.json();
-
-  const survey = new Survey.Model(surveyJson);
-
-  SurveyUI.renderSurvey(
-    survey,
-    document.getElementById("surveyContainer")
-  );
-}
-
-loadSurvey();
-</script>i -->
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet"
-        href="https://unpkg.com/survey-core/defaultV2.min.css">
-  <script src="https://unpkg.com/survey-core/survey.core.min.js"></script>
-  <script src="https://unpkg.com/survey-js-ui/survey-js-ui.min.js"></script>
-</head>
-<body> -->
-
-<!-- <div id="surveyContainer"></div> -->
-<!-- <div id="surveyContainer" style="max-width:900px;margin:auto;"></div>
-<script>
-fetch("survey.json")
-  .then(r => r.json())
-  .then(json => {
-    const survey = new Survey.Model(json);
-    survey.render(document.getElementById("surveyContainer"));
-  })
-  .catch(console.error);
-</script>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -65,8 +15,24 @@ fetch("survey.json")
     <script src="json.js"></script>
     <script src="theme.js"></script>
     <script src="index.js"></script>
-  </body>
-</html>
+     <script>
+    async function loadSurvey() {
+      const response = await fetch("survey.json");
+      const surveyJson = await response.json();
+
+      const survey = new Survey.Model(surveyJson);
+
+      survey.onComplete.add((sender) => {
+        console.log(sender.data);
+      });
+
+      survey.render(
+        document.getElementById("surveyContainer")
+      );
+    }
+
+    document.addEventListener("DOMContentLoaded", loadSurvey);
+  </script>
 <script>
 survey.onComplete.add(async (sender) => {
   try {
@@ -89,31 +55,6 @@ survey.onComplete.add(async (sender) => {
     alert("Fetch failed: " + err.message);
   }
 });
-loadSurvey();
 </script>
-<!-- <script>
-async function loadSurvey() {
-  const response = await fetch("survey.json");
-  const surveyJson = await response.json();
-
-  const survey = new Survey.Model(surveyJson);
-
-  // ✅ ADD THIS BLOCK HERE
-  survey.onComplete.add(async (sender) => {
-    await fetch("https://script.google.com/macros/s/AKfycbzaMk9iwHeDs5Hp6IQe12qAUNLEAhLFjcPQjuk8IpbTt_df-cM5A62xVTd9epSdVzjWDw/exec", {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(sender.data)
-    });
-
-    alert("Thank you for submitting!");
-  });
-
-  // render survey
-  survey.render(document.getElementById("surveyContainer"));
-} -->
-
-<!-- loadSurvey(); -->
+  </body>
+</html>
