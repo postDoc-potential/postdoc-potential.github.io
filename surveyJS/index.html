@@ -67,7 +67,30 @@ fetch("survey.json")
     <script src="index.js"></script>
   </body>
 </html>
+<script>
+survey.onComplete.add(async (sender) => {
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyL3j5W9HBqZabSdAdTxgi2ZBVPyBriYnR9wwmraKvIaYY76tBZQ6zBSqMYlUfuAKMtkg/exec", {
+      method: "POST",
+      mode: "no-cors",
 
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(sender.data)
+    });
+
+    console.log("Status:", response.status);
+    console.log("Response:", await response.text());
+
+    alert("Submission sent");
+  } catch (err) {
+    console.error("Fetch failed:", err);
+    alert("Fetch failed: " + err.message);
+  }
+});
+loadSurvey();
+</script>
 <!-- <script>
 async function loadSurvey() {
   const response = await fetch("survey.json");
@@ -93,26 +116,4 @@ async function loadSurvey() {
   survey.render(document.getElementById("surveyContainer"));
 } -->
 
-loadSurvey();
-</script>
-survey.onComplete.add(async (sender) => {
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbyohbVF3aT41k48kM2t1sVe9RtaJQ38Qb50Ep5--dfIsxrNU-fWKwKKIa34FpwEiLp84A/exec", {
-      method: "POST",
-      mode: "no-cors",
-
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(sender.data)
-    });
-
-    console.log("Status:", response.status);
-    console.log("Response:", await response.text());
-
-    alert("Submission sent");
-  } catch (err) {
-    console.error("Fetch failed:", err);
-    alert("Fetch failed: " + err.message);
-  }
-});
+<!-- loadSurvey(); -->
