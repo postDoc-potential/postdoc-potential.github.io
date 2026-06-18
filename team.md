@@ -9,39 +9,39 @@ permalink: /team
 # Team
 
 <style type="text/css">
-      .table-outer {
+    .table-outer {
         inline-size: 18rem;
         aspect-ratio: 1;
         border: .25rem solid royalblue;
         border-radius: 2rem;
-      }
-      .table-inner {
+    }
+    .table-inner {
         inline-size: 10rem;
         aspect-ratio: 1;
         border: .25rem solid royalblue;
         border-radius: 0 2rem;
         border-spacing: 2rem;
 
-      }
+    }
     table {
         width: 100%;
         height: 100%;
         text-align: left;
         border-collapse: collapse;
     }
-      th, td {
-       border: collapse;
-       padding: 10px;
-      }
-      tr.hide_top > td, td.hide_top{
+    th, td {
+        border: collapse;
+        padding: 10px;
+    }
+    tr.hide_top > td, td.hide_top{
         border-top-style:hidden;
-      }
-        tr.hide_right > td, td.hide_right{
+    }
+    tr.hide_right > td, td.hide_right{
         border-right-style:hidden;
-      }
-      tr.hide_all > td, td.hide_all{
+    }
+    tr.hide_all > td, td.hide_all{
         border-style:hidden;
-      }
+    }
 </style>
 
 <table style="width:100%">
@@ -99,18 +99,18 @@ permalink: /team
 
 ## Collaborator
 <div class="table-outer">
-<table>
-  <tr >
-    <th  colspan=2><img src="assets/img/CDWF.png" alt="cdwf" width="100" height="100"></th>
-  </tr>
-  <tr class="hide_all">
-    <td  colspan=2><b> Climate Dialogues: Way Forward</td>
-  </tr>
-  <tr class="hide_all">
-    <td class="hide_right"><b><a href="mailto:climatedialogueswayforward@gmail.com"> <img src="assets/img/icons8-email-32.png"></a></td>
-    <td><b><a href="https://cdwf-clima.github.io\"> <img src="assets/img/icons8-internet-32.png"><a></td>
-  </tr>
-</table>
+    <table>
+        <tr >
+            <th  colspan=2><img src="assets/img/CDWF.png" alt="cdwf" width="100" height="100"></th>
+        </tr>
+        <tr class="hide_all">
+            <td  colspan=2><b> Climate Dialogues: Way Forward</td>
+        </tr>
+        <tr class="hide_all">
+            <td class="hide_right"><b><a href="mailto:climatedialogueswayforward@gmail.com"> <img src="assets/img/icons8-email-32.png"></a></td>
+            <td><b><a href="https://cdwf-clima.github.io\"> <img src="assets/img/icons8-internet-32.png"><a></td>
+        </tr>
+    </table>
 </div>
 
 ### [back](./)
