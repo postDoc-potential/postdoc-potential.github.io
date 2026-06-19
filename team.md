@@ -43,7 +43,7 @@ permalink: /team
     tr.hover {background-color: #8adae7;}
 </style>
 # Team
-
+<div style="max-width:1400px;margin:auto;">
 <table style="width:100%; text-align:center">
   <colgroup>
     <col class="table-inner">
@@ -55,13 +55,13 @@ permalink: /team
     <col class="table-inner">
   </colgroup>
   <tr class="hide_top" style="height:30px">
-    <th  ><img src="assets/img/Anila_Sebastian.png" alt="anila" width="100" height="100"></th>
+    <th  ><center><img src="assets/img/Anila_Sebastian.png" alt="anila" width="100" height="100"></center></th>
     <th>&nbsp;</th>
-    <th  ><img src="assets/img/arindam.jpg" alt="arindam" width="100" height="100"></th>
+    <th  ><center><img src="assets/img/arindam.jpg" alt="arindam" width="100" height="100"></center></th>
     <th>&nbsp;</th>
-    <th  ><img src="assets/img/aswin.jpg" alt="arindam" width="100" height="100"></th>
+    <th  ><center><img src="assets/img/aswin.jpg" alt="aswin" width="100" height="100"></center></th>
     <th>&nbsp;</th>
-    <th  ><img src="assets/img/ritu.jpg" alt="arindam" width="100" height="100"></th>
+    <th  ><center><img src="assets/img/ritu.jpg" alt="ritu" width="100" height="100"></center></th>
   </tr>
   <tr class="hide_top" style="height:10px">
     <td  ><b> Anila Sebastian</b></td>
@@ -91,12 +91,12 @@ permalink: /team
     <td ><a href="mailto:rituparnasarkr@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/rituparnasindia/"> <img src="assets/img/icons8-linkedin-30.png"></a> <a href="https://srituparna.github.io/"> <img  src="assets/img/icons8-internet-32.png"></a></td>
   </tr>
 </table>
-
+</div>
 ## Collaborator
 <div class="table-outer">
     <table style="text-align:center">
         <tr style="height:30px">
-            <th ><img src="assets/img/CDWF.png" alt="cdwf" width="100" height="100"></th>
+            <th ><center><img src="assets/img/CDWF.png" alt="cdwf" width="100" height="100"></center></th>
         </tr>
         <tr class="hide_all" style="height:10px">
             <td  ><b> Climate Dialogues: Way Forward</b></td>
@@ -106,5 +106,6 @@ permalink: /team
         </tr>
     </table>
 </div>
+<br>
 
 ### [back](./)
