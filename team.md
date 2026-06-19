@@ -21,8 +21,9 @@ permalink: /team
 }
 
 .member:hover {
-    background: #030bffa4;
+    background: #869191d2;
     transform: translateY(-4px);
+    color:  #fefefe;
 }
 </style>
 
@@ -51,9 +52,9 @@ permalink: /team
     <p><a href="mailto:aswinsagaran@gmail.com"> <img   src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/aswin-sagar-18756b242/"> <img  src="assets/img/icons8-linkedin-30.png"></a></p>
   </div>
   <div class="member" >
-    <img src="assets/img/ritu.jpg" width=370px height=370px>
+    <img src="assets/img/ritu.jpg">
     <h3>Rituparna Sarkar</h3>
-    <p>Independent Researchera</p>
+    <p>Independent Researcher</p>
     <p><a href="mailto:rituparnasarkr@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/rituparnasindia/"> <img src="assets/img/icons8-linkedin-30.png"></a> <a href="https://srituparna.github.io/"> <img  src="assets/img/icons8-internet-32.png"></a></p>
   </div>
 </div>

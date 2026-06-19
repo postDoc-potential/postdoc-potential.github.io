@@ -44,7 +44,7 @@ permalink: /team
     tr.hide_all > td, td.hide_all{
         border-style:hidden;
     }
-    tr.hover {background-color: #8adae7;}
+    tr.hover {background-color: #e9eff0;}
 </style>
 
 # Team
