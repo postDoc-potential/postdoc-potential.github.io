@@ -6,119 +6,66 @@ title: "Team"
 permalink: /team
 
 ---
-<style type="text/css">
-    .table-outer {
-        inline-size: 18rem;
-        aspect-ratio: 1;
-        border: .25rem solid royalblue;
-        border-radius: 2rem;
-    }
-    .table-inner {
-        inline-size: 18rem;
-        aspect-ratio: 1;
-        border: .25rem solid royalblue;
-        border-radius: 5rem;
-        border-spacing: 2rem;
-    }
-    table {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        border-collapse: collapse;
-    }
-    th, td {
-        border: collapse;
-        padding: 10px;
-    }
+<style>
+.team {
+    display: flex;
+    gap: 2rem;
+}
 
-    .content-table td {
-    text-align: center;
-    }
+.member {
+    width: 45%;
+    border: 2px solid royalblue;
+    border-radius: 20px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
 
-    tr.hide_top > td, td.hide_top{
-        border-top-style:hidden;
-    }
-    tr.hide_right > td, td.hide_right{
-        border-right-style:hidden;
-    }
-    tr.hide_all > td, td.hide_all{
-        border-style:hidden;
-    }
-    tr.hover {background-color: #8adae7;}
+.member:hover {
+    background: #7be7f848;
+    transform: translateY(-4px);
+}
 </style>
 
 # Team
-<table style="width:100%; text-align:center">
-  <colgroup>
-    <col class="table-inner" style="width:45%;">
-    <col>
-    <col class="table-inner" style="width:45%;">
-  </colgroup>
-  <tr class="hide_top" style="height:30px">
-    <th  ><center><img src="assets/img/Anila_Sebastian.png" alt="anila" width="100" height="100"></center></th>
-    <th>&nbsp;</th>
-    <th  ><center><img src="assets/img/arindam.jpg" alt="arindam" width="100" height="100"></center></th>
-  </tr>
-  <tr class="hide_top" style="height:10px;text-align: center">
-    <td  ><b> Anila Sebastian</b></td>
-    <td>&nbsp;</td>
-    <td  ><b> Arindam Das</b></td>
-  </tr>
-  <tr class="hide_top" style="height:10px;text-align: center">
-    <td  >Independent Researcher</td>
-    <td>&nbsp;</td>
-    <td  >Senior Research Fellow<br>IITM, Pune, India</td>
-  </tr>
-  <tr class="hide_top" style="height:10px;text-align: center">
-    <td ><a href="mailto:anilaalan@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/anila-sebastian-1055b6130/"> <img  src="assets/img/icons8-linkedin-30.png"></a></td>
-    <td>&nbsp;</td>
-    <td ><a href="mailto:arindamdas018@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a> <a href="https://www.linkedin.com/in/arindam-das-02a882191/"> <img  src="assets/img/icons8-linkedin-30.png"></a></td>
-  </tr>
-</table>
-<table style="width:100%; text-align:center">
-  <colgroup>
-    <col class="table-inner" style="width:45%;">
-    <col>
-    <col class="table-inner" style="width:45%;">
-  </colgroup>
-  <tr class="hide_top" style="height:30px">
-    <th  ><center><img src="assets/img/aswin.jpg" alt="aswin" width="100" height="100"></center></th>
-    <th>&nbsp;</th>
-    <th  ><center><img src="assets/img/ritu.jpg" alt="ritu" width="100" height="100"></center></th>
-  </tr>
-  <tr class="hide_top" style="height:10px;text-align: center">
-    <td  ><b> Aswin Sagar</b></td>
-    <td>&nbsp;</td>
-    <td  ><b> Rituparna Sarkar</b></td>
-   </tr>
-   <tr class="hide_top" style="height:10px;text-align: center">
-    <td  >Research Associate<br>IITM, Pune, India</td>
-    <td>&nbsp;</td>
-    <td  >Independent Researcher</td>
-   </tr>
-   <tr class="hide_top" style="height:10px;text-align: center">
-    <td ><a href="mailto:aswinsagaran@gmail.com"> <img   src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/aswin-sagar-18756b242/"> <img  src="assets/img/icons8-linkedin-30.png"></a></td>
-    <td>&nbsp;</td>
-    <td ><a href="mailto:rituparnasarkr@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/rituparnasindia/"> <img src="assets/img/icons8-linkedin-30.png"></a> <a href="https://srituparna.github.io/"> <img  src="assets/img/icons8-internet-32.png"></a></td>
-   </tr>
-</table>
 
+<div class="team">
+  <div class="member">
+    <img src="assets/img/Anila_Sebastian.png">
+    <h3>Anila Sebastian</h3>
+    <p>Independent Researcher</p>
+    <p><a href="mailto:anilaalan@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/anila-sebastian-1055b6130/"> <img  src="assets/img/icons8-linkedin-30.png"></a></p>
+  </div>
+
+  <div class="member">
+    <img src="assets/img/arindam.jpg">
+    <h3>Arindam Das</h3>
+    <p>Senior Research Fellow</p>
+    <p><a href="mailto:arindamdas018@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a> <a href="https://www.linkedin.com/in/arindam-das-02a882191/"> <img  src="assets/img/icons8-linkedin-30.png"></a></p>
+  </div>
+
+  <div class="member">
+    <img src="assets/img/aswin.jpg">
+    <h3>Aswin Sagar</h3>
+    <p>Research Associate<br>IITM, Pune, India</p>
+    <p><a href="mailto:aswinsagaran@gmail.com"> <img   src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/aswin-sagar-18756b242/"> <img  src="assets/img/icons8-linkedin-30.png"></a></p>
+  </div>
+
+  <div class="member">
+    <img src="assets/img/ritu.jpg">
+    <h3>Rituparna Sarkar</h3>
+    <p>Independent Researchera</p>
+    <p><a href="mailto:rituparnasarkr@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/rituparnasindia/"> <img src="assets/img/icons8-linkedin-30.png"></a> <a href="https://srituparna.github.io/"> <img  src="assets/img/icons8-internet-32.png"></a></p>
+  </div>
+</div>
 
 ## Collaborator
-<div class="table-outer">
-    <table style="text-align:center">
-        <tr style="height:30px;text-align: center">
-            <th ><center><img src="assets/img/CDWF.png" alt="cdwf" width="100" height="100"></center></th>
-        </tr>
-        <tr class="hide_all" style="height:10px;text-align: center">
-            <td  ><b> Climate Dialogues: Way Forward</b></td>
-        </tr>
-        <tr class="hide_all" style="height:10px;text-align: center">
-            <td class="content-table"><a href="mailto:climatedialogueswayforward@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://cdwf-clima.github.io\"> <img  src="assets/img/icons8-internet-32.png"></a></td>
-        </tr>
-    </table>
+
+<div class="team">
+  <div class="member">
+    <img src="assets/img/CDWF.png">
+    <h3>Climate Dialogues: Way Forward</h3>
+    <p><a href="mailto:climatedialogueswayforward@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://cdwf-clima.github.io\"> <img  src="assets/img/icons8-internet-32.png"></a></p>
+  </div>
 </div>
-<br>
 
 ### [back](./)
-
