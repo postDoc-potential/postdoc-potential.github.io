@@ -6,8 +6,7 @@ title: "Team"
 permalink: /team
 
 ---
-<!DOCTYPE html>
-<html>
+
 <style type="text/css">
     .table-outer {
         inline-size: 18rem;
@@ -25,7 +24,7 @@ permalink: /team
     table {
         width: 100%;
         height: 100%;
-        text-align: left;
+        text-align: center;
         border-collapse: collapse;
     }
     th, td {
@@ -43,8 +42,8 @@ permalink: /team
     }
     tr.hover {background-color: #8adae7;}
 </style>
-<body>
-<h1>Team</h1>
+# Team
+
 <table style="width:100%; text-align:center">
   <colgroup>
     <col class="table-inner">
@@ -56,13 +55,13 @@ permalink: /team
     <col class="table-inner">
   </colgroup>
   <tr class="hide_top" style="height:30px">
-    <th  ><center><img src="assets/img/Anila_Sebastian.png" alt="anila" width="100" height="100"></center></th>
+    <th  ><img src="assets/img/Anila_Sebastian.png" alt="anila" width="100" height="100"></th>
     <th>&nbsp;</th>
-    <th  ><center><img src="assets/img/arindam.jpg" alt="arindam" width="100" height="100"></center></th>
+    <th  ><img src="assets/img/arindam.jpg" alt="arindam" width="100" height="100"></th>
     <th>&nbsp;</th>
-    <th  ><center><img src="assets/img/aswin.jpg" alt="arindam" width="100" height="100"></center></th>
+    <th  ><img src="assets/img/aswin.jpg" alt="arindam" width="100" height="100"></th>
     <th>&nbsp;</th>
-    <th  ><center><img src="assets/img/ritu.jpg" alt="arindam" width="100" height="100"></center></th>
+    <th  ><img src="assets/img/ritu.jpg" alt="arindam" width="100" height="100"></th>
   </tr>
   <tr class="hide_top" style="height:10px">
     <td  ><b> Anila Sebastian</b></td>
@@ -93,11 +92,11 @@ permalink: /team
   </tr>
 </table>
 
-<h2>Collaborator</h2>
+## Collaborator
 <div class="table-outer">
     <table style="text-align:center">
         <tr style="height:30px">
-            <th ><center><img src="assets/img/CDWF.png" alt="cdwf" width="100" height="100"></center></th>
+            <th ><img src="assets/img/CDWF.png" alt="cdwf" width="100" height="100"></th>
         </tr>
         <tr class="hide_all" style="height:10px">
             <td  ><b> Climate Dialogues: Way Forward</b></td>
@@ -108,6 +107,4 @@ permalink: /team
     </table>
 </div>
 
-<h3> <a href="./">back</a></h3>
-</body>
-</html>
+### [back](./)
