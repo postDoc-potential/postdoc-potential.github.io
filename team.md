@@ -34,7 +34,7 @@ permalink: /team
     .content-table td {
     text-align: center;
     }
-    
+
     tr.hide_top > td, td.hide_top{
         border-top-style:hidden;
     }
@@ -114,7 +114,7 @@ permalink: /team
             <td  ><b> Climate Dialogues: Way Forward</b></td>
         </tr>
         <tr class="hide_all" style="height:10px;text-align: center">
-            <td><a href="mailto:climatedialogueswayforward@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://cdwf-clima.github.io\"> <img  src="assets/img/icons8-internet-32.png"></a></td>
+            <td class="content-table"><a href="mailto:climatedialogueswayforward@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://cdwf-clima.github.io\"> <img  src="assets/img/icons8-internet-32.png"></a></td>
         </tr>
     </table>
 </div>
