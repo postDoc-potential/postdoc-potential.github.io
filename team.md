@@ -1,12 +1,12 @@
 ---
-layout: team
+layout: default
 
 title: "Team"
 
 permalink: /team
 
 ---
-
+<div style="max-width: 800px; margin: auto;">
 <style type="text/css">
     .table-outer {
         inline-size: 18rem;
@@ -42,8 +42,9 @@ permalink: /team
     }
     tr.hover {background-color: #8adae7;}
 </style>
+
 # Team
-<div style="max-width:1400px;margin:auto;">
+
 <table style="width:100%; text-align:center">
   <colgroup>
     <col class="table-inner">
@@ -91,7 +92,8 @@ permalink: /team
     <td ><a href="mailto:rituparnasarkr@gmail.com"> <img  src="assets/img/icons8-email-32.png"></a><a href="https://www.linkedin.com/in/rituparnasindia/"> <img src="assets/img/icons8-linkedin-30.png"></a> <a href="https://srituparna.github.io/"> <img  src="assets/img/icons8-internet-32.png"></a></td>
   </tr>
 </table>
-</div>
+
+
 ## Collaborator
 <div class="table-outer">
     <table style="text-align:center">
@@ -109,3 +111,5 @@ permalink: /team
 <br>
 
 ### [back](./)
+
+</div>
