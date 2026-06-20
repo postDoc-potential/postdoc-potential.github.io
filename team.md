@@ -30,7 +30,6 @@ permalink: /team
 .column {
   float: left;
   width: 50%;
-  height=20rem;
   column-gap: 40px;
 }
 
@@ -88,7 +87,7 @@ permalink: /team
 ## Collaborator
 <br>
 <div class="team">
-  <div class="member" style="width: 60%;">
+  <div class="member" style="width: 60%;height:170px;">
     <div class="row">
       <div class="column" style="text-align:right" >
         <div class="container">
