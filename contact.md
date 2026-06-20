@@ -192,7 +192,6 @@ permalink: /contact
     </div>
     <div class="column">
         <section id="last">
-            <!-- heading -->
             <div class="full">
                 <h3>Drop a Message</h3>
                 <div class="lt">
@@ -200,7 +199,6 @@ permalink: /contact
                         action="contact.php">
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <!-- name  -->
                                 <input type="text" class="form-control" 
                                     id="name" placeholder="NAME" 
                                     name="name" value="" />
@@ -208,7 +206,6 @@ permalink: /contact
                         </div>
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <!-- email  -->
                                 <input type="email" class="form-control" 
                                     id="email" placeholder="EMAIL" 
                                     name="email"
