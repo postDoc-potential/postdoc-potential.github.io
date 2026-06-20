@@ -87,7 +87,7 @@ permalink: /team
 ## Collaborator
 <br>
 <div class="team">
-  <div class="member" style="width: 60%;height:170px;">
+  <div class="member" style="width: 80%;height:170px;">
     <div class="row">
       <div class="column" style="text-align:right" >
         <div class="container">
