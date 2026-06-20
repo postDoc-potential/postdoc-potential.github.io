@@ -14,6 +14,7 @@ permalink: /team
 
 .member {
     width: 80%;
+    height: 20rem;
     border: 2px solid royalblue;
     border-radius: 20px;
     padding: 1rem;
@@ -29,6 +30,8 @@ permalink: /team
 .column {
   float: left;
   width: 50%;
+  height=20rem;
+  column-gap: 40px;
 }
 
 /* Clear floats after the columns */
@@ -53,30 +56,30 @@ permalink: /team
 <div class="team" style="text-align: center">
   <a href="https://www.linkedin.com/in/anila-sebastian-1055b6130/" target="_blank"> 
   <div class="member">
-    <img src="assets/img/Anila_Sebastian.png" >
-    <h3>Dr. Anila Sebastian</h3>
-    <p>Program Initiator and administrator</p>
+    <img src="assets/img/Anila_Sebastian.png" height=150px>
+    <h3 style="font-size: 15px">Dr. Anila Sebastian</h3>
+    <p>Program Initiator,<br>Administrator</p>
   </div>
   </a>
   <a href="https://www.linkedin.com/in/arindam-das-02a882191/">
   <div class="member" >
-    <img src="assets/img/arindam.jpg"  >
-    <h3>Arindam Das</h3>
-    <p>Program Initiator and administrator</p>
+    <img src="assets/img/arindam.jpg"  height=150px>
+    <h3  style="font-size: 15px">Arindam Das</h3>
+    <p>Program Initiator &<br>Administrator</p>
   </div>
   </a>
   <a href="https://www.linkedin.com/in/aswin-sagar-18756b242/">
-  <div class="member">
-    <img src="assets/img/aswin.jpg" >
-    <h3>Aswin Sagar</h3>
-    <p>Program Initiator and administrator</p>
+  <div class="member" >
+    <img src="assets/img/aswin.jpg" height=150px>
+    <h3  style="font-size: 15px">Dr. Aswin Sagar</h3>
+    <p>Program Initiator &<br>Administrator</p>
   </div>
   </a>
-  <a href="https://www.linkedin.com/in/rituparnasindia/"> 
+  <a href="https://srituparna.github.io/"> 
   <div class="member" >
-    <img src="assets/img/ritu.jpg">
-    <h3>Rituparna Sarkar</h3>
-    <p>Program Initiator, administrator and co-ordinator</p>
+    <img src="assets/img/ritu.jpg" height=150px>
+    <h3  style="font-size: 15px">Dr. Rituparna Sarkar</h3>
+    <p>Program Initiator,<br>Administrator &<br>Co-ordinator</p>
   </div>
   </a>
 </div>
@@ -93,9 +96,9 @@ permalink: /team
         </div>
       </div>
       <div class="column" style="text-align:left">
-        <h3><a href="https://nabanitaborah.wixsite.com/bohemian" target="_blank"> Dr. Nabanita Borah </a></h3>
+        <h3  style="font-size: 15px"><a href="https://nabanitaborah.wixsite.com/bohemian" target="_blank"> Dr. Nabanita Borah </a></h3>
         <p>Mentor</p>
-        <h3> <a href="https://www.linkedin.com/in/bidyut-bikash-goswami" target="_blank"> Dr. Bidyut Bikash Goswami </a> </h3>
+        <h3  style="font-size: 15px"> <a href="https://www.linkedin.com/in/bidyut-bikash-goswami" target="_blank"> Dr. Bidyut Bikash Goswami </a> </h3>
       </div>
     </div>
   </div>
