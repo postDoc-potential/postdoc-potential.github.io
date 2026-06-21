@@ -166,6 +166,11 @@ permalink: /contact
         display: table;
         clear: both;
     }
+    #result {
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
 </style>
 <head>
     <link rel="stylesheet" 
@@ -195,28 +200,54 @@ permalink: /contact
             <div class="full">
                 <h3>Drop a Message</h3>
                 <div class="lt">
-                    <form class="form-horizontal" method="post" 
-                        action="contact.php">
+                    <!-- <form class="form-horizontal"
+                        action="https://api.web3forms.com/submit"
+                        method="POST"> -->
+                    <form id="contact-form" class="form-horizontal">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
+                        <!-- Optional Subject -->
+                        <input type="hidden" name="subject"
+                            value="New Message from PostDoc Potential Website">
+                        <!-- Optional Redirect after submission
+                        <input type="hidden" name="redirect"
+                            value="https://postdoc-potential.github.io/thank-you.html"> -->
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" 
-                                    id="name" placeholder="NAME" 
-                                    name="name" value="" />
+                                <input type="text"
+                                    class="form-control"
+                                    id="name"
+                                    name="name"
+                                    placeholder="NAME"
+                                    required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <input type="email" class="form-control" 
-                                    id="email" placeholder="EMAIL" 
+                                <input type="email"
+                                    class="form-control"
+                                    id="email"
                                     name="email"
-                                    value="" />
+                                    placeholder="EMAIL"
+                                    required>
                             </div>
                         </div>
-                        <textarea class="form-control" rows="10" 
-                                placeholder="MESSAGE" name="message">
-                        </textarea>
-                        <button class="btn btn-primary send-button" 
-                                id="submit" type="submit" value="SEND">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <textarea class="form-control"
+                                        rows="10"
+                                        name="message"
+                                        placeholder="MESSAGE"
+                                        required></textarea>
+                            </div>
+                        </div>
+                        <!-- Anti-spam field -->
+                        <input type="checkbox"
+                            name="botcheck"
+                            class="hidden"
+                            style="display:none;">
+                        <button class="btn btn-primary send-button"
+                                type="submit">
                             <i class="fa fa-paper-plane"></i>
                             <span class="send-text">SEND</span>
                         </button>
@@ -226,6 +257,39 @@ permalink: /contact
         </section>
     </div>
 </div>
+<script>
+    const form = document.getElementById("contact-form");
+    const result = document.getElementById("result");
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        result.innerHTML = "Sending...";
+        const formData = new FormData(form);
+        try {
+            const response = await fetch(
+                "https://api.web3forms.com/submit",
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+            const data = await response.json();
+            if (data.success) {
+                result.innerHTML =
+                    "<span style='color:green'>Message sent successfully!</span>";
+                form.reset();
+            } else {
+                result.innerHTML =
+                    "<span style='color:red'>Error: " +
+                    data.message +
+                    "</span>";
+            }
+        } catch (error) {
+            result.innerHTML =
+                "<span style='color:red'>Network error. Please try again.</span>";
+            console.error(error);
+        }
+    });
+</script>
 <br>
 
 ### [back](./)
