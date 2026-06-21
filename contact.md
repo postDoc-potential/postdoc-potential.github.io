@@ -251,6 +251,7 @@ permalink: /contact
                                 type="submit">
                             <i class="fa fa-paper-plane"></i>
                             <span class="send-text">SEND</span>
+                            <div id="result"></div>
                         </button>
                     </form>
                 </div>
@@ -263,36 +264,37 @@ permalink: /contact
 ### [back](./)
 
 <script>
-    const form = document.getElementById("contact-form");
-    const result = document.getElementById("result");
-    form.addEventListener(
-        "submit", async function (e) {
-            e.preventDefault();
-            result.innerHTML = "Sending...";
-            const formData = new FormData(form);
-            try {
-                const response = await fetch(
-                    "https://api.web3forms.com/submit",
-                    {
-                        method: "POST",
-                        body: formData
-                    }
-                );
-                const data = await response.json();
-                if (data.success) {
-                    result.innerHTML =
-                        "<span style='color:green'>Message sent successfully!</span>";
-                    form.reset();
-                } else {
-                result.innerHTML =
-                    "<span style='color:red'>Error: " +
-                    data.message +
-                    "</span>";
-                }
-            } catch (error) {
+const form = document.getElementById("contact-form");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    result.innerHTML = "Sending...";
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
             result.innerHTML =
-                "<span style='color:red'>Network error. Please try again.</span>";
-            console.error(error);
+                "<span style='color:green'>Message sent successfully!</span>";
+            form.reset();
+        } else {
+            result.innerHTML =
+                "<span style='color:red'>Error: " + data.message + "</span>";
         }
-    });
+
+    } catch (error) {
+        console.error(error);
+        result.innerHTML =
+            "<span style='color:red'>Network error. Please try again.</span>";
+    }
+});
 </script>
