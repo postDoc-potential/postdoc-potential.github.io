@@ -251,7 +251,7 @@ permalink: /contact
                                 type="submit">
                             <i class="fa fa-paper-plane"></i>
                             <span class="send-text">SEND</span>
-                            <div id="result"></div>
+                        <div id="result"></div>
                         </button>
                     </form>
                 </div>
@@ -264,37 +264,38 @@ permalink: /contact
 ### [back](./)
 
 <script>
-const form = document.getElementById("contact-form");
-const result = document.getElementById("result");
+document.addEventListener("DOMContentLoaded", function () {
 
-form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+    const form = document.getElementById("contact-form");
+    const result = document.getElementById("result");
 
-    result.innerHTML = "Sending...";
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault(); // VERY IMPORTANT
 
-    const formData = new FormData(form);
+        result.innerHTML = "Sending...";
 
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        const formData = new FormData(form);
 
-        const data = await response.json();
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        if (data.success) {
-            result.innerHTML =
-                "<span style='color:green'>Message sent successfully!</span>";
-            form.reset();
-        } else {
-            result.innerHTML =
-                "<span style='color:red'>Error: " + data.message + "</span>";
+            const data = await response.json();
+
+            if (data.success) {
+                result.innerHTML = "✅ Message sent successfully!";
+                form.reset();
+            } else {
+                result.innerHTML = "❌ Error: " + data.message;
+            }
+
+        } catch (err) {
+            console.error(err);
+            result.innerHTML = "❌ Network error. Try again.";
         }
+    });
 
-    } catch (error) {
-        console.error(error);
-        result.innerHTML =
-            "<span style='color:red'>Network error. Please try again.</span>";
-    }
 });
 </script>
