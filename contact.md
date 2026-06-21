@@ -180,8 +180,8 @@ permalink: /contact
     <link rel="stylesheet" 
           href="style.css" />
 </head>
-
-# Contact us
+<body>
+<h1>Contact us <h1>
 <div class="row">
     <div class="column">
         <h2>To get in touch</h2>
@@ -257,6 +257,8 @@ permalink: /contact
         </section>
     </div>
 </div>
+<br>
+<h3> <a href="./">back<h3>
 <script>
     const form = document.getElementById("contact-form");
     const result = document.getElementById("result");
@@ -290,6 +292,4 @@ permalink: /contact
         }
     });
 </script>
-<br>
-
-### [back](./)
+</body>
