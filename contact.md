@@ -6,8 +6,6 @@ title: "Contact"
 permalink: /contact
 
 ---
-<html>
-<head>
 <style>
     .btn {
         border: 2px solid black;
@@ -174,16 +172,17 @@ permalink: /contact
         text-align: center;
     }
 </style>
-
-<link rel="stylesheet" 
+<head>
+    <link rel="stylesheet" 
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-<link rel="stylesheet" 
+    <link rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link rel="stylesheet" 
+    <link rel="stylesheet" 
           href="style.css" />
 </head>
-<body>
-<h1>Contact us <h1>
+
+# Contact us
+
 <div class="row">
     <div class="column">
         <h2>To get in touch</h2>
@@ -260,39 +259,40 @@ permalink: /contact
     </div>
 </div>
 <br>
-<h3> <a href="./">back<h3>
+
+### [back](./)
+
 <script>
     const form = document.getElementById("contact-form");
     const result = document.getElementById("result");
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        result.innerHTML = "Sending...";
-        const formData = new FormData(form);
-        try {
-            const response = await fetch(
-                "https://api.web3forms.com/submit",
-                {
-                    method: "POST",
-                    body: formData
-                }
-            );
-            const data = await response.json();
-            if (data.success) {
-                result.innerHTML =
-                    "<span style='color:green'>Message sent successfully!</span>";
-                form.reset();
-            } else {
+    form.addEventListener(
+        "submit", async function (e) {
+            e.preventDefault();
+            result.innerHTML = "Sending...";
+            const formData = new FormData(form);
+            try {
+                const response = await fetch(
+                    "https://api.web3forms.com/submit",
+                    {
+                        method: "POST",
+                        body: formData
+                    }
+                );
+                const data = await response.json();
+                if (data.success) {
+                    result.innerHTML =
+                        "<span style='color:green'>Message sent successfully!</span>";
+                    form.reset();
+                } else {
                 result.innerHTML =
                     "<span style='color:red'>Error: " +
                     data.message +
                     "</span>";
-            }
-        } catch (error) {
+                }
+            } catch (error) {
             result.innerHTML =
                 "<span style='color:red'>Network error. Please try again.</span>";
             console.error(error);
         }
     });
 </script>
-</body>
-</html>
