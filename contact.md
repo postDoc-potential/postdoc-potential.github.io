@@ -263,7 +263,7 @@ permalink: /contact
 
 <!-- ### [back](./) -->
 
-<!-- <script>
+<script>
     const form = document.getElementById('form');
     const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -300,4 +300,4 @@ permalink: /contact
             submitBtn.disabled = false;
         }
     });
-</script> -->
+</script>
