@@ -261,7 +261,7 @@ permalink: /contact
 </div>
 <br>
 
-### [back](./)
+<!-- ### [back](./) -->
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -269,20 +269,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
     const result = document.getElementById("result");
 
+    if (!form) {
+        console.error("Form not found");
+        return;
+    }
+
     form.addEventListener("submit", async function (e) {
-        e.preventDefault(); // VERY IMPORTANT
+        e.preventDefault();
+
+        console.log("AJAX triggered"); // DEBUG
 
         result.innerHTML = "Sending...";
 
-        const formData = new FormData(form);
-
         try {
+            const formData = new FormData(form);
+
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 body: formData
             });
 
             const data = await response.json();
+
+            console.log(data); // DEBUG
 
             if (data.success) {
                 result.innerHTML = "✅ Message sent successfully!";
@@ -293,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } catch (err) {
             console.error(err);
-            result.innerHTML = "❌ Network error. Try again.";
+            result.innerHTML = "❌ Network error";
         }
     });
 
