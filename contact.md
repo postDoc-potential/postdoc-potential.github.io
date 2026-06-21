@@ -204,9 +204,10 @@ permalink: /contact
                     <form class="form-horizontal"
                         action="https://api.web3forms.com/submit"
                         method="POST">
-                    <!-- <form id="contact-form" class="form-horizontal"> -->
+                        <!-- <form id="contact-form" class="form-horizontal"> -->
                         <!-- Web3Forms Access Key -->
-                        <input type="hidden" name="access_key" value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
+                        <input type="hidden" name="access_key"
+                        value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
                         <!-- Optional Subject -->
                         <!-- <input type="hidden" name="subject"
                             value="New Message from PostDoc Potential Website"> -->
@@ -253,7 +254,7 @@ permalink: /contact
                             <span class="send-text">SEND</span>
                         </button>
                     </form>
-                    <div id="result"></div>
+                    <!-- <div id="result"></div> -->
                 </div>
             </div>
         </section>
