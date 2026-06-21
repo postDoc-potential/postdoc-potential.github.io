@@ -36,7 +36,7 @@ permalink: /contact
     .row {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 10px;
     }
 
     .column {
@@ -49,8 +49,8 @@ permalink: /contact
         background: white;
         border: 2px solid var(--blue);
         border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: 10px;
+        margin-bottom: 10px;
     }
 
     .card h2 {
@@ -137,7 +137,7 @@ permalink: /contact
 
             <div class="card">
                 <h2>Get in Touch</h2>
-                <p>Email us for collaboration or volunteering.</p>
+                <p>or collaboration, volunteering and participation drop us an email</p>
                 <p>
                     <img src="assets/img/icons8-email-32.png" style="vertical-align:middle"> <a href="mailto:postdoc.potential@gmail.com">
                     postdoc.potential@gmail.com
@@ -147,7 +147,7 @@ permalink: /contact
 
             <div class="card">
                 <h2>Partner</h2>
-                <p>Climate Dialogues: Way Forward</p>
+                <p><b>Climate Dialogues: Way Forward</b></p>
                 <p>
                     <img src="assets/img/icons8-email-32.png" style="vertical-align:middle"> <a href="mailto:climatedialogueswayforward@gmail.com">
                     climatedialogueswayforward@gmail.com
@@ -178,7 +178,8 @@ permalink: /contact
                               placeholder="Your Message" required></textarea>
 
                     <button type="submit">
-                        Send Message
+                        <i class="fa fa-paper-plane"></i>
+                        <span class="send-text">Send Message</span>
                     </button>
 
                     <div id="result"></div>
@@ -226,12 +227,12 @@ form.addEventListener("submit", function(e) {
         if (res.status === 200) {
             result.style.background = "#dcfce7";
             result.style.color = "#166534";
-            result.innerHTML = "Message sent successfully!";
+            result.innerHTML = "✓ Message sent successfully!";
             form.reset();
         } else {
             result.style.background = "#fee2e2";
             result.style.color = "#991b1b";
-            result.innerHTML = "Failed to send message.";
+            result.innerHTML = "✗ Failed to send message.";
         }
     })
     .catch(() => {
