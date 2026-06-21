@@ -251,9 +251,9 @@ permalink: /contact
                                 type="submit">
                             <i class="fa fa-paper-plane"></i>
                             <span class="send-text">SEND</span>
-                        <div id="result"></div>
                         </button>
                     </form>
+                    <div id="result"></div>
                 </div>
             </div>
         </section>
