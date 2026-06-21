@@ -13,23 +13,23 @@ $subject = "This is the subject line";
 // Message = user entered message 
 $txt ="Name = ". $name . "\r\n  Email = " 
     . $email . "\r\n Message =" . $message;
-$headers = "MIME-Version: 1.0" . "\r\n";
+// $headers = "MIME-Version: 1.0" . "\r\n";
 
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+// $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-// $headers = "From: " $name . " <" $email">\r\n" .
-//             "CC: rituparnasarkr@gmail.com";
+// // $headers = "From: " $name . " <" $email">\r\n" .
+// //             "CC: rituparnasarkr@gmail.com";
 
-$headers[] = 'To: Postdoc Potential <postdoc.potential@gmail.com>';
+// $headers[] = 'To: Postdoc Potential <postdoc.potential@gmail.com>';
 
-$headers[] = 'From: test <'$email'>';
+// $headers[] = 'From: test <'$email'>';
 
 
-if($email != NULL) {
-    // mail($to, $subject, $txt, $headers);
-    mail($to, $subject, $txt,);
-}
-
+// if($email != NULL) {
+//     // mail($to, $subject, $txt, $headers);
+//     mail($to, $subject, $txt,);
+// }
+mail('postdoc.potential@gmail.com', 'test_subject', $txt);
 // Redirect to
 header("Location:last.html");
 ?>
