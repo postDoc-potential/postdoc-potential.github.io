@@ -1,272 +1,244 @@
 ---
 layout: default
-
 title: "Contact"
-
 permalink: /contact
-
 ---
+
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
-    .btn {
-        border: 2px solid black;
-        background-color: white;
-        color: black;
-        padding-top: 24px;
-        padding-left: 24px;
-        padding-right: 24px;
-        font-size: 16px;
-        vertical-align:middle;
-    }
+:root {
+    --blue: #2563eb;
+    --dark-blue: #1e40af;
+    --black: #111827;
+    --white: #ffffff;
+    --bg: #f8fafc;
+}
 
-    /* Green */
-    .success {
-        border-color: #0f2eda;
-        color: black;
+/* Page */
+body {
+    background: var(--bg);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-    }
+h1 {
+    text-align: center;
+    color: var(--blue);
+    margin: 40px 0;
+}
 
-    /* .success:hover {
-        background-color: #0f2eda;
-        color: white;
-    } */
-    /* Adding contact form css */
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
 
-    #last {
-        width: 100%;
-        height: auto;
-        display: flex; /* Corrected for centering content */
-        justify-content: center;
-        background-color: none;
-    }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
-    .full {
-        width: 95%;
-        display: inline-block;
-        margin: 2%;
-        margin-left: 10%;
-        text-align: center;
-        background-color: none;
-        color: white;
-        border: 2px solid rgb(22, 19, 222);
-        border-radius: 5px;
-        margin-bottom: 8%;
-        margin-top: 8%;
-    }
+.column {
+    flex: 1;
+    min-width: 300px;
+}
 
-    .full h3 {
-        font-size: 20pt;
-        display: block;
-        margin: 2%;
-        margin-bottom: 0;
-    }
+/* LEFT CARDS */
+.card {
+    background: white;
+    border: 2px solid var(--blue);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
-    .lt {
-        padding: 2%;
-        margin: 2%;
-    }
+.card h2 {
+    color: var(--dark-blue);
+}
 
-    .rt {
-        padding: 2%;
-        margin: 2%;
-    }
+/* FORM BOX */
+.form-box {
+    background: var(--black);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid var(--blue);
+}
 
-    .lt textarea {
-        margin-left: 2%;
-    }
+/* INPUTS */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #1f2937;
+    color: white;
+}
 
-    button {
-        margin: 2%;
-    }
+form textarea {
+    min-height: 140px;
+}
 
-    .btn-primary {
-        background-color: black;
-        border: 2px solid white;
-        border-radius: 5%; /* Adjusted for a cleaner appearance */
-    }
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-    .list-item {
-        margin-bottom: 2%;
-        list-style-type: none;
-    }
+button:hover {
+    background: var(--dark-blue);
+}
 
-    .list-item span {
-        margin-left: 10px;
-        font-size: 1.4rem;
-    }
+/* RESULT MESSAGE */
+#result {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
 
-    .list-item a {
-        color: white;
-        display: inline-block;
-    }
+/* BACK LINK */
+.back {
+    text-align: center;
+    margin: 40px 0;
+}
 
-    .list-item a:hover {
-        text-decoration: underline;
-    }
-
-    .form-control {
-        background-color: black;
-    }
-
-    @media screen and (min-width: 770px) {
-        .full {
-            width: 70%;
-            margin-left: 15%;
-        }
-
-        .lt textarea {
-            width: 95%;
-            margin-left: 2.4%;
-        }
-    }
-
-    @media screen and (min-width: 1100px) {
-        .full {
-            width: 65%;
-            margin-left: 17%;
-            margin-top: 5%;
-        }
-
-        .lt {
-            width: 55%;
-            display: inline-block;
-            float: left;
-            margin-right: 0;
-        }
-
-        .rt {
-            width: 35%;
-            display: inline-block;
-            margin-left: 0;
-        }
-
-        .list-item {
-            margin-bottom: 10%;
-        }
-
-        .contact-list {
-            margin-top: 22%;
-            padding-right: 8%;
-        }
-
-        .fa-envelope, .gmail {
-            display: inline-block;
-            width: auto;
-        }
-    }
-
-    .column {
-        float: left;
-        width: 50%;
-        padding: 20px;
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    #result {
-        margin-top: 15px;
-        font-weight: bold;
-        text-align: center;
-    }
+.back a {
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: none;
+}
 </style>
 
-<head>
-    <link rel="stylesheet" 
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" 
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" 
-          href="style.css" />
-</head>
-
 <h1>Contact Us</h1>
-<br>
-<div class="row">
-    <div class="column">
-        <h2>To get in touch</h2>
-        <p>For collaboration, volunteering and participation drop us an email</p>
-        <button class="btn success">
-            <p> <img src="assets/img/icons8-email-32.png" style="vertical-align:middle"><b> Email </b><a href="mailto:postdoc.potential@gmail.com" target="_blank">postdoc.potential@gmail.com</a></p>
-        </button>
-        <h2> Our partners</h2>
-        <button class="btn success">
-            <h3 style=" font-size: 20px;vertical-align:center">Climate Dialogues: Way Forward (CDWF)</h3>
-            <p> <img src="assets/img/icons8-email-32.png" style="vertical-align:middle"><b> Email </b><a href="mailto: climatedialogueswayforward@gmail.com " target="_blank"> climatedialogueswayforward@gmail.com</a></p>
-        </button>
-    </div>
-    <div class="column">
-        <section id="last">
-            <div class="full">
-                <h3>Drop a Message</h3>
-                <div class="lt">
-                <form method="POST" id="form">
-                    <input type="hidden" name="access_key" value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
-                    <input type="hidden" name="subject" value="New Submission from Web3Forms">
-                    <input type="checkbox" name="botcheck" id="" style="display: none;">
-                    
-                    <input type="text" name="name" placeholder="NAME"required>
-                    <input type="email" name="email" placeholder="EMAIL" required>
-                    <textarea name="message" placeholder="MESSAGE" required></textarea>
-                    <button type="submit">
-                        <i class="fa fa-paper-plane"></i>
-                        <span class="send-text">SEND</span>
-                    </button>
-                    <div id="result"></div>
-                </form>
-                </div>
+
+<div class="container">
+    <div class="row">
+
+        <!-- LEFT SIDE -->
+        <div class="column">
+
+            <div class="card">
+                <h2>Get in Touch</h2>
+                <p>Email us for collaboration or volunteering.</p>
+                <p>
+                    📧 <a href="mailto:postdoc.potential@gmail.com">
+                    postdoc.potential@gmail.com
+                    </a>
+                </p>
             </div>
-        </section>
+
+            <div class="card">
+                <h2>Partner</h2>
+                <p>Climate Dialogues: Way Forward</p>
+                <p>
+                    📧 <a href="mailto:climatedialogueswayforward@gmail.com">
+                    climatedialogueswayforward@gmail.com
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE (FORM) -->
+        <div class="column">
+
+            <div class="form-box">
+
+                <h2 style="text-align:center;">Drop a Message</h2>
+
+                <form id="form" method="POST">
+
+                    <input type="hidden" name="access_key"
+                           value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
+
+                    <input type="text" name="name"
+                           placeholder="Your Name" required>
+
+                    <input type="email" name="email"
+                           placeholder="Your Email" required>
+
+                    <textarea name="message"
+                              placeholder="Your Message" required></textarea>
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                    <div id="result"></div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="back">
+        <a href="./">← Back</a>
     </div>
 </div>
-<br>
-<h3><a href="./">Back</a></h3>
+
 <script>
-const form = document.getElementById('form');
-const result = document.getElementById('result');
+const form = document.getElementById("form");
+const result = document.getElementById("result");
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-      formData.append("access_key", "073cc7af-bd2e-45fb-a3f4-4ec638461a14");
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.innerHTML = "Please wait..."
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                // result.innerHTML = json.message;
-                result.style.display = "block";
-                result.style.color = "green";
-                result.innerHTML = "✓ Thank you for your message! Our team will get back to you, shortly!";
-            } else {
-                console.log(response);
-                // result.innerHTML = json.message;
-                result.style.display = "block";
-                result.style.color = "red";
-                result.innerHTML = "✗ Unable to send message. Please try again.";
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-        })
-        .then(function() {
+    result.style.display = "block";
+    result.style.background = "#dbeafe";
+    result.style.color = "#1e40af";
+    result.innerHTML = "Sending...";
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: json
+    })
+    .then(async (res) => {
+        let data = await res.json();
+
+        if (res.status === 200) {
+            result.style.background = "#dcfce7";
+            result.style.color = "#166534";
+            result.innerHTML = "Message sent successfully!";
             form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 10000);
-        });
+        } else {
+            result.style.background = "#fee2e2";
+            result.style.color = "#991b1b";
+            result.innerHTML = "Failed to send message.";
+        }
+    })
+    .catch(() => {
+        result.style.background = "#fee2e2";
+        result.style.color = "#991b1b";
+        result.innerHTML = "Something went wrong.";
+    });
 });
 </script>
