@@ -211,6 +211,7 @@ const result = document.getElementById('result');
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   const formData = new FormData(form);
+      formData.append("access_key", "073cc7af-bd2e-45fb-a3f4-4ec638461a14");
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
   result.innerHTML = "Please wait..."
@@ -243,7 +244,6 @@ form.addEventListener('submit', function(e) {
             }, 3000);
         });
 });
-// formData.append("access_key", "073cc7af-bd2e-45fb-a3f4-4ec638461a14");
 
 </script>
 </body>
