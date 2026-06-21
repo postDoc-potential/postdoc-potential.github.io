@@ -4,142 +4,142 @@ title: "Contact"
 permalink: /contact
 ---
 
-<link rel="stylesheet"
+<style>
+    :root {
+        --blue: #2563eb;
+        --dark-blue: #1e40af;
+        --black: #111827;
+        --white: #ffffff;
+        --bg: #f8fafc;
+    }
+
+    /* Page */
+    body {
+        background: var(--bg);
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        color: var(--blue);
+        margin: 40px 0;
+    }
+
+    /* Layout */
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .column {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    /* LEFT CARDS */
+    .card {
+        background: white;
+        border: 2px solid var(--blue);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card h2 {
+        color: var(--dark-blue);
+    }
+
+    /* FORM BOX */
+    .form-box {
+        background: var(--black);
+        color: white;
+        padding: 25px;
+        border-radius: 12px;
+        border: 2px solid var(--blue);
+    }
+
+    /* INPUTS */
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #333;
+        background: #1f2937;
+        color: white;
+    }
+
+    form textarea {
+        min-height: 140px;
+    }
+
+    /* BUTTON */
+    button {
+        width: 100%;
+        padding: 12px;
+        background: var(--blue);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: var(--dark-blue);
+    }
+
+    /* RESULT MESSAGE */
+    #result {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        display: none;
+    }
+
+    /* BACK LINK */
+    .back {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .back a {
+        color: var(--blue);
+        font-weight: bold;
+        text-decoration: none;
+    }
+</style>
+<head>
+    <link rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<style>
-:root {
-    --blue: #2563eb;
-    --dark-blue: #1e40af;
-    --black: #111827;
-    --white: #ffffff;
-    --bg: #f8fafc;
-}
-
-/* Page */
-body {
-    background: var(--bg);
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    text-align: center;
-    color: var(--blue);
-    margin: 40px 0;
-}
-
-/* Layout */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.column {
-    flex: 1;
-    min-width: 300px;
-}
-
-/* LEFT CARDS */
-.card {
-    background: white;
-    border: 2px solid var(--blue);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.card h2 {
-    color: var(--dark-blue);
-}
-
-/* FORM BOX */
-.form-box {
-    background: var(--black);
-    color: white;
-    padding: 25px;
-    border-radius: 12px;
-    border: 2px solid var(--blue);
-}
-
-/* INPUTS */
-form input,
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    background: #1f2937;
-    color: white;
-}
-
-form textarea {
-    min-height: 140px;
-}
-
-/* BUTTON */
-button {
-    width: 100%;
-    padding: 12px;
-    background: var(--blue);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background: var(--dark-blue);
-}
-
-/* RESULT MESSAGE */
-#result {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    display: none;
-}
-
-/* BACK LINK */
-.back {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.back a {
-    color: var(--blue);
-    font-weight: bold;
-    text-decoration: none;
-}
-</style>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
 <h1>Contact Us</h1>
 
 <div class="container">
     <div class="row">
 
-        <!-- LEFT SIDE -->
         <div class="column">
 
             <div class="card">
                 <h2>Get in Touch</h2>
                 <p>Email us for collaboration or volunteering.</p>
                 <p>
-                    📧 <a href="mailto:postdoc.potential@gmail.com">
+                    <img src="assets/img/icons8-email-32.png" style="vertical-align:middle"> <a href="mailto:postdoc.potential@gmail.com">
                     postdoc.potential@gmail.com
                     </a>
                 </p>
@@ -149,7 +149,7 @@ button:hover {
                 <h2>Partner</h2>
                 <p>Climate Dialogues: Way Forward</p>
                 <p>
-                    📧 <a href="mailto:climatedialogueswayforward@gmail.com">
+                    <img src="assets/img/icons8-email-32.png" style="vertical-align:middle"> <a href="mailto:climatedialogueswayforward@gmail.com">
                     climatedialogueswayforward@gmail.com
                     </a>
                 </p>
@@ -157,7 +157,6 @@ button:hover {
 
         </div>
 
-        <!-- RIGHT SIDE (FORM) -->
         <div class="column">
 
             <div class="form-box">
