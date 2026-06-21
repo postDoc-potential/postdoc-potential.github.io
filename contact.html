@@ -196,7 +196,7 @@ permalink: /contact
                 <i class="fa fa-paper-plane"></i>
                 <span class="send-text">SEND</span>
             </button>
-            <!-- <div id="result"></div> -->
+            <div id="result"></div>
         </form>
         </div>
     </div>
@@ -205,80 +205,80 @@ permalink: /contact
 
 
 <script>
-// const form = document.getElementById('form');
-// const result = document.getElementById('result');
-
-// form.addEventListener('submit', function(e) {
-//   e.preventDefault();
-//   const formData = new FormData(form);
-//       formData.append("access_key", "073cc7af-bd2e-45fb-a3f4-4ec638461a14");
-//   const object = Object.fromEntries(formData);
-//   const json = JSON.stringify(object);
-//   result.innerHTML = "Please wait..."
-
-//     fetch('https://api.web3forms.com/submit', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 'Accept': 'application/json'
-//             },
-//             body: json
-//         })
-//         .then(async (response) => {
-//             let json = await response.json();
-//             if (response.status == 200) {
-//                 result.innerHTML = json.message;
-//             } else {
-//                 console.log(response);
-//                 result.innerHTML = json.message;
-//             }
-//         })
-//         .catch(error => {
-//             console.log(error);
-//             result.innerHTML = "Something went wrong!";
-//         })
-//         .then(function() {
-//             form.reset();
-//             setTimeout(() => {
-//                 result.style.display = "none";
-//             }, 3000);
-//         });
-// });
 const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
+const result = document.getElementById('result');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+      formData.append("access_key", "073cc7af-bd2e-45fb-a3f4-4ec638461a14");
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
 
-    const formData = new FormData(form);
-    formData.append("access_key", "073cc7af-bd2e-45fb-a3f4-4ec638461a14");
-
-    const originalText = submitBtn.textContent;
-
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
-
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            alert("Success! Your message has been sent.");
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = json.message;
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
             form.reset();
-        } else {
-            alert("Error: " + data.message);
-        }
-
-    } catch (error) {
-        alert("Something went wrong. Please try again.");
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
 });
+// const form = document.getElementById('form');
+// const submitBtn = form.querySelector('button[type="submit"]');
+
+// form.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+
+//     const formData = new FormData(form);
+//     formData.append("access_key", "073cc7af-bd2e-45fb-a3f4-4ec638461a14");
+
+//     const originalText = submitBtn.textContent;
+
+//     submitBtn.textContent = "Sending...";
+//     submitBtn.disabled = true;
+
+//     try {
+//         const response = await fetch("https://api.web3forms.com/submit", {
+//             method: "POST",
+//             body: formData
+//         });
+
+//         const data = await response.json();
+
+//         if (response.ok) {
+//             alert("Success! Your message has been sent.");
+//             form.reset();
+//         } else {
+//             alert("Error: " + data.message);
+//         }
+
+//     } catch (error) {
+//         alert("Something went wrong. Please try again.");
+//     } finally {
+//         submitBtn.textContent = originalText;
+//         submitBtn.disabled = false;
+//     }
+// });
 </script>
 </body>
