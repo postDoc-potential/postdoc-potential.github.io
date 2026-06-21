@@ -201,15 +201,15 @@ permalink: /contact
             <div class="full">
                 <h3>Drop a Message</h3>
                 <div class="lt">
-                    <!-- <form class="form-horizontal"
+                    <form class="form-horizontal"
                         action="https://api.web3forms.com/submit"
-                        method="POST"> -->
-                    <form id="contact-form" class="form-horizontal">
+                        method="POST">
+                    <!-- <form id="contact-form" class="form-horizontal"> -->
                         <!-- Web3Forms Access Key -->
                         <input type="hidden" name="access_key" value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
                         <!-- Optional Subject -->
-                        <input type="hidden" name="subject"
-                            value="New Message from PostDoc Potential Website">
+                        <!-- <input type="hidden" name="subject"
+                            value="New Message from PostDoc Potential Website"> -->
                         <!-- Optional Redirect after submission
                         <input type="hidden" name="redirect"
                             value="https://postdoc-potential.github.io/thank-you.html"> -->
@@ -263,27 +263,22 @@ permalink: /contact
 
 <!-- ### [back](./) -->
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+<!-- <script>
+    const form = document.getElementById('form');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-    const form = document.getElementById("contact-form");
-    const result = document.getElementById("result");
-
-    if (!form) {
-        console.error("Form not found");
-        return;
-    }
-
-    form.addEventListener("submit", async function (e) {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        console.log("AJAX triggered"); // DEBUG
+        const formData = new FormData(form);
+        formData.append("access_key", "073cc7af-bd2e-45fb-a3f4-4ec638461a14");
 
-        result.innerHTML = "Sending...";
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
 
         try {
-            const formData = new FormData(form);
-
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 body: formData
@@ -291,20 +286,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const data = await response.json();
 
-            console.log(data); // DEBUG
-
-            if (data.success) {
-                result.innerHTML = "✅ Message sent successfully!";
+            if (response.ok) {
+                alert("Success! Your message has been sent.");
                 form.reset();
             } else {
-                result.innerHTML = "❌ Error: " + data.message;
+                alert("Error: " + data.message);
             }
 
-        } catch (err) {
-            console.error(err);
-            result.innerHTML = "❌ Network error";
+        } catch (error) {
+            alert("Something went wrong. Please try again.");
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
         }
     });
-
-});
-</script>
+</script> -->
