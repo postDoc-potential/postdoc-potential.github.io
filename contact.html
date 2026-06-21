@@ -182,28 +182,45 @@ permalink: /contact
           href="style.css" />
 </head>
 
-<section id="last">
-    <div class="full">
-        <h3>Drop a Message</h3>
-        <div class="lt">
-        <form method="POST" id="form">
-            <input type="hidden" name="access_key" value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
-            <input type="hidden" name="subject" value="New Submission from Web3Forms">
-            <input type="checkbox" name="botcheck" id="" style="display: none;">
-            
-            <input type="text" name="name" placeholder="NAME"required>
-            <input type="email" name="email" placeholder="EMAIL" required>
-            <textarea name="message" placeholder="MESSAGE" required></textarea>
-            <button type="submit">
-                <i class="fa fa-paper-plane"></i>
-                <span class="send-text">SEND</span>
-            </button>
-            <div id="result"></div>
-        </form>
-        </div>
+<div class="row">
+    <div class="column">
+        <h2>To get in touch</h2>
+        <p>For collaboration, volunteering and participation drop us an email</p>
+        <button class="btn success">
+            <p> <img src="assets/img/icons8-email-32.png" style="vertical-align:middle"><b> Email </b><a href="mailto:postdoc.potential@gmail.com" target="_blank">postdoc.potential@gmail.com</a></p>
+        </button>
+        <h2> Our partners</h2>
+        <button class="btn success">
+            <h3 style=" font-size: 20px;vertical-align:center">Climate Dialogues: Way Forward (CDWF)</h3>
+            <p> <img src="assets/img/icons8-email-32.png" style="vertical-align:middle"><b> Email </b><a href="mailto: climatedialogueswayforward@gmail.com " target="_blank"> climatedialogueswayforward@gmail.com</a></p>
+        </button>
     </div>
-</section>
-
+    <div class="column">
+        <section id="last">
+            <div class="full">
+                <h3>Drop a Message</h3>
+                <div class="lt">
+                <form method="POST" id="form">
+                    <input type="hidden" name="access_key" value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                    <input type="checkbox" name="botcheck" id="" style="display: none;">
+                    
+                    <input type="text" name="name" placeholder="NAME"required>
+                    <input type="email" name="email" placeholder="EMAIL" required>
+                    <textarea name="message" placeholder="MESSAGE" required></textarea>
+                    <button type="submit">
+                        <i class="fa fa-paper-plane"></i>
+                        <span class="send-text">SEND</span>
+                    </button>
+                    <div id="result"></div>
+                </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<br>
+<h3><a href="./">Back</a></h3>
 <script>
 const form = document.getElementById('form');
 const result = document.getElementById('result');
@@ -230,7 +247,7 @@ form.addEventListener('submit', function(e) {
                 // result.innerHTML = json.message;
                 result.style.display = "block";
                 result.style.color = "green";
-                result.innerHTML = "✓ Thank you! We have recieved your message; Our team will get back to you, shortly";
+                result.innerHTML = "✓ Thank you for your message! Our team will get back to you, shortly!";
             } else {
                 console.log(response);
                 // result.innerHTML = json.message;
@@ -247,7 +264,7 @@ form.addEventListener('submit', function(e) {
             form.reset();
             setTimeout(() => {
                 result.style.display = "none";
-            }, 3000);
+            }, 10000);
         });
 });
 </script>
