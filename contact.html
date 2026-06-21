@@ -1,7 +1,20 @@
+---
+layout: default
+
+title: "Contact"
+
+permalink: /contact
+
+---
+
+
 <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
+    <input type="hidden" name="access_key" value="073cc7af-bd2e-45fb-a3f4-4ec638461a14">
+    <input type="text" name="name" placeholder="NAME"required>
+    <input type="email" name="email" placeholder="EMAIL" required>
+    <textarea name="message" placeholder="MESSAGE" required></textarea>
+    <button type="submit">
+        <i class="fa fa-paper-plane"></i>
+        <span class="send-text">SEND</span>
+    </button>
 </form>
