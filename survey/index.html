@@ -55,5 +55,23 @@
     }
     });
     </script>
+    <script>
+    const VERSION = "1.0.0"; // Change here before deployment
+
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = `index.css?v=${VERSION}`;
+    document.head.appendChild(css);
+
+    [
+      `json.js?v=${VERSION}`,
+      `theme.js?v=${VERSION}`,
+      `index.js?v=${VERSION}`
+    ].forEach(src => {
+      const script = document.createElement("script");
+      script.src = src;
+      document.body.appendChild(script);
+    });
+  </script>
   </body>
 </html>
