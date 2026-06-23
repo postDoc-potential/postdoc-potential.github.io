@@ -1,4 +1,4 @@
-const themeJson = {
+export const themeJson = {
   "themeName": "layered",
   "colorPalette": "light",
   "isPanelless": true,
