@@ -1,32 +1,62 @@
 ---
-
 ---
 
 @import "{{ site.theme }}";
 
-html {
-  margin: auto;
+/* ===== BASE ===== */
+
+html, body {
+  margin: 0;
   padding: 0;
   width: 100%;
-}
-
-body {
-  margin: auto;
   background: white;
-  padding: 0;
-  width: 100%;
 }
 
-.site-header,
-.site-footer {
+/* ===== HEADER ===== */
+
+.site-header {
+  width: 100%;
   background: #063D88;
+  color: white;
 }
+
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.site-nav a {
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+/* ===== CONTENT ===== */
 
 .page-content {
-  background: white;
   max-width: 1200px;
-  margin: auto auto;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+section {
+  margin: 20px auto;
+  background: white;
+}
+
+/* ===== FOOTER ===== */
 
 footer {
   width: 100%;
@@ -38,99 +68,49 @@ footer {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  align-items: flex-start;
 }
-
-.footer-left p {
-  margin: auto;
-  text-align: left;
-
-}
-
 
 .footer-right a {
   color: white;
   text-decoration: underline;
-  text-align: right;
 }
 
-.footer-right p {
-  color: white;
-  text-decoration: none;
-  text-align: right;
-}
-
-
-// Edit here
-.site-header {
-  width: 100%;
-  background: #063D88;
-  color: white;
-  
-}
-
-.site-header-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-header a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1rem;
-  
-}
-
-.site-title {
-  font-size: clamp(1.5rem, 2vw, 2rem);;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-  
-}
-
-.site-nav a {
-  font-size: clamp(1rem, 1vw, 1.5rem);
-}
+/* ===== REMOVE OLD THEME LAYOUT ===== */
 
 header,
 footer {
-  float: none ;
-  width: 100% ;
-  position: static ;
+  float: none;
+  width: 100%;
+  position: static;
 }
 
-.wrapper {
-  width: 100% ;
-  max-width: none ;
-  margin: auto ;
-}
-
-section {
-  width: 100% ;
-  margin: 20px auto;
-  background: white;
-}
+/* ===== MOBILE ===== */
 
 @media (max-width: 600px) {
+
+  .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav a {
+    margin-left: 0;
+  }
+
   .footer-inner {
     flex-direction: column;
-    gap: 0.5 rem;
     align-items: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .site-header-inner {
-    flex-direction: column-reverse;
-    gap: 0.5 rem;
-    align-items: left;
+    text-align: center;
+    gap: 1rem;
   }
 }
