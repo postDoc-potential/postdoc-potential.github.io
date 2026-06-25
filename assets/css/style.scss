@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 20px;
   background: white;
   padding: 0;
   width: 100%;
@@ -112,7 +112,7 @@ footer {
 .wrapper {
   width: 100% ;
   max-width: none ;
-  margin: auto ;
+  margin: 20px ;
 }
 
 section {
@@ -127,6 +127,7 @@ section {
     align-items: right;
     text-align: right;
     gap: 0.5rem;
+    margin-left: 0.5rem;
   }
 
   .footer-left,
@@ -137,14 +138,14 @@ section {
 
 @media (max-width: 600px) {
   .site-header-inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start; /* correct */
     gap: 0.5rem;
   }
 
   .site-nav {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     align-items: flex-start;
   }
 
