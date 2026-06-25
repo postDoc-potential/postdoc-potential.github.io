@@ -43,7 +43,7 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin:  auto;
-  padding: 0.25rem 1rem 1rem 1rem;
+  padding: 0.15rem 1rem 1rem 1rem;
   flex-wrap: wrap;
 }
 
@@ -55,6 +55,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  padding-right: 2rem;
 }
 
 .footer-right a {
@@ -80,7 +81,7 @@ footer {
 .site-header-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 0.5rem 1rem 0.25rem 1rem;
+  padding: 1rem 1rem 0.1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +107,7 @@ footer {
   color: white;
   text-decoration: none;
   margin: 0;
-  line-height: 1;
+  line-height: 0.5;
 }
 
 .site-nav {
