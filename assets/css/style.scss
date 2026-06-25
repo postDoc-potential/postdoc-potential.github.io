@@ -33,7 +33,9 @@ body {
 footer {
   width: 100%;
   background: #063D88;
-  color: white;  
+  color: white;
+  height: 2rem;
+
 }
 
 .footer-inner {
@@ -69,6 +71,8 @@ footer {
   width: 100%;
   background: #063D88;
   color: white;
+  height: 2rem;
+
 }
 
 .site-header-inner {
@@ -124,7 +128,6 @@ footer {
   float: none ;
   width: 100% ;
   position: static ;
-  height: 3rem;
 }
 
 .wrapper {
