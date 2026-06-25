@@ -3,6 +3,21 @@
 ---
 
 @import "{{ site.theme }}";
+body {
+  margin: 0;
+  background: #063D88;
+}
+
+.site-header,
+.site-footer {
+  background: #063D88;
+}
+
+.page-content {
+  background: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 footer {
   width: 100%;
@@ -19,6 +34,8 @@ footer {
 
 .footer-left p {
   margin: 0;
+  align-items: left;
+
 }
 
 
@@ -26,6 +43,8 @@ footer {
   color: white;
   text-decoration: none;
   margin-left: 1rem;
+  align-items: right;
+
 }
 
 // Edit here
