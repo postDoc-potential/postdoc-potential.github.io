@@ -39,18 +39,17 @@ footer {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   margin:  0 auto;
-  padding: 1.5rem 1rem;
+  padding: 0.4rem 1rem;
 }
 
 .footer-left p {
   margin: auto;
   text-align: left;
 }
-
 
 .footer-right a {
   color: white;
@@ -75,7 +74,7 @@ footer {
 .site-header-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,12 +102,20 @@ footer {
   margin: 0;
 }
 
-.site-nav a {
+.site-nav {
   display: flex;
   flex-direction: row;
-  font-size: clamp(1rem, 1vw, 1.5rem);
+  gap: 1rem;
+  align-items: center;
+}
+
+.site-nav a {
+  display: inline-block;
   margin: 0;
-  gap: 2rem;
+}
+
+.site-nav p {
+  margin: 0;
 }
 
 header,
@@ -126,7 +133,8 @@ footer {
 
 section {
   width: 100%;
-  margin: 100px auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
   padding: 0 50px;
   background: white;
   box-sizing: border-box;
