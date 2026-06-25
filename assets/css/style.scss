@@ -103,6 +103,7 @@ footer {
 .site-nav a {
   font-size: clamp(1rem, 1vw, 1.5rem);
   margin: 0;
+  gap: 1rem;
 }
 
 header,
@@ -119,15 +120,17 @@ footer {
 }
 
 section {
-  width: 100% ;
-  margin: 20px auto;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 40px;
   background: white;
+  box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
   .footer-inner {
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     text-align: left;
     gap: 0.5rem;
     margin-left: 0;
@@ -162,6 +165,12 @@ section {
     padding: 0 1rem;
     text-align: left;
   }
+}
 
-  
+@media (max-width: 600px) {
+  section {
+    padding: 0 20px;
+    margin-top: 0;
+
+  }
 }
