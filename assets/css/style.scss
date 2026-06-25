@@ -20,7 +20,7 @@ body {
 
 .page-content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px;
   padding: 0 20px; /* THIS gives left/right spacing */
   background: white;
 }
@@ -43,7 +43,7 @@ footer {
   align-items: flex-start;
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 20px;
 }
 
 .footer-left p {
@@ -124,14 +124,14 @@ section {
 @media (max-width: 600px) {
   .footer-inner {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+    align-items: right;
+    text-align: right;
+    gap: 0.5rem;
   }
 
   .footer-left,
   .footer-right {
-    text-align: center;
+    text-align: right;
   }
 }
 
@@ -144,7 +144,7 @@ section {
 
   .site-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
   }
 
