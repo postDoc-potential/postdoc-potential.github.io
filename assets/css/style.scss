@@ -211,8 +211,8 @@ section {
 }
 
 .hero-image img {
-  width: auto;
-  height: 400px;
+  width: 100%;  // auto;
+  height: auto; // 400px;
   display: block;
 }
 
@@ -224,7 +224,7 @@ section {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
@@ -278,6 +278,6 @@ section {
   }
 
   .hero-text {
-    padding: 0.5rem;
+    padding: 0.1rem;
   }
 }
