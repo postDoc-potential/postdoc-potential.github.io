@@ -212,7 +212,10 @@ section {
 
 .hero-image img {
   width: 100%;  // auto;
-  height: auto; // 400px;
+  height: 400px; // auto; // 
+  display: block;
+  object-fit: cover;    /* crops image nicely */
+  object-position: center;
   display: block;
 }
 
@@ -270,14 +273,14 @@ section {
 
 @media (max-width: 768px) {
   .hero-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .hero-text p {
-    font-size: 1.3rem; /* increased for mobile readability */
+    font-size: 1rem; /* increased for mobile readability */
   }
 
   .hero-text {
-    padding: 0.1rem;
+    padding: 0;
   }
 }
