@@ -205,9 +205,9 @@ section {
 }
 
 .hero-image {
-  display: flex;
-  justify-content: center;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-image img {
@@ -215,7 +215,7 @@ section {
   height: 400px; // auto; // 
   display: block;
   object-fit: cover;    /* crops image nicely */
-  object-position: center;
+  object-position: center bottom;
   display: block;
 }
 
@@ -227,11 +227,12 @@ section {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 20%;
+  top: 55%;              /* move DOWN */
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  padding: 1rem 1rem;
+  padding: 1rem;
+  width: 80%;
 }
 
 .hero-text button {
@@ -281,6 +282,6 @@ section {
   }
 
   .hero-text {
-    padding: 0;
+    width: 95%;        /* 👈 wider on mobile */
+    padding: 0.5rem;
   }
-}
