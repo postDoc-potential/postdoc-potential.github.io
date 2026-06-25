@@ -2,6 +2,8 @@
 title: Home
 layout: default
 ---
+
+{% include hero.html %}
 <h1>PostDoc Potential</h1>
 <p align="justify"> A platform created for and by early-career researchers navigating postdoctoral research</p>
 <h2>Our Story </h2>
