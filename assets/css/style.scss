@@ -4,9 +4,17 @@
 
 @import "{{ site.theme }}";
 
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
   margin: 0;
   background: white;
+  padding: 0;
+  width: 100%;
 }
 
 .site-header,
@@ -28,9 +36,12 @@ footer {
 }
 
 .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .footer-left p {
@@ -101,4 +112,12 @@ footer {
 section {
   width: 100% !important;
   margin: 0 !important;
+  background: white;
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
