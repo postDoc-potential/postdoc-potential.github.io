@@ -33,17 +33,18 @@ body {
 footer {
   width: 100%;
   background: #063D88;
-  color: white;
-  padding: 2rem;
+  color: white;  
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;;
   width: 100%;
   max-width: 1200px;
-  margin: 20px;
+  margin:  0 auto;
+  padding: 2rem 20px;
+
 }
 
 .footer-left p {
@@ -95,11 +96,13 @@ footer {
   font-weight: 600;
   color: white;
   text-decoration: none;
+  margin: 0;
   
 }
 
 .site-nav a {
   font-size: clamp(1rem, 1vw, 1.5rem);
+  margin: 0;
 }
 
 header,
@@ -124,15 +127,15 @@ section {
 @media (max-width: 600px) {
   .footer-inner {
     flex-direction: column;
-    align-items: right;
-    text-align: right;
+    align-items: left;
+    text-align: left;
     gap: 0.5rem;
     margin-left: 0;
   }
 
   .footer-left,
   .footer-right {
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -153,4 +156,12 @@ section {
   .site-header a {
     margin-left: 0;
   }
+
+  .site-header-inner,
+  .footer-inner {
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  
 }
