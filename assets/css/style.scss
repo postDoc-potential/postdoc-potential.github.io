@@ -4,7 +4,6 @@
 
 @import "{{ site.theme }}";
 
-// 
 footer {
   width: 100%;
   background: #063D88;
@@ -16,6 +15,17 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.footer-left p {
+  margin: 0;
+}
+
+
+.footer-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
 }
 
 // Edit here
@@ -44,14 +54,18 @@ footer {
 }
 
 .site-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);;
   font-weight: 600;
   color: white;
   text-decoration: none;
+  
+}
+
+.site-nav a {
+  font-size: clamp(0.85rem, 1vw, 1rem);
 }
 
 header,
-section,
 footer {
   float: none !important;
   width: 100% !important;
@@ -60,10 +74,11 @@ footer {
 
 .wrapper {
   width: 100% !important;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: none !important;
+  margin: 0 !important;
 }
 
 section {
+  width: 100% !important;
   margin: 0 !important;
 }

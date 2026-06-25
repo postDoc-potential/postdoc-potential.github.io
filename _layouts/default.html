@@ -7,10 +7,10 @@
     <meta name="keywords" content="postdoc, phd, earth science, academia, research, fellowship">
     {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <!-- [if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    ![endif]
-    {% include head-custom.html %} -->
+    <!-- [if lt IE 9]> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <!-- [endif] -->
+    <!-- {% include head-custom.html %} -->
   </head>
   <body>
     {% include header.html %}
@@ -53,11 +53,13 @@
     </footer> -->
     <footer>
       <div class="footer-inner">
-        © 2026 PostDoc Potential
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Created by <a href="https://github.com/SRituparna">Rituparna</a></small></p>
+          <div class="footer-left">© 2026 PostDoc Potential</div>
+            <div class="footer-right">
+              {% if site.github.is_project_page %}
+              <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+              {% endif %}
+              <p><small>Hosted on GitHub Pages &mdash;<br>Created by <a href="https://github.com/SRituparna">Rituparna</a></small></p>
+            </div>
       </div>
     </footer>
   <!-- </div> -->
