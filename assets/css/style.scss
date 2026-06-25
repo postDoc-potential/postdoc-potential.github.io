@@ -256,10 +256,13 @@ section {
   display: inline-block;
   padding: 10px 25px;
   color: black;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color:  #E9F1F9ff;
+  border-radius: 5px ;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+
 }
 
 .hero-text a {
@@ -275,7 +278,7 @@ section {
 
 .hero-text p {
   font-size: 1.5rem;
-  padding: 0.5 5rem;
+  padding: 0.5 15rem;
 }
 
 .hero-text button:hover {
@@ -302,6 +305,6 @@ section {
   .hero-text {
     width: 95%;        /* 👈 wider on mobile */
     padding: 0.5rem;
-    top:50%;
+    top:45%;
   }
 }
