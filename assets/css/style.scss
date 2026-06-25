@@ -5,13 +5,13 @@
 @import "{{ site.theme }}";
 
 html {
-  margin: 0;
+  margin: auto;
   padding: 0;
   width: 100%;
 }
 
 body {
-  margin: 0;
+  margin: auto;
   background: white;
   padding: 0;
   width: 100%;
@@ -25,7 +25,7 @@ body {
 .page-content {
   background: white;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto auto;
 }
 
 footer {
@@ -33,6 +33,8 @@ footer {
   background: #063D88;
   color: white;
   padding: 2rem 0;
+  display: flex;
+  align-items: center;
 }
 
 .footer-inner {
@@ -41,11 +43,11 @@ footer {
   align-items: flex-start;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto auto;
 }
 
 .footer-left p {
-  margin: 0;
+  margin: auto;
   text-align: left;
 
 }
@@ -54,7 +56,7 @@ footer {
 .footer-right a {
   color: white;
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: auto;
   text-align: right;
 
 }
@@ -69,7 +71,7 @@ footer {
 
 .site-header-inner {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto auto;
   padding: 1rem 2rem;
 
   display: flex;
@@ -85,7 +87,7 @@ footer {
 }
 
 .site-title {
-  font-size: clamp(1.2rem, 3vw, 2rem);;
+  font-size: clamp(1rem, 3vw, 2rem);;
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -93,25 +95,25 @@ footer {
 }
 
 .site-nav a {
-  font-size: clamp(0.85rem, 1vw, 1rem);
+  font-size: clamp(0.5rem, 1vw, 1rem);
 }
 
 header,
 footer {
-  float: none !important;
-  width: 100% !important;
-  position: static !important;
+  float: none ;
+  width: 100% ;
+  position: static ;
 }
 
 .wrapper {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
+  width: 100% ;
+  max-width: none ;
+  margin: auto ;
 }
 
 section {
-  width: 100% !important;
-  margin: 0 !important;
+  width: 100% ;
+  margin: auto ;
   background: white;
 }
 
