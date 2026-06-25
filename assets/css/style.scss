@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  margin: 20px;
+  margin: 0;
   background: white;
   padding: 0;
   width: 100%;
@@ -127,7 +127,7 @@ section {
     align-items: right;
     text-align: right;
     gap: 0.5rem;
-    margin-left: 0.5rem;
+    margin-left: 0;
   }
 
   .footer-left,
@@ -147,6 +147,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .site-header a {
