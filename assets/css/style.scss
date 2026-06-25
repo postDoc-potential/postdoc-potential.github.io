@@ -226,7 +226,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.6); /* adjust darkness */
+  background: rgba(255, 255, 255, 0.8); /* adjust darkness */
   z-index: 1;
 }
 // .hero-image::before {
@@ -274,11 +274,12 @@ section {
   font-size: 3rem;   /* smaller desktop heading */
   margin: 0;
   padding: 0 0.5rem;   /* reduce left/right padding */
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .hero-text p {
   font-size: 1.5rem;
-  padding: 0.5 15rem;
+  padding: 0.5 30rem;
 }
 
 .hero-text button:hover {
