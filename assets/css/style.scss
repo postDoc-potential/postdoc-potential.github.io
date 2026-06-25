@@ -43,14 +43,12 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin:  0 auto;
-  padding: 0.5rem 1rem;
-
+  padding: 1.5rem 1rem;
 }
 
 .footer-left p {
   margin: auto;
   text-align: left;
-
 }
 
 
@@ -72,7 +70,6 @@ footer {
   width: 100%;
   background: #063D88;
   color: white;
-  
 }
 
 .site-header-inner {
@@ -88,7 +85,6 @@ footer {
   color: white;
   text-decoration: none;
   margin-left: 1rem;
-  
 }
 
 .site-header h1 {
@@ -105,12 +101,11 @@ footer {
   color: white;
   text-decoration: none;
   margin: 0;
-  
 }
 
 .site-nav a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-size: clamp(1rem, 1vw, 1.5rem);
   margin: 0;
   gap: 2rem;
@@ -131,7 +126,7 @@ footer {
 
 section {
   width: 100%;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 0 50px;
   background: white;
   box-sizing: border-box;
