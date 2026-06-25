@@ -44,6 +44,7 @@ footer {
   max-width: 1200px;
   margin:  0 auto;
   padding: 0.4rem 1rem;
+  min-height: 80px;
 }
 
 .footer-left p {
@@ -69,6 +70,7 @@ footer {
   width: 100%;
   background: #063D88;
   color: white;
+  margin-bottom: 50px;
 }
 
 .site-header-inner {
@@ -84,6 +86,7 @@ footer {
   color: white;
   text-decoration: none;
   margin-left: 1rem;
+  min-height: 80px;
 }
 
 .site-header h1 {
