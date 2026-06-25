@@ -202,12 +202,24 @@ hr {
   margin:0 0 20px;
 }
 
+// footer {
+//   width:270px;
+//   float:left;
+//   position:fixed;
+//   bottom:50px;
+//   -webkit-font-smoothing:subpixel-antialiased;
+// }
 footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
-  -webkit-font-smoothing:subpixel-antialiased;
+  width: 100%;
+  background: #063D88;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -283,4 +295,51 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+
+// Edit here
+.site-header {
+  width: 100%;
+  background: #063D88;
+  color: white;
+}
+
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+header,
+section,
+footer {
+  float: none !important;
+  width: 100% !important;
+  position: static !important;
+}
+
+.wrapper {
+  width: 100% !important;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 0 !important;
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }

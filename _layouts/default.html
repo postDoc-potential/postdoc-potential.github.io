@@ -15,7 +15,7 @@
   </head>
   <body>
     {% include header.html %}
-    <div class="wrapper">
+    <!-- <div class="wrapper"> -->
       <!-- <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1> -->
 
@@ -42,29 +42,29 @@
         {% endif %} -->
        <!-- {% include navigation.html %}
       </header> -->
-      <section>
+    <section>
 
-        <!-- {% include navigation.html %} -->
+      <!-- {% include navigation.html %} -->
 
-        {{ content }}
+      {{ content }}
 
-      </section>
+    </section>
       <!-- <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Created by <a href="https://github.com/SRituparna">Rituparna</a></small></p>
       </footer> -->
-      <footer>
-      <div class="footer-inner">
-        © 2026 PostDoc Potential
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Created by <a href="https://github.com/SRituparna">Rituparna</a></small></p>
-      </div>
-    </footer>
+    <footer>
+    <div class="footer-inner">
+      © 2026 PostDoc Potential
+      {% if site.github.is_project_page %}
+      <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+      {% endif %}
+      <p><small>Hosted on GitHub Pages &mdash; Created by <a href="https://github.com/SRituparna">Rituparna</a></small></p>
     </div>
+  </footer>
+  <!-- </div> -->
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <!-- {% include navigation.html %}
     {{ content }} -->
