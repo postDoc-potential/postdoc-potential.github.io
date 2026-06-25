@@ -248,6 +248,9 @@ section {
   padding: 1rem;
   width: 80%;
   z-index: 2;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
 }
 
 .hero-text button {
@@ -262,7 +265,6 @@ section {
   font-weight: bold;
   cursor: pointer;
   box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
-
 }
 
 .hero-text a {
@@ -274,12 +276,14 @@ section {
   font-size: 3rem;   /* smaller desktop heading */
   margin: 0;
   padding: 0 0.5rem;   /* reduce left/right padding */
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text p {
   font-size: 1.5rem;
-  padding: 0.5 30rem;
+  max-width: 600px;   /* controls line width */
+  margin: 0 auto;  
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text button:hover {
