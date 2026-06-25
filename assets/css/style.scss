@@ -200,11 +200,10 @@ section {
 // For hero block
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/hero-emage.png");
-  height: 50%;
+  height: 400px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 50%;
   position: relative;
 }
 
@@ -222,13 +221,13 @@ section {
   outline: 0;
   display: inline-block;
   padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
+  color: #E42311;
+  background-color: 0370DD;
   text-align: center;
   cursor: pointer;
 }
 
 .hero-text button:hover {
-  background-color: #555;
-  color: white;
+  background-color: #063D88;
+  color: #E42311;
 }
