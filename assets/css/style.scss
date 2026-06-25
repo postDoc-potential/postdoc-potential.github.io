@@ -33,8 +33,6 @@ footer {
   background: #063D88;
   color: white;
   padding: 2rem 0;
-  display: flex;
-  align-items: center;
 }
 
 .footer-inner {
@@ -43,7 +41,7 @@ footer {
   align-items: flex-start;
   width: 100%;
   max-width: 1200px;
-  margin: auto auto;
+  margin: auto;
 }
 
 .footer-left p {
@@ -56,9 +54,7 @@ footer {
 .footer-right a {
   color: white;
   text-decoration: none;
-  margin-left: auto;
   text-align: right;
-
 }
 
 // Edit here
@@ -71,9 +67,8 @@ footer {
 
 .site-header-inner {
   max-width: 1200px;
-  margin: auto auto;
-  padding: 1rem 2rem;
-
+  margin: auto;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,7 +82,7 @@ footer {
 }
 
 .site-title {
-  font-size: clamp(1rem, 3vw, 2rem);;
+  font-size: clamp(1.5rem, 2vw, 2rem);;
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -95,7 +90,7 @@ footer {
 }
 
 .site-nav a {
-  font-size: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(1rem, 1vw, 1.5rem);
 }
 
 header,
@@ -121,5 +116,6 @@ section {
   .footer-inner {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
   }
 }
