@@ -1,62 +1,34 @@
 ---
+
 ---
 
 @import "{{ site.theme }}";
 
-/* ===== BASE ===== */
 
-html, body {
-  margin: 0;
+html {
+  margin: auto;
   padding: 0;
   width: 100%;
+}
+
+body {
+  margin: 0;
   background: white;
-}
-
-/* ===== HEADER ===== */
-
-.site-header {
+  padding: 0;
   width: 100%;
-  background: #063D88;
-  color: white;
 }
-
-.site-header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-title {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-}
-
-.site-nav a {
-  font-size: clamp(1rem, 1vw, 1.2rem);
-  color: white;
-  text-decoration: none;
-  margin-left: 1rem;
-}
-
-/* ===== CONTENT ===== */
 
 .page-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-section {
-  margin: 20px auto;
+  padding: 0 20px; /* THIS gives left/right spacing */
   background: white;
 }
 
-/* ===== FOOTER ===== */
+.site-header,
+.site-footer {
+  background: #063D88;
+}
 
 footer {
   width: 100%;
@@ -68,32 +40,105 @@ footer {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
   align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
+
+.footer-left p {
+  margin: auto;
+  text-align: left;
+
+}
+
 
 .footer-right a {
   color: white;
   text-decoration: underline;
+  text-align: right;
 }
 
-/* ===== REMOVE OLD THEME LAYOUT ===== */
+.footer-right p {
+  color: white;
+  text-decoration: none;
+  text-align: right;
+}
+
+
+// Edit here
+.site-header {
+  width: 100%;
+  background: #063D88;
+  color: white;
+  
+}
+
+.site-header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  
+}
+
+.site-title {
+  font-size: clamp(1.5rem, 2vw, 2rem);;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  
+}
+
+.site-nav a {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+}
 
 header,
 footer {
-  float: none;
-  width: 100%;
-  position: static;
+  float: none ;
+  width: 100% ;
+  position: static ;
 }
 
-/* ===== MOBILE ===== */
+.wrapper {
+  width: 100% ;
+  max-width: none ;
+  margin: auto ;
+}
+
+section {
+  width: 100% ;
+  margin: 20px auto;
+  background: white;
+}
 
 @media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
 
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
   .site-header-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* correct */
     gap: 0.5rem;
   }
 
@@ -103,14 +148,7 @@ footer {
     align-items: flex-start;
   }
 
-  .site-nav a {
+  .site-header a {
     margin-left: 0;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
   }
 }
