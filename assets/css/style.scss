@@ -219,6 +219,14 @@ section {
   display: block;
 }
 
+.hero-image::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.2)
+  );
+}
+
 .responsive {
   width: 100%;
   height: auto;
@@ -236,7 +244,7 @@ section {
 }
 
 .hero-text button {
-  border: 3px solid #E42311;
+  border: 3px solid #063D88;
   outline: 0;
   display: inline-block;
   padding: 10px 25px;
