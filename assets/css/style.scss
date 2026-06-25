@@ -57,13 +57,13 @@ footer {
 .footer-right a {
   color: white;
   text-decoration: underline;
-  text-align: right;
+  text-align: left;
 }
 
 .footer-right p {
   color: white;
   text-decoration: none;
-  text-align: right;
+  text-align: left;
 }
 
 
@@ -103,7 +103,7 @@ footer {
 .site-nav a {
   font-size: clamp(1rem, 1vw, 1.5rem);
   margin: 0;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 header,
@@ -121,8 +121,8 @@ footer {
 
 section {
   width: 100%;
-  margin: 40px auto;
-  padding: 0 40px;
+  margin: 50px auto;
+  padding: 0 50px;
   background: white;
   box-sizing: border-box;
 }
@@ -169,8 +169,8 @@ section {
 
 @media (max-width: 600px) {
   section {
-    padding: 0 20px;
     margin-top: 0;
-
+    margin-bottom: 0;
+    padding: 0 1rem;
   }
 }
