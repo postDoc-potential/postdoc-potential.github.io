@@ -228,7 +228,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
 }
 
 .hero-text button {
@@ -249,11 +249,13 @@ section {
 }
 
 .hero-text h1 {
-  font-size: 4vw;
+  font-size: 2.5rem;   /* smaller desktop heading */
+  margin: 0;
+  padding: 0 0.5rem;   /* reduce left/right padding */
 }
 
 .hero-text p {
-  font-size: 2vw;
+  font-size: 1.2rem;
 }
 
 .hero-text button:hover {
@@ -264,4 +266,18 @@ section {
 .hero-text button:hover a {
   color: white;
   text-decoration: none; /* no underline */
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1.3rem; /* increased for mobile readability */
+  }
+
+  .hero-text {
+    padding: 0.5rem;
+  }
 }
