@@ -205,8 +205,8 @@ section {
 }
 
 .hero-image img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 600px;
   display: block;
 }
 
@@ -217,31 +217,39 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .hero-text button {
-  border: none;
+  border: 3px solid #E42311;
   outline: 0;
   display: inline-block;
   padding: 10px 25px;
   color: #E42311;
-  background-color: #0370DD;
+  background-color: none;
   text-align: center;
   cursor: pointer;
 }
 
 .hero-text a {
-  color: blue;
+  color: #E42311;
   text-decoration: none; /* no underline */
+}
+
+.hero-text h1 {
+  font-size:40px
+}
+
+.hero-text p {
+  font-size:20px
 }
 
 .hero-text button:hover {
   background-color: #063D88;
-  color: #E42311;
+  color: white;
 }
 
 .hero-text button:hover a {
-  color: blue;
+  color: white;
   text-decoration: none; /* no underline */
 }
