@@ -206,8 +206,14 @@ section {
 
 .hero-image img {
   width: auto;
-  height: 600px;
+  height: 400px;
   display: block;
+  position: center;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
 }
 
 .hero-text {
@@ -226,8 +232,9 @@ section {
   display: inline-block;
   padding: 10px 25px;
   color: #E42311;
-  background-color: none;
+  background-color: #C7DCEF;
   text-align: center;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -237,11 +244,11 @@ section {
 }
 
 .hero-text h1 {
-  font-size:40px
+  font-size: 4vw;
 }
 
 .hero-text p {
-  font-size:20px
+  font-size: 2vw;
 }
 
 .hero-text button:hover {
