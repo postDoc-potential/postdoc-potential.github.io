@@ -245,7 +245,6 @@ section {
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
 }
 
 .hero-text a {
@@ -254,7 +253,7 @@ section {
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;   /* smaller desktop heading */
+  font-size: 2rem;   /* smaller desktop heading */
   margin: 0;
   padding: 0 0.5rem;   /* reduce left/right padding */
 }
@@ -264,8 +263,10 @@ section {
 }
 
 .hero-text button:hover {
-  background-color: #E42311;
+  background-color: #063D88;
   color: white;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+
 }
 
 .hero-text button:hover a {
@@ -285,5 +286,6 @@ section {
   .hero-text {
     width: 95%;        /* 👈 wider on mobile */
     padding: 0.5rem;
+    top:30%;
   }
 }
