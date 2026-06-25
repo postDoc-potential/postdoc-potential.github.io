@@ -4,6 +4,7 @@
 
 @import "{{ site.theme }}";
 
+// 
 footer {
   width: 100%;
   background: #063D88;
@@ -22,6 +23,7 @@ footer {
   width: 100%;
   background: #063D88;
   color: white;
+  
 }
 
 .site-header-inner {
@@ -38,6 +40,14 @@ footer {
   color: white;
   text-decoration: none;
   margin-left: 1rem;
+  
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
 }
 
 header,
