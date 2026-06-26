@@ -508,3 +508,21 @@ section {
 *::after {
   box-sizing: border-box;
 }
+
+h1 {
+  font-size: 4rem;   /* smaller desktop heading */
+  margin: 0;
+  padding: 0 0.5rem;   /* reduce left/right padding */
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;   /* smaller desktop heading */
+  margin: 0;
+  padding: 0 0.5rem;   /* reduce left/right padding */
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
