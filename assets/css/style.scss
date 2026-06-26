@@ -661,27 +661,28 @@ h2 {
     background: white;
     border: none; /* 2px solid var(--blue); */
     border-radius: 12px;
-    padding: 10px;
+    padding: 2rem 0;
     margin-bottom: 10px;
 }
 
 .card-contact h2 {
     color: black;
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-.card-contact h3 {
+
+.card-contact a {
     color: black;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 /* FORM BOX */
 .form-box {
     background: none;
     color: black;
-    padding-right: 2.5rem;
+    padding-right: 2.7rem;
     border-radius: 12px;
     border: none;
 }
@@ -740,7 +741,6 @@ form textarea {
         flex: 0 0 100%;
     }
 }
-
 
 #myBtn {
   opacity: 0;
