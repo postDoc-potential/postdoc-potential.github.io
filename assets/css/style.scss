@@ -706,90 +706,88 @@ h2 {
 
 // Contact layout
 
-    .container-contact {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-    }
+.container-contact {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
 
-    .row-contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+.row-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-    .column-contact {
-        flex: 1;
-        min-width: 300px;
-    }
+.column-contact {
+    flex: 1;
+    min-width: 300px;
+}
 
-    /* LEFT card-contactS */
-    .card-contact {
-        background: white;
-        border: none; // 2px solid var(--blue);
-        border-radius: 12px;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+/* LEFT card-contactS */
+.card-contact {
+    background: white;
+    border: none; // 2px solid var(--blue);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
-    .card-contact h2 {
-        color: black;
-    }
+.card-contact h2 {
+    color: black;
+}
 
-    /* FORM BOX */
-    .form-box {
-        background: #C7DCEF;
-        color: black;
-        padding: 25px;
-        border-radius: 12px;
-        border: 2px solid #0370DD;
-    }
+/* FORM BOX */
+.form-box {
+    background: #C7DCEF;
+    color: black;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #0370DD;
+}
 
-    /* INPUTS */
-    form input,
-    form textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        border: 1px solid #0370DD;
-        background: #C7DCEF;
-        color: black;
-    }
+/* INPUTS */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #0370DD;
+    background: #C7DCEF;
+    color: black;
+}
 
-    form textarea {
-        min-height: 140px;
-    }
+form textarea {
+    min-height: 140px;
+}
 
-    /* BUTTON */
-    button {
-        width: 100%;
-        padding: 12px;
-        background: #C7DCEF;
-        color: black;
-        border: 1px solid #0370DD;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+/* BUTTON */
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: #C7DCEF;
+    color: black;
+    border: 1px solid #0370DD;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-    button:hover {
-        background: #063D88;
-        color: white;
-    }
+.form-box button:hover {
+    background: #063D88;
+    color: white;
+}
 
-    /* RESULT MESSAGE */
-    #result {
-        margin-top: 15px;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-        font-weight: bold;
-        color: #063D88;
-        display: block;
-    }
-
-
+/* RESULT MESSAGE */
+#result {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #063D88;
+    display: block;
+}
 
 
 #myBtn {
