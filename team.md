@@ -36,26 +36,6 @@ permalink: /team
 </div>
 <br>
 
-<!-- <h2>Collaborator</h2>
-<br>
-<div class="team">
-  <div class="member collaborator">
-    <div class="row">
-      <div class="column" style="text-align:right" >
-        <div class="container">
-          <a href="https://cdwf-clima.github.io/"> <img src="assets/img/CDWF.png" height=150px valign="middle"></a>
-        </div>
-      </div>
-      <div class="column" style="text-align:left">
-        <h3  style="font-size: 1.2rem; padding: 0 0.5rem;"><a href="https://nabanitaborah.wixsite.com/bohemian" target="_blank"> Dr. Nabanita Borah </a></h3>
-        <p style="font-size: 1rem;">Mentor</p>
-        <h3  style="font-size: 1.2rem; padding: 0 0.5rem;"> <a href="https://www.linkedin.com/in/bidyut-bikash-goswami" target="_blank"> Dr. Bidyut Bikash Goswami </a> </h3>
-      </div>
-    </div>
-  </div>
-</div>
-<br> -->
-
 <h2>Collaborator</h2>
 <div class="team team-collab">
     <a href="https://cdwf-clima.github.io/" target="_blank" class="member collaborator" > 
