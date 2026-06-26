@@ -381,9 +381,10 @@ section {
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 2rem;
   }
-
   .card-left,
   .card-right {
     flex: 1;
