@@ -636,6 +636,11 @@ h2 {
         gap: 1rem;
     }
 
+        flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
     .info {
         text-align: center;
     }
@@ -673,7 +678,7 @@ h2 {
 // }
 
 #myBtn {
-  display: none; /* Hidden by default */
+  display: block; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
