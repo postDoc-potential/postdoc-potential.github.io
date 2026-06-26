@@ -413,6 +413,9 @@ section {
     gap: 2rem;
     padding: 1rem;
     align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;              /* remove auto centering issues */
   }
 
   .card-left,
@@ -432,7 +435,7 @@ section {
 
   .card-right p {
     margin: 0;
-    padding-right: 1rem;
+    padding-right: 0;
     text-align: center;
   }
 
@@ -496,4 +499,12 @@ section {
 .survey-cta-btn:hover a {
   color: white;
   text-decoration: none; /* no underline */
+}
+
+// Global changes
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
