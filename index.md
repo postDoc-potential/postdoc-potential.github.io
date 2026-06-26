@@ -15,6 +15,20 @@ layout: default
     </div>
 </div>
 
+<div
+  class="hero-image">
+  <img src="{{ 'assets/img/hero-image-survey.png' | relative_url }}" alt="" class="responsive">
+  <div class="survey-hero">
+    <h1 style="font-size: 3rem;">Got A Minute?</h1>
+    <br>
+    <p class="subheading" style="font-size: 1rem;">
+        Share your views on postdoctoral opportunities
+    </p>
+    <br>
+    <button><a href="/survey/" target="_blank" class="survey-cta-btn" >Take a quick survey</a></button>
+  </div>
+</div>
+
 <section class="survey-hero">
   <h1 style="font-size: 3rem;">Got A Minute?</h1>
   <p class="subheading" style="font-size: 1rem;">
