@@ -104,11 +104,6 @@ footer {
   text-decoration: underline;
   text-align: left;
 }
-.footer-right:hover,:visited,:active,:focus a {
-  color: white;
-  text-decoration: underline;
-  text-align: left;
-}
 
 .footer-right p {
   color: white;
@@ -381,6 +376,11 @@ section {
   font-size: 3rem;
 }
 
+.card-story-left a {
+  color:  black;
+  text-decoration: none; /* no underline */
+}
+
 .card-story-btn {
   display: inline-block;
   align-self: flex-start;
@@ -395,7 +395,6 @@ section {
   cursor: pointer;
   justify-content: right;
 }
-
 
 .card-story-btn:hover {
   background-color: #063D88;
@@ -486,6 +485,11 @@ section {
   max-width: 60ch;          /* Keeps text readable */
   line-height: 1.6;
   font-size: 1.5rem;
+}
+
+.survey-hero a {
+  color:  black;
+  text-decoration: none; /* no underline */
 }
 
 .survey-cta-btn {
