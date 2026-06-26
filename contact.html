@@ -3,139 +3,11 @@ layout: default
 title: "Contact"
 permalink: /contact
 ---
-
-<style>
-    :root {
-        --blue: #2563eb;
-        --dark-blue: #1e40af;
-        --black: #111827;
-        --white: #ffffff;
-        --bg: #f8fafc;
-    }
-
-    /* Page */
-    body {
-        background: var(--bg);
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    h1 {
-        text-align: center;
-        color: var(--blue);
-        margin: 40px 0;
-    }
-
-    /* Layout */
-    .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .column {
-        flex: 1;
-        min-width: 300px;
-    }
-
-    /* LEFT CARDS */
-    .card {
-        background: white;
-        border: 2px solid var(--blue);
-        border-radius: 12px;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .card h2 {
-        color: var(--dark-blue);
-    }
-
-    /* FORM BOX */
-    .form-box {
-        background: var(--black);
-        color: white;
-        padding: 25px;
-        border-radius: 12px;
-        border: 2px solid var(--blue);
-    }
-
-    /* INPUTS */
-    form input,
-    form textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        border: 1px solid #333;
-        background: #1f2937;
-        color: white;
-    }
-
-    form textarea {
-        min-height: 140px;
-    }
-
-    /* BUTTON */
-    button {
-        width: 100%;
-        padding: 12px;
-        background: var(--blue);
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: var(--dark-blue);
-    }
-
-    /* RESULT MESSAGE */
-    #result {
-        margin-top: 15px;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-        font-weight: bold;
-        display: none;
-    }
-
-    /* BACK LINK */
-    .back {
-        text-align: center;
-        margin: 40px 0;
-    }
-
-    .back a {
-        color: var(--blue);
-        font-weight: bold;
-        text-decoration: none;
-    }
-</style>
-<head>
-    <link rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
 <h1>Contact Us</h1>
-
-<div class="container">
-    <div class="row">
-
-        <div class="column">
-
-            <div class="card">
+<div class="container-contact">
+    <div class="row-contact">
+        <div class="column-contact">
+            <div class="card-contact">
                 <h2>Get in Touch</h2>
                 <p>or collaboration, volunteering and participation drop us an email</p>
                 <p>
@@ -145,7 +17,7 @@ permalink: /contact
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card-contact">
                 <h2>Partner</h2>
                 <p><b>Climate Dialogues: Way Forward</b></p>
                 <p>
@@ -157,7 +29,7 @@ permalink: /contact
 
         </div>
 
-        <div class="column">
+        <div class="column-contact">
 
             <div class="form-box">
 
@@ -197,48 +69,4 @@ permalink: /contact
     </div>
 </div>
 
-<script>
-const form = document.getElementById("form");
-const result = document.getElementById("result");
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    result.style.display = "block";
-    result.style.background = "#dbeafe";
-    result.style.color = "#1e40af";
-    result.innerHTML = "Sending...";
-
-    const formData = new FormData(form);
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: json
-    })
-    .then(async (res) => {
-        let data = await res.json();
-
-        if (res.status === 200) {
-            result.style.background = "#dcfce7";
-            result.style.color = "#166534";
-            result.innerHTML = "✓ Message sent successfully!";
-            form.reset();
-        } else {
-            result.style.background = "#fee2e2";
-            result.style.color = "#991b1b";
-            result.innerHTML = "✗ Failed to send message.";
-        }
-    })
-    .catch(() => {
-        result.style.background = "#fee2e2";
-        result.style.color = "#991b1b";
-        result.innerHTML = "Something went wrong.";
-    });
-});
-</script>
+<script src="assets/js/form.js"></script>
