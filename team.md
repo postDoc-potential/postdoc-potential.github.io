@@ -57,7 +57,7 @@ permalink: /team
 <br> -->
 
 <h2>Collaborator</h2>
-<div class="team">
+<div class="team team-collab">
     <a href="https://cdwf-clima.github.io/" target="_blank" class="member collaborator" > 
       <img src="assets/img/CDWF-dpv2.png" height=150px valign="middle">
       <div class="info">
