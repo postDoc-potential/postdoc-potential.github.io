@@ -32,7 +32,7 @@ permalink: /team
 </div>
 <br>
 
-<h2>Collaborator</h2>
+<!-- <h2>Collaborator</h2>
 <br>
 <div class="team">
   <div class="member collaborator">
@@ -50,6 +50,17 @@ permalink: /team
     </div>
   </div>
 </div>
-<br>
+<br> -->
+
+<div class="team">
+    <div class="member collaborator">
+    <a href="https://cdwf-clima.github.io/"> <img src="assets/img/CDWF.png" height=150px valign="middle"></a>
+        <div class="info">
+          <h3  style="font-size: 15px"><a href="https://nabanitaborah.wixsite.com/bohemian" target="_blank"> Dr. Nabanita Borah </a></h3>
+          <p>Mentor</p>
+          <h3  style="font-size: 15px"> <a href="https://www.linkedin.com/in/bidyut-bikash-goswami" target="_blank"> Dr. Bidyut Bikash Goswami </a> </h3>
+        </div>
+    </div>
+</div>
 
 ### [back](./)

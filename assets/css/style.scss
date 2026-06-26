@@ -532,6 +532,7 @@ h2 {
     gap: 1rem;
     width: 100%;
     padding: 1rem;
+    justify-content: center;
 }
 
 .team > a {
@@ -586,5 +587,19 @@ h2 {
 }
 
 .collaborator {
-    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+    height: auto;
+}
+
+.collaborator img {
+    width: 150px;
+    height: auto;
+}
+
+.info {
+    text-align: left;
 }
