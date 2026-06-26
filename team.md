@@ -59,8 +59,7 @@ permalink: /team
 
 <h2>Collaborator</h2>
 <div class="team">
-    <div class="member collaborator">
-    <a href="https://cdwf-clima.github.io/"> 
+    <a href="https://cdwf-clima.github.io/" target="_blank" class="member collaborator" > 
       <img src="assets/img/CDWF.png" height=150px valign="middle">
       <div class="info">
         <h3  style="font-size: 1.2rem; padding: 0 0.5rem;"> Dr. Nabanita Borah</h3>
@@ -68,9 +67,6 @@ permalink: /team
         <h3  style="font-size: 1.2rem; padding: 0 0.5rem;">  Dr. Bidyut Bikash Goswami </h3>
       </div>
     </a>
-    </div>
 </div>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="backToTop">
-  <span>&#11165;</span>
-</button> 
+ <button onclick="topFunction()" id="myBtn" title="Go to top">^ Top</button> 
