@@ -681,43 +681,6 @@ h2 {
 // font-size: 16px;
 // }
 
-
-#myBtn {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  display: block;
-  position: fixed;
-  bottom: 5rem;
-  right: 1rem;
-  z-index: 99;
-  font-size: 15px;
-  border: solid 3px #063D88;
-  outline: none;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  padding: 5px 15px;
-  border-radius: 14px;
-}
-
-#myBtn:hover {
-  background-color: #063D88;
-  color: white;
-}
-
-#myBtn.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-@media (max-width: 768px) {
-  #myBtn {
-    bottom: 2rem;   /* adjust for mobile */
-    right: 1rem;
-  }
-}
-
 // .backToTop {
 //   height: 50px;
 //   width: 50px;
@@ -825,3 +788,42 @@ h2 {
         color: #063D88;
         display: block;
     }
+
+
+
+
+#myBtn {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: block;
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  z-index: 99;
+  font-size: 15px;
+  border: solid 3px #063D88;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 14px;
+}
+
+#myBtn:hover {
+  background-color: #063D88;
+  color: white;
+}
+
+#myBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+  #myBtn {
+    bottom: 2rem;   /* adjust for mobile */
+    right: 1rem;
+  }
+}
