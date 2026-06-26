@@ -3,18 +3,15 @@ const mybutton = document.getElementById("myBtn");
 function scrollFunction() {
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-  mybutton.style.display = scrollTop > 30 ? "block" : "none";
+  if (scrollTop > 30) {
+    mybutton.classList.add("show");
+  } else {
+    mybutton.classList.remove("show");
+  }
 }
 
-// run on scroll
 window.addEventListener("scroll", scrollFunction);
-
-// run on load
 window.addEventListener("load", scrollFunction);
-
-function topFunction() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
 
 // Original code
 // // Get the button:
