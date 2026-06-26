@@ -71,7 +71,7 @@ footer {
 }
 
 
-/* Edit here */
+// Edit here
 .site-header {
   width: 100%;
   background: #063D88;
@@ -197,7 +197,7 @@ section {
   }
 }
 
-/* For hero block */
+// For hero block
 
 .hero-section {
   margin-top: 0;
@@ -211,8 +211,8 @@ section {
 }
 
 .hero-image img {
-  width: 100%;  
-  height: 400px;
+  width: 100%;  // auto;
+  height: 400px; // auto; // 
   display: block;
   object-fit: cover;    /* crops image nicely */
   object-position: center bottom;
@@ -229,7 +229,9 @@ section {
   background: rgba(255, 255, 255, 0.6); /* adjust darkness */
   z-index: 1;
 }
-
+// .hero-image::before {
+//   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+// }
 
 .responsive {
   width: 100%;
@@ -309,20 +311,22 @@ section {
   }
 }
 
-/* Our story block */
+// two-column flex card structure
+// heading+cta|text
 
 .card {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 3rem;
   padding: 2rem;
   max-width: 1200px;
+  width: 100%;
   margin: 1rem auto;
-  flex-wrap: wrap;
 }
 
 .card-left {
-  flex: 0 1 35%;
-  min-width: 250px;
+  flex: 0 0 35%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -362,9 +366,9 @@ section {
 }
 
 .card-right {
-  flex: 1 1 60%;
-  min-width: 250px;
+  flex: 1;
 }
+
 .card-right p {
   margin: 0;
   line-height: 1.5;
@@ -373,7 +377,36 @@ section {
   padding-right: 0;
   text-align:left;
 }
+/* commented---
+  /* Mobile */
+  // @media (max-width: 768px) {
+  //   .card {
+  //     flex-direction: column;
+  //     align-items: center;
+  //     text-align: center;
+  //     gap: 2rem;
+  //   }
 
+  //   .btn{
+  //     align-self: flex-start;
+  //   }
+
+  //   .card-left h2 {
+  //     text-align:center;
+  //   }
+
+
+  //   .card-left,
+  //   .card-right {
+  //     flex: 1;
+  //     text-align:center;
+  //     align-items: center;
+  //   }
+
+  //   .card-right p {
+  //     text-align:center;
+  //   }
+  // } commented */
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
@@ -411,7 +444,7 @@ section {
   }
 }
 
-/* Adding Survey CTA */
+// Adding Survey CTA
 
 .survey-hero {
   display: flex;
@@ -419,7 +452,7 @@ section {
   align-items: center;  /* Left align everything */
   justify-content: center;  /* Center vertically if height is set */
   width: 100%;
-  /*  min-height: 100vh;        /* Optional: full viewport height */
+  // min-height: 100vh;        /* Optional: full viewport height */
   padding: 1rem;
   box-sizing: border-box;
   gap: 1.2rem;
@@ -468,7 +501,7 @@ section {
   text-decoration: none; /* no underline */
 }
 
-/* Global changes */
+// Global changes
 
 *,
 *::before,
@@ -508,6 +541,15 @@ h2 {
     color: inherit;
 }
 
+
+// .member {
+//     width: 80%;
+//     height: 20rem;
+//     border: 2px solid royalblue;
+//     border-radius: 20px;
+//     padding: 1rem;
+//     transition: all 0.3s ease;
+// }
 
 .member {
     height: 20rem;
@@ -629,7 +671,39 @@ h2 {
     }
 }
 
-/* Contact layout */
+// #backButton {
+// background-color: #4CAF50;
+// color: white;
+// padding: 10px 20px;
+// border: none;
+// cursor: pointer;
+// font-size: 16px;
+// }
+
+// .backToTop {
+//   height: 50px;
+//   width: 50px;
+//   position: fixed;
+//   bottom: 30px;
+//   right: 30px;
+//   z-index: 999;
+//   font-size: 24px;
+//   border: none;
+//   outline: none;
+//   background-color: #111111;
+//   color: white;
+//   cursor: pointer;
+//   border-radius: 50%;
+//   transition: all ease-in 0.3s;
+// }
+// .backToTop:hover {
+//   background-color: #fff;
+//   color: #111111;
+//   border: 2px solid #111111;
+//   font-size: 30px;
+// }
+
+// Contact layout
 
 .container-contact {
     max-width: 1200px;
@@ -651,7 +725,7 @@ h2 {
 /* LEFT card-contactS */
 .card-contact {
     background: white;
-    border: none; /* 2px solid var(--blue); */
+    border: none; // 2px solid var(--blue);
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 10px;
