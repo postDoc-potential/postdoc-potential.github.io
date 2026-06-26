@@ -661,7 +661,7 @@ h2 {
     background: white;
     border: none; /* 2px solid var(--blue); */
     border-radius: 12px;
-    padding: 2rem 0;
+    padding: 4rem 0;
     margin-bottom: 10px;
 }
 
@@ -682,9 +682,10 @@ h2 {
 .form-box {
     background: none;
     color: black;
-    padding-right: 2.7rem;
+    padding-right: 3rem;
     border-radius: 12px;
     border: none;
+    height: fit-content;
 }
 
 /* INPUTS */
