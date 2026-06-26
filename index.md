@@ -9,8 +9,8 @@ layout: default
     <a href="/team" class="btn">Meet our team</a>
   </div>
   <div class="card-right">
-    <palign="justify">
-        <b>PostDoc Potential</b> started as a dinner table discussion among a group of fresh PhDs in 2025. <i>What if we create a platform for people who are transitioning from a PhD to a postdoc?</i>. For people like us. A platform where postDoctoral fellows can share their insights into <u>project proposal writing</u>, <u>finding suitable fellowships</u>, and <u>career planning.</u>
+    <p style="text-align:justify">
+        <b>PostDoc Potential</b> started as a dinner table discussion among a group of fresh PhDs in 2025. <i>What if we create a platform for people who are transitioning from a PhD to a postdoc?</i>. For people like us. A platform where postDoctoral fellows can share their insights into&mdash; <u>project proposal writing</u>, <u>finding suitable fellowships</u>, and <u>career planning.</u>
     </p>
   </div>
 </div>

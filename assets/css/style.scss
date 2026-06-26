@@ -319,11 +319,9 @@ section {
   justify-content: space-between;
   align-items: flex-start;
   gap: 3rem;
-
   padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  max-width: 900px;
+  max-width: 1200px;
+  width: 100%;
   margin: 2rem auto;
 }
 
@@ -336,18 +334,35 @@ section {
 
 .card-left h2 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .btn {
   display: inline-block;
   align-self: flex-start;
   padding: 0.75rem 1.5rem;
-  background: #111;
+  background: #E9F1F9ff;
   color: #fff;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 5px;
+  border: 3px solid #063D88;
+  outline: 0;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
 }
+
+.btn:hover {
+  background-color: #063D88;
+  color: white;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.btn:hover a {
+  color: white;
+  text-decoration: none; /* no underline */
+}
+
 
 .card-right {
   flex: 1;
@@ -356,13 +371,14 @@ section {
 .card-right p {
   margin: 0;
   line-height: 1.7;
-  color: #555;
+  color: black;
+  font-size: 16px;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
 
