@@ -6,51 +6,6 @@ title: "Team"
 permalink: /team
 
 ---
-<style>
-.team {
-    display: flex;
-    gap: 1rem;
-}
-
-.member {
-    width: 80%;
-    height: 20rem;
-    border: 2px solid royalblue;
-    border-radius: 20px;
-    padding: 1rem;
-    transition: all 0.3s ease;
-}
-
-.member:hover {
-    background: #869191d2;
-    transform: translateY(-4px);
-    color:  #fefefe;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  column-gap: 40px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.container {
-    width: 150px;
-    /* border: 4px solid rgb(30, 194, 66); */
-}
-
-.container img {
-    display: block;
-}
-</style>
-
-
 <h1> Team </h1>
 <br>
 <div class="team" style="text-align: center">
@@ -85,7 +40,7 @@ permalink: /team
 </div>
 <br>
 
-## Collaborator
+<h2>Collaborator</h2>
 <br>
 <div class="team">
   <div class="member" style="width: 80%;height:170px;">
