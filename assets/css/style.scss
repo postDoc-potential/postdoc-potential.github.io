@@ -642,6 +642,7 @@ h2 {
     gap: 10px;
 }
 
+
 .column-contact {
     flex: 1;
     min-width: 300px;
@@ -654,6 +655,7 @@ h2 {
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 10px;
+    width: 40%;
 }
 
 .card-contact h2 {
@@ -662,7 +664,7 @@ h2 {
     font-size: 2rem;
 }
 
-.card-contact h2 {
+.card-contact h3 {
     color: black;
     text-align: left;
     font-size: 1.5rem;
@@ -675,6 +677,7 @@ h2 {
     padding-right: 2.5rem;
     border-radius: 12px;
     border: none;
+    width: 60%;
 }
 
 /* INPUTS */
@@ -721,7 +724,12 @@ form textarea {
     display: block;
 }
 
-
+@media (max-width: 768px) {
+    .card-contact,
+    .form-box {
+        width: 100%;
+    }
+}
 
 
 #myBtn {
