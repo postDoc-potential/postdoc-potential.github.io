@@ -763,23 +763,23 @@ h2 {
     /* LEFT card-contactS */
     .card-contact {
         background: white;
-        border: 2px solid var(--blue);
+        border: none; // 2px solid var(--blue);
         border-radius: 12px;
         padding: 10px;
         margin-bottom: 10px;
     }
 
     .card-contact h2 {
-        color: var(--dark-blue);
+        color: black;
     }
 
     /* FORM BOX */
     .form-box {
-        background: var(--black);
-        color: white;
+        background: #C7DCEF;
+        color: black;
         padding: 25px;
         border-radius: 12px;
-        border: 2px solid var(--blue);
+        border: 2px solid #0370DD;
     }
 
     /* INPUTS */
@@ -789,9 +789,9 @@ h2 {
         padding: 12px;
         margin-bottom: 15px;
         border-radius: 8px;
-        border: 1px solid #333;
-        background: #1f2937;
-        color: white;
+        border: 1px solid #0370DD;
+        background: #C7DCEF;
+        color: black;
     }
 
     form textarea {
@@ -802,16 +802,17 @@ h2 {
     button {
         width: 100%;
         padding: 12px;
-        background: var(--blue);
-        color: white;
-        border: none;
+        background: #C7DCEF;
+        color: black;
+        border: 1px solid #0370DD;
         border-radius: 8px;
         font-weight: bold;
         cursor: pointer;
     }
 
     button:hover {
-        background: var(--dark-blue);
+        background: #063D88;
+        color: white;
     }
 
     /* RESULT MESSAGE */
@@ -821,5 +822,6 @@ h2 {
         border-radius: 8px;
         text-align: center;
         font-weight: bold;
-        display: none;
+        color: #063D88;
+        display: block;
     }
