@@ -370,7 +370,7 @@ section {
   line-height: 1.5;
   color: black;
   font-size: 1.2rem;
-  padding-right: 2rem;
+  padding-right: 2.5rem;
   text-align:left;
 }
 
@@ -658,17 +658,21 @@ h2 {
 
 .card-contact h2 {
     color: black;
-    text-align: center;
-    font-size: 3rem;
+    text-align: left;
+    font-size: 2rem;
+}
 
-
+.card-contact h2 {
+    color: black;
+    text-align: left;
+    font-size: 1.5rem;
 }
 
 /* FORM BOX */
 .form-box {
     background: none;
     color: black;
-    padding: 25px;
+    padding-right: 2.5rem
     border-radius: 12px;
     border: none;
 }
@@ -693,9 +697,9 @@ form textarea {
 .form-box button {
     width: 100%;
     padding: 12px;
-    background: #C7DCEF;
-    color: black;
-    border: 3px solid #0370DD;
+    background: #0370DD;
+    color: white;
+    border: none;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
