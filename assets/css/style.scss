@@ -388,6 +388,7 @@ section {
   .card-right {
     flex: 1;
     text-align:center;
+    align-items: center;
   }
 
   .card-right p {
@@ -424,14 +425,14 @@ section {
 .subheading {
   max-width: 60ch;          /* Keeps text readable */
   line-height: 1.6;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .survey-cta-btn {
   display: inline-block;
   align-self: center;
   padding: 0.5rem;
-  background: rgba(199, 220, 239, 0.6);
+  background: #DDEAF5ff;
   color: black;
   text-decoration: none;
   border-radius: 5px;
