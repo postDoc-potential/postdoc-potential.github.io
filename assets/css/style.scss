@@ -793,16 +793,8 @@ form textarea {
     display: block;
 }
 
-@media (max-width: 768px) {
-  .row-contact {
-    flex-direction: column-reverse;
-    gap: 2rem;
-    padding: 1rem;
-    align-items: stretch;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
+
+
 
 #myBtn {
   opacity: 0;
@@ -833,6 +825,17 @@ form textarea {
     visibility: visible;
 }
 
+@media (max-width: 768px) {
+  .row-contact {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;              /* remove auto centering issues */
+  }
+}
 @media (max-width: 768px) {
   #myBtn {
     bottom: 2rem;   /* adjust for mobile */
