@@ -642,6 +642,14 @@ h2 {
     gap: 10px;
 }
 
+.left {
+    flex: 4;
+}
+
+.right {
+    flex: 6;
+}
+
 
 .column-contact {
     flex: 1;
@@ -655,7 +663,6 @@ h2 {
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 10px;
-    width: 40%;
 }
 
 .card-contact h2 {
@@ -677,7 +684,6 @@ h2 {
     padding-right: 2.5rem;
     border-radius: 12px;
     border: none;
-    width: 60%;
 }
 
 /* INPUTS */
@@ -725,9 +731,13 @@ form textarea {
 }
 
 @media (max-width: 768px) {
-    .card-contact,
-    .form-box {
-        width: 100%;
+    .row-contact {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        flex: 0 0 100%;
     }
 }
 
