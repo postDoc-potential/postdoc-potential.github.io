@@ -534,13 +534,27 @@ h2 {
     padding: 1rem;
 }
 
+.team > a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+// .member {
+//     width: 80%;
+//     height: 20rem;
+//     border: 2px solid royalblue;
+//     border-radius: 20px;
+//     padding: 1rem;
+//     transition: all 0.3s ease;
+// }
+
 .member {
-    width: 80%;
     height: 20rem;
     border: 2px solid royalblue;
     border-radius: 20px;
     padding: 1rem;
-    transition: all 0.3s ease;
 }
 
 .member:hover {
@@ -569,4 +583,8 @@ h2 {
 
 .container img {
     display: block;
+}
+
+.collaborator {
+    flex: 1;
 }
