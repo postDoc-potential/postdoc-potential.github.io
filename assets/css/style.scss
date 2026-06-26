@@ -603,3 +603,58 @@ h2 {
 .info {
     text-align: left;
 }
+
+@media (max-width: 768px) {
+
+    /* Stack all team members */
+    .team {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem;
+    }
+
+    .team > a {
+        width: 100%;
+        flex: none;
+    }
+
+    .member {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Collaborator card fills the screen */
+    .collaborator {
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .collaborator img {
+        width: 120px;
+        margin: 0 auto;
+    }
+
+    /* Remove float layout on mobile */
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        float: none;
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .container {
+        width: auto;
+    }
+}
