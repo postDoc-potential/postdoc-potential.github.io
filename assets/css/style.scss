@@ -311,7 +311,7 @@ section {
 
 /* Our story block */
 
-.card {
+.card-story {
   display: flex;
   gap: 3rem;
   padding: 2rem;
@@ -320,7 +320,7 @@ section {
   flex-wrap: wrap;
 }
 
-.card-left {
+.card-story-left {
   flex: 0 1 35%;
   min-width: 250px;
   display: flex;
@@ -330,12 +330,12 @@ section {
   align-items: flex-start;
 }
 
-.card-left h2 {
+.card-story-left h2 {
   margin: 0;
   font-size: 3rem;
 }
 
-.btn {
+.card-story-btn {
   display: inline-block;
   align-self: flex-start;
   padding: 0.75rem;
@@ -351,21 +351,21 @@ section {
 }
 
 
-.btn:hover {
+.card-story-btn:hover {
   background-color: #063D88;
   color: white;
 }
 
-.btn:hover a {
+.card-story-btn:hover a {
   color: white;
   text-decoration: none; /* no underline */
 }
 
-.card-right {
+.card-story-right {
   flex: 1 1 60%;
   min-width: 250px;
 }
-.card-right p {
+.card-story-right p {
   margin: 0;
   line-height: 1.5;
   color: black;
@@ -375,7 +375,7 @@ section {
 }
 
 @media (max-width: 768px) {
-  .card {
+  .card-story {
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
@@ -385,28 +385,28 @@ section {
     margin: 0;              /* remove auto centering issues */
   }
 
-  .card-left,
-  .card-right {
+  .card-story-left,
+  .card-story-right {
     width: 100%;
     flex: 1 1 auto;
   }
 
-  .card-left {
+  .card-story-left {
     align-items: center;
     text-align: center;
   }
 
-  .card-left h2 {
+  .card-story-left h2 {
     text-align: center;
   }
 
-  .card-right p {
+  .card-story-right p {
     margin: 0;
     padding-right: 0;
     text-align: center;
   }
 
-  .btn {
+  .card-story-btn {
     align-self: center;
   }
 }
