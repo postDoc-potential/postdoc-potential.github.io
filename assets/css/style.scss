@@ -406,8 +406,9 @@ section {
   padding: 1rem;
   box-sizing: border-box;
   gap: 1.5rem;
-  background-color: rgb(199, 220, 239, 0.6);
+  background-color: rgba(199, 220, 239, 0.6);
   margin: auto;
+  border-radius: 16px;
 }
 
 .survey-hero h1,
