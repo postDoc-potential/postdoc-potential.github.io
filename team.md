@@ -7,13 +7,12 @@ permalink: /team
 
 ---
 
-<head>
+<!-- <head>
     <script src="assets/js/mybutton.js"></script>
-</head>
+</head> -->
 
 <h1> Team </h1>
-<br>
-<div class="team" style="text-align: center">
+<div class="team team-members" style="text-align: center">
   <a href="https://www.linkedin.com/in/anila-sebastian-1055b6130/" target="_blank" class="member">
     <img src="assets/img/anila-dp.png" height=150px>
     <h3 style="font-size: 1.2rem; padding: 0 0.5rem;">Dr. Anila Sebastian</h3>
@@ -68,5 +67,3 @@ permalink: /team
       </div>
     </a>
 </div>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
