@@ -385,6 +385,16 @@ section {
     text-align: center;
     gap: 2rem;
   }
+
+  .btn{
+    align-self: flex-start;
+  }
+
+  .card-left h2 {
+    text-align:center;
+  }
+
+
   .card-left,
   .card-right {
     flex: 1;

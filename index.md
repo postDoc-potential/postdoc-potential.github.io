@@ -2,7 +2,7 @@
 title: Home
 layout: default
 ---
-<section class="hero-section">{% include hero.html %}</section>
+<section class="hero-section" >{% include hero.html %}</section>
 <div class="card">
     <div class="card-left">
         <h2>Our Story</h2>
@@ -16,7 +16,7 @@ layout: default
 </div>
 
 <div
-  class="hero-image">
+  class="hero-image" style="  border-radius: 15px;">
   <img src="{{ 'assets/img/hero-image-survey.png' | relative_url }}" alt="" class="responsive">
   <div class="hero-text">
     <h1>Got A Minute?</h1>
@@ -29,12 +29,12 @@ layout: default
   </div>
 </div>
 
-<section class="survey-hero">
+<!-- <section class="survey-hero">
   <h1 style="font-size: 3rem;">Got A Minute?</h1>
   <p class="subheading" style="font-size: 1rem;">
     Share your views on postdoctoral opportunities
   </p>
   <a href="/survey/" target="_blank" class="survey-cta-btn" >Take a quick survey</a>
-</section>
+</section> -->
 
 <!-- ![wallpaper]({{ site.baseurl }}/assets/IMG_20180621_164121832.jpg) -->
