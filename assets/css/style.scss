@@ -370,7 +370,8 @@ section {
   line-height: 1.5;
   color: black;
   font-size: 1.2rem;
-  padding-right: 2rem;
+  padding-right: 2.5rem;
+  text-align:left;
 }
 
 /* Mobile */
@@ -383,5 +384,9 @@ section {
   .card-left,
   .card-right {
     flex: 1;
+  }
+
+  .card-right p {
+    text-align:justify;
   }
 }
