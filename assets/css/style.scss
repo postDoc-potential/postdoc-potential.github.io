@@ -387,6 +387,7 @@ section {
   .card-left,
   .card-right {
     flex: 1;
+    text-align:center;
   }
 
   .card-right p {
@@ -405,7 +406,7 @@ section {
   // min-height: 100vh;        /* Optional: full viewport height */
   padding: 1rem;
   box-sizing: border-box;
-  gap: 1.5rem;
+  gap: 1.2rem;
   background-color: rgba(199, 220, 239, 0.6);
   margin: auto;
   border-radius: 16px;
@@ -426,11 +427,27 @@ section {
   font-size: 1.2rem;
 }
 
-// .survey-cta-btn {
-//   display: inline-block;
-//   padding: 0.75rem 1.5rem;
-//   background: #111;
-//   color: #fff;
-//   text-decoration: none;
-//   border-radius: 6px;
-// }
+.survey-cta-btn {
+  display: inline-block;
+  align-self: center;
+  padding: 0.5rem;
+  background: rgba(199, 220, 239, 0.6);
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 3px solid #063D88;
+  outline: 0;
+  font-weight: bold;
+  cursor: pointer;
+  justify-content: right;
+}
+
+.survey-cta-btn:hover {
+  background-color: #063D88;
+  color: white;
+}
+
+.survey-cta-btn:hover a {
+  color: white;
+  text-decoration: none; /* no underline */
+}

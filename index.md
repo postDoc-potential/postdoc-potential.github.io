@@ -17,10 +17,10 @@ layout: default
 
 <section class="survey-hero">
   <h1 style="font-size: 3rem;">Got A Minute?</h1>
-  <p class="subheading">
+  <p class="subheading" style="font-size: 1rem;">
     Share your views on postdoctoral opportunities
   </p>
-  <a href="/survey/" target="_blank" class="btn"   style="align-self: center;   background: #C7DCEF;">Take a quick survey</a>
+  <a href="/survey/" target="_blank" class="survey-cta-btn" >Take a quick survey</a>
 </section>
 
 <!-- ![wallpaper]({{ site.baseurl }}/assets/IMG_20180621_164121832.jpg) -->
