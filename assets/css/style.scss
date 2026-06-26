@@ -796,7 +796,7 @@ form textarea {
   transition: all 0.3s ease;
   display: block;
   position: fixed;
-  bottom: 5rem;
+  bottom: 5.5rem;
   right: 1rem;
   z-index: 99;
   font-size: 15px;
@@ -823,5 +823,13 @@ form textarea {
   #myBtn {
     bottom: 2rem;   /* adjust for mobile */
     right: 1rem;
+    background-color: #063D88;
+    color: white;
+  }
+
+  #myBtn:hover {
+  background-color: white;
+  color: black;
+  border: #063D88;
   }
 }
