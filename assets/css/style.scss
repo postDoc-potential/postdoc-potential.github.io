@@ -339,10 +339,6 @@ section {
   font-size: 3rem;
 }
 
-.card-left .btn {
-    margin-left: 2rem;
-}
-
 .btn {
   display: inline-block;
   align-self: flex-start;
@@ -713,6 +709,13 @@ h2 {
 #myBtn.show {
     opacity: 1;
     visibility: visible;
+}
+
+@media (max-width: 768px) {
+  #myBtn {
+    bottom: 2rem;   /* adjust for mobile */
+    right: 1rem;
+  }
 }
 
 // .backToTop {
