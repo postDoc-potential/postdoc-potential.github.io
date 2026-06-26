@@ -351,6 +351,7 @@ section {
   outline: 0;
   font-weight: bold;
   cursor: pointer;
+  justify-content: right;
 }
 
 .btn:hover {
@@ -405,12 +406,16 @@ section {
   padding: 1rem;
   box-sizing: border-box;
   gap: 1.5rem;
-  background-color: #0370DD;
+  background-color: #C7DCEF;
+  margin: auto;
 }
 
 .survey-hero h1,
 .survey-hero .subheading {
   margin: 0;
+  color: black;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 
