@@ -374,7 +374,7 @@ section {
   line-height: 1.5;
   color: black;
   font-size: 1.2rem;
-  padding-right: 2.5rem;
+  padding-right: 0;
   text-align:left;
 }
 
@@ -734,15 +734,19 @@ h2 {
 
 .card-contact h2 {
     color: black;
+    text-align: center;
+    font-size: 3rem;
+
+
 }
 
 /* FORM BOX */
 .form-box {
-    background: #C7DCEF;
+    background: none;
     color: black;
     padding: 25px;
     border-radius: 12px;
-    border: 2px solid #0370DD;
+    border: none;
 }
 
 /* INPUTS */
@@ -767,7 +771,7 @@ form textarea {
     padding: 12px;
     background: #C7DCEF;
     color: black;
-    border: 1px solid #0370DD;
+    border: 3px solid #0370DD;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
@@ -789,6 +793,16 @@ form textarea {
     display: block;
 }
 
+@media (max-width: 768px) {
+  .row-contact {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
 
 #myBtn {
   opacity: 0;
