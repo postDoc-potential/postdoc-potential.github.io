@@ -339,6 +339,10 @@ section {
   font-size: 3rem;
 }
 
+.card-left .btn {
+    margin-left: 2rem;
+}
+
 .btn {
   display: inline-block;
   align-self: flex-start;
@@ -353,6 +357,7 @@ section {
   cursor: pointer;
   justify-content: right;
 }
+
 
 .btn:hover {
   background-color: #063D88;
@@ -556,7 +561,8 @@ h2 {
     border: 2px solid #063D88;
     border-radius: 20px;
     padding: 1rem;
-}
+    color: inherit;
+  }
 
 .member:hover {
     background: #0370DD;
@@ -564,7 +570,8 @@ h2 {
     transform: translateY(-4px);
     color:  #FFFFFF;
 }
-.member:hover h3 {
+.member:hover h3,
+.member:hover p {
     color: #FFFFFF;
 }
 
@@ -685,7 +692,7 @@ h2 {
   transition: all 0.3s ease;
   display: block;
   position: fixed;
-  bottom: 2rem;
+  bottom: 5rem;
   right: 1rem;
   z-index: 99;
   font-size: 15px;
