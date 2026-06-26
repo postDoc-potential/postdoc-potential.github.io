@@ -396,12 +396,10 @@ section {
 .survey-hero {
   display: flex;
   flex-direction: column;   /* Stack items vertically */
-  align-items: flex-start;  /* Left align everything */
+  align-items: center;  /* Left align everything */
   justify-content: center;  /* Center vertically if height is set */
-
   width: 100%;
-  min-height: 100vh;        /* Optional: full viewport height */
-
+  // min-height: 100vh;        /* Optional: full viewport height */
   padding: 4rem;
   box-sizing: border-box;
   gap: 1.5rem;
@@ -417,11 +415,11 @@ section {
   line-height: 1.6;
 }
 
-.survey-cta-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #111;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-}
+// .survey-cta-btn {
+//   display: inline-block;
+//   padding: 0.75rem 1.5rem;
+//   background: #111;
+//   color: #fff;
+//   text-decoration: none;
+//   border-radius: 6px;
+// }

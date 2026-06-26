@@ -20,7 +20,7 @@ layout: default
   <p class="subheading">
     Share your views on postdoctoral opportunities
   </p>
-  <a href="/survey/" class="survey-cta-btn">Take a quick survey</a>
+  <a href="/survey/" class="btn">Take a quick survey</a>
 </section>
 
 <!-- ![wallpaper]({{ site.baseurl }}/assets/IMG_20180621_164121832.jpg) -->
