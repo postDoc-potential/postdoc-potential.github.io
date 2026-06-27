@@ -50,6 +50,10 @@ a {
   transition: none;
 }
 
+a:link{
+  text-decoration: none!important;
+}
+
 a:visited,
 a:hover,
 a:active,
@@ -149,6 +153,12 @@ footer {
   text-decoration: none;
   margin: 0;
   line-height: 0.5;
+}
+
+.site-title a {
+  display: inline-block;
+  margin: 0;
+  text-decoration:none;
 }
 
 .site-nav {
