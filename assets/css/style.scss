@@ -888,14 +888,10 @@ form textarea {
 }
 
 .email-btn {
-  opacity: 0;
+  opacity: 1;
   visibility: visible;
   transition: all 0.3s ease;
   display: inline-block;
-  position: fixed;
-  bottom: 5.5rem;
-  right: 1rem;
-  z-index: 99;
   font-size: 15px;
   border: solid 3px #063D88;
   outline: none;
