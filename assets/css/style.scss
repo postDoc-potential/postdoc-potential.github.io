@@ -889,9 +889,9 @@ form textarea {
 
 .email-btn {
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   transition: all 0.3s ease;
-  display: block;
+  display: inline-block;
   position: fixed;
   bottom: 5.5rem;
   right: 1rem;
