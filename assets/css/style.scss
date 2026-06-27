@@ -52,9 +52,6 @@ a {
 
 a:link{
   text-decoration: none!important;
-  color: inherit!important;
-  outline: none;
-
 }
 
 a:visited,
@@ -108,8 +105,19 @@ footer {
 
 .footer-right a {
   color: white;
-  text-decoration: underline;
   text-align: left;
+}
+
+.footer-right a:link{
+  text-decoration: underline;
+}
+
+.footer-right a:hover{
+  color: inherit;
+}
+
+.footer-right a:visited{
+  color: inherit;
 }
 
 .footer-right p {
