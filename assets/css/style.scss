@@ -606,16 +606,18 @@ section {
     border-radius: 20px;
     padding: 1rem;
     color: inherit;
-    color: black;
   }
 
-.member h3{
+.member h3 {
   font-size: 1.2rem;
   padding: 0 0.5rem;
+  font-weight: bold;
+  color: black;
 }
 
-.member p{
+.member p {
   font-size: 1rem;
+  color: black;
 }
 
 .member:hover {
@@ -671,9 +673,34 @@ section {
 
 .info {
     text-align: left;
-    color: inherit;
-
+    color: black;
 }
+
+.info h3 {
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  color: black;
+}
+
+.info p {
+  font-size: 1rem;
+  padding-left:0.5rem;
+  padding-top:0;
+  color: black;
+}
+
+.info:hover {
+    background: #0370DD;
+    border: 2px solid #0370DD;
+    transform: translateY(-4px);
+    color:  #FFFFFF;
+}
+.info:hover h3,
+.info:hover p {
+    color: #FFFFFF;
+}
+
+
 
 @media (max-width: 768px) {
 
