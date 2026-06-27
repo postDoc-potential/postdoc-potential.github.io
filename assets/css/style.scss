@@ -814,6 +814,26 @@ section {
     font-size: 1.2rem;
 }
 
+.card-contact a:link{
+  text-decoration: none;
+  color: black;
+}
+
+.card-contact a:hover{
+  color: inherit;
+}
+
+.card-contact a:visited{
+  color: inherit;
+}
+
+.card-contact img {
+    width: 32px;
+}
+
+.card-contact img:hover {
+    width: 48px;
+}
 
 
 /* FORM BOX */
