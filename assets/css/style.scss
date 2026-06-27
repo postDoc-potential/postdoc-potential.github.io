@@ -156,15 +156,18 @@ footer {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
+  text-decoration:none
 }
 
 .site-nav a {
   display: inline-block;
   margin: 0;
+  text-decoration:none;
 }
 
 .site-nav p {
   margin: 0;
+  text-decoration:none;
 }
 
 header,
@@ -216,7 +219,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.6rem;
   }
 
   .site-header a {
