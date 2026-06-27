@@ -171,6 +171,19 @@ footer {
   display: inline-block;
   margin: 0;
   text-decoration:none;
+  color: white;
+}
+
+.site-title a:link{
+  text-decoration: none;
+}
+
+.site-title a:hover{
+  color: inherit;
+}
+
+.site-title a:visited{
+  color: inherit;
 }
 
 .site-nav {
@@ -185,6 +198,19 @@ footer {
   display: inline-block;
   margin: 0;
   text-decoration:none;
+  columns: white;
+}
+
+.site-nav a:link{
+  text-decoration: none;
+}
+
+.site-nav a:hover{
+  color: inherit;
+}
+
+.site-nav a:visited{
+  color: inherit;
 }
 
 .site-nav p {
