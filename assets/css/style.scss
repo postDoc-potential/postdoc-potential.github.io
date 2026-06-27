@@ -819,24 +819,24 @@ section {
 }
 
 .email-member img {
+  display: inline;
   width: 32px;
 }
 
 .email-member:hover {
     transform: scale(1.5,1.5);
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: black;
 
   }
 
 .email-member:hover a {
     color: black;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .email-member:hover img {
     width: 48px;
-
 }
 
 
