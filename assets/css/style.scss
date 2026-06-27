@@ -810,6 +810,7 @@ section {
 
 .email-member {
     color: black;
+    font-size: 1.5rem;
   }
 
 .email-member a {
@@ -823,6 +824,9 @@ section {
 
 .email-member:hover {
     transform: scale(1.5,1.5);
+    font-size: 2rem;
+    color: black;
+
   }
 
 .email-member:hover a {
