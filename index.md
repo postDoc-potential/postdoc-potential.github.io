@@ -6,7 +6,7 @@ layout: default
 <div class="card-story">
     <div class="card-story-left">
         <h2>Our Story</h2>
-        <button><a href="/team" class="card-story-btn">Meet our team</a></button>
+        <button><a href="/team" target="_blank"  class="hero-button">Meet our team</a></button>
     </div>
     <div class="card-story-right">
         <p>
