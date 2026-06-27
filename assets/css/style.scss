@@ -809,11 +809,12 @@ section {
 
 
 .email-member {
-    color: inherit;
+    color: black;
   }
 
 .email-member a {
   color: black;
+  font-size: 1.5rem;
 }
 
 .email-member img {
@@ -825,7 +826,8 @@ section {
   }
 
 .email-member:hover a {
-    color: inherit;
+    color: black;
+    font-size: 2rem;
 }
 
 .email-member:hover img {
