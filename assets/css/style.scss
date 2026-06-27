@@ -150,6 +150,18 @@ footer {
   margin-left: 1rem;
 }
 
+.site-header a:link{
+  text-decoration: none;
+}
+
+.site-header a:hover{
+  color: inherit;
+}
+
+.site-header a:visited{
+  color: inherit;
+}
+
 .site-header h1 {
   margin: 0;
 }
@@ -191,14 +203,15 @@ footer {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  text-decoration:none
+  text-decoration:none;
+  columns: 1rem;
 }
 
 .site-nav a {
   display: inline-block;
   margin: 0;
   text-decoration:none;
-  columns: white;
+  color: white;
 }
 
 .site-nav a:link{
