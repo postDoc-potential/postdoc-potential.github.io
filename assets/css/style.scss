@@ -626,9 +626,13 @@ section {
     transform: translateY(-4px);
     color:  #FFFFFF;
 }
-.member:hover h3,
+.member:hover h3{
+    color: #FFFFFF;
+}
+
 .member:hover p {
     color: #FFFFFF;
+    font-weight: inherit;
 }
 
 .column {
@@ -695,9 +699,12 @@ section {
     transform: translateY(-4px);
     color:  #FFFFFF;
 }
-.info:hover h3,
+.info:hover h3{
+    color: #FFFFFF;
+}
 .info:hover p {
     color: #FFFFFF;
+    font-weight: inherit;
 }
 
 
@@ -820,11 +827,12 @@ section {
 form input,
 form textarea {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 20px;
     border-radius: 8px;
     border: 1px solid #0370DD;
     background: #C7DCEF;
     color: black;
+    padding: 12px;
 }
 
 form textarea {
