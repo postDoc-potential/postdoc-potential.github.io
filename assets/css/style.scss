@@ -808,31 +808,29 @@ section {
 }
 
 
-.card-contact a {
-    color: black;
-    text-align: left;
-    font-size: 1.2rem;
-}
+.email-member {
+    color: inherit;
+  }
 
-.card-contact a:link{
-  text-decoration: none;
+.email-member a {
   color: black;
 }
 
-.card-contact a:hover{
-  color: inherit;
+.email-member img {
+  width: 32px;
 }
 
-.card-contact a:visited{
-  color: inherit;
+.email-member:hover {
+    transform: scale(1.5,1.5);
+  }
+
+.email-member:hover a {
+    color: inherit;
 }
 
-.card-contact img {
-    width: 32px;
-}
-
-.card-contact img:hover {
+.email-member:hover img {
     width: 48px;
+
 }
 
 
