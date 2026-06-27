@@ -586,7 +586,6 @@ section {
   text-decoration: none; /* no underline */
 }
 
-
 .team {
     display: flex;
     gap: 1rem;
@@ -601,25 +600,23 @@ section {
     color: black;
 }
 
-.team-members > a:link{
-  text-decoration: none;
-}
-
-.team-members > a:hover{
-  color: white;
-}
-
-.team-members > a:visited{
-  color: white;
-}
-
 .member {
     height: 20rem;
     border: 2px solid #063D88;
     border-radius: 20px;
     padding: 1rem;
     color: inherit;
+    color: black;
   }
+
+.member h3{
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+}
+
+.member p{
+  font-size: 1rem;
+}
 
 .member:hover {
     background: #0370DD;
