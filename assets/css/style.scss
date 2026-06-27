@@ -814,6 +814,8 @@ section {
     font-size: 1.2rem;
 }
 
+
+
 /* FORM BOX */
 .form-box {
     background: none;
@@ -885,32 +887,6 @@ form textarea {
       padding-top: 12px;
       margin: 0;
     }
-}
-
-.email-btn {
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.3s ease;
-  display: inline-block;
-  font-size: 15px;
-  border: solid 3px #063D88;
-  outline: none;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  padding: 5px 15px;
-  border-radius: 14px;
-}
-
-.email-btn:hover {
-  background-color: #063D88;
-  color: white;
-}
-
-.email-btn.show {
-    opacity: 1;
-    visibility: visible;
-    right: 10px;
 }
 
 #myBtn {
