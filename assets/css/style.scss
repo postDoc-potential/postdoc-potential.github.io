@@ -236,26 +236,25 @@ footer {
   border: 3px solid #E42311;
   outline: 0;
   display: inline-block;
-  padding: 10px 25px;
+  padding: 5px;
   color: #E42311;
-  background-color:  #E9F1F9ff;
+  background-color: white;
   border-radius: 5px ;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
 }
+
 .site-nav button:hover {
   background-color: #E42311;
   color: white;
-  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
-
 }
 
 .site-nav button:hover a {
   color: white;
   text-decoration: none; /* no underline */
 }
+
 header,
 footer {
   float: none ;
@@ -307,6 +306,10 @@ section {
     align-items: flex-start;
     gap: 0.6rem;
     padding: .5rem;
+  }
+
+  .site-nav button {
+    vertical-align: middle;
   }
 
   .site-header a {
@@ -407,7 +410,7 @@ section {
 
 .hero-text p {
   font-size: 1.5rem;
-  max-width: 600px;   /* controls line width */
+  max-width: 650px;   /* controls line width */
   margin: 0 auto;  
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
