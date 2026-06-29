@@ -212,6 +212,7 @@ footer {
   margin: 0;
   text-decoration:none;
   color: white;
+  font-weight: bold;
 }
 
 .site-nav a:link{
@@ -231,6 +232,30 @@ footer {
   text-decoration:none;
 }
 
+.site-nav button {
+  border: 3px solid #E42311;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: #E42311;
+  background-color:  #E9F1F9ff;
+  border-radius: 5px ;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+}
+.site-nav button:hover {
+  background-color: #E42311;
+  color: white;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+
+}
+
+.site-nav button:hover a {
+  color: white;
+  text-decoration: none; /* no underline */
+}
 header,
 footer {
   float: none ;
