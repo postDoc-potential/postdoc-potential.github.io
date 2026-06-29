@@ -303,13 +303,12 @@ section {
   .site-nav {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 0.6rem;
     padding: .5rem;
   }
 
   .site-nav button {
-    align-items: baseline;
     vertical-align: baseline;
   }
 
