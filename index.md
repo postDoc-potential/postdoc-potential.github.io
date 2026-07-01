@@ -2,7 +2,9 @@
 title: Home
 layout: default
 ---
+{% include popup.html %}
 <section class="hero-section" >{% include hero.html %}</section>
+<!-- <section>{% include hero-CTA.html %}</section> -->
 <div class="card-story">
     <div class="card-story-left">
         <h2>Our Story</h2>
@@ -16,8 +18,8 @@ layout: default
 </div>
 
 <div
-  class="hero-image" style="  border-radius: 15px;">
-  <img src="{{ 'assets/img/hero-image-survey.png' | relative_url }}" alt="" class="responsive">
+  class="hero-image" style="border-radius: 15px;">
+  <img src="{{ 'assets/img/hero-image-survey.png' | relative_url }}" alt="" class="responsive" style="  height: 400px;">
   <div class="hero-text">
     <h1>Got A Minute?</h1>
     <br>
