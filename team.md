@@ -1,7 +1,7 @@
 ---
 layout: default
 
-title: "Our Team | PostDoc Potential"
+title: "Our Team  — PostDoc Potential"
 
 description: "Meet the team behind PostDoc Potential — early-career researchers building support for the postdoc transition in Earth, atmosphere, ocean and climate sciences."
 
