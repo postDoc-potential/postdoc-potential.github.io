@@ -281,7 +281,7 @@ footer { width: 100%; background: #063D88; color: white; }
 
 .site-title a:visited { color: inherit; }
 
-.site-nav { display: flex; flex-direction: row; gap: 1.2rem; align-items: center; text-decoration: none; columns: 1rem; font-size: clamp(1.2rem, 2vw, 1rem); }
+.site-nav { display: flex; flex-direction: row; gap: 1.2rem; align-items: center; text-decoration: none; columns: 1rem; font-size: clamp(0.9rem, 1.5vw, 1.05rem); }
 
 .site-nav a { display: inline-block; margin: 0; text-decoration: none; color: white; font-weight: bold; transition: transform 0.2s ease; }
 
@@ -311,10 +311,12 @@ section { width: 100%; margin-top: 10px; margin-bottom: 20px; padding: 20px 50px
   .footer-left, .footer-right { text-align: left; }
   .site-header-inner { flex-direction: column-reverse; align-items: flex-start; /* correct */ gap: 0.5rem; }
   .site-title { padding: 0.5rem; }
-  .site-nav { display: flex; flex-direction: row; align-items: baseline; gap: 0.6rem; padding: .5rem; }
-  .site-nav button { vertical-align: baseline; }
+  .site-nav { display: flex; flex-direction: row; align-items: baseline; gap: 0.6rem; padding: 0.5rem; }
+  .site-nav a { font-size: 1rem; font-weight: 500; opacity: 0.95; }
+  .site-nav button { vertical-align: baseline; padding: 3px 6px; font-size: 1rem; }
   .site-header a { margin-left: 0; }
   .site-header-inner, .footer-inner { padding: 1rem; text-align: left; }
+  .site-title { padding: 0.5rem; margin-top: 0.15rem; /* tightens gap to nav row above it */ font-size: 1.6rem; /* slightly boosted, more separation from nav's 0.8rem */ }
   section { margin-top: 0; margin-bottom: 0; padding: 1rem 1rem; } }
 /* For hero block */
 .hero-section { margin-top: 0; padding: 0; }
