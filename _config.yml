@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
-title: PostDoc Potential
+title: "PostDoc Potential — From PhD to PostDoc in Earth Sciences"
 # logo: /assets/kbush58-stick-people-2324013_1920.png
-description: Next Step after your PhD
-av: true
+description: "Find postdoc opportunities, career guidance, and community support for early-career researchers in Earth, atmospheric, ocean and climate science"
+avatar: true
 remote_theme: pages-themes/minimal@v0.2.0
 # remote_theme: pages-themes/cayman@v0.2.0
 # plugins:
