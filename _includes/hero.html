@@ -1,6 +1,12 @@
 <div
   class="hero-image" style="border-radius: 15px;">
-  <img src="{{ '/assets/img/hero-image.png' | relative_url }}" alt="" class="responsive">
+  <picture>
+    <source srcset="{{ '/assets/img/hero-image.webp' | relative_url }}" type="image/webp">
+    <img src="{{ '/assets/img/hero-image.png' | relative_url }}" 
+          alt="Postdoc Potential — supporting early-career researchers in Earth Sciences" 
+          width="1200" height="600" loading="lazy"
+          class="responsive">
+  </picture>
   <div class="hero-text">
     <h1 style="font-style: italic">Next Step after Your PhD</h1>
     <br>

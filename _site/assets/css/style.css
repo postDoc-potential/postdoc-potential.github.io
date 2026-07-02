@@ -488,11 +488,11 @@ form textarea { min-height: 140px; }
   .email-member { color: black; font-size: 1rem; margin: 1rem auto; }
   .email-member a { font-size: 0.8rem; }
   .email-member:hover { transform: translateY(-2px); font-size: 1rem; color: black; } }
-.modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); display: grid; place-items: center; padding: 0.5rem; }
+.modal { position: relative; inset: 0; background: rgba(0, 0, 0, 0.5); display: grid; place-items: center; padding: 0.5rem; }
 
 .modal-content { width: min(480px, 90vw); max-width: 480px; background: white; padding: 0.5rem; border-radius: 10px; overflow-y: auto; max-height: 80vh; }
 
-.close { position: absolute; right: 15px; top: 10px; font-size: 1.5rem; cursor: pointer; color: #333; }
+.close { position: absolute; right: 15px; top: 10px; font-size: 1.5rem; cursor: pointer; color: #333; z-index: 10; padding: 8px; line-height: 1; }
 
 @keyframes popupFade { from { opacity: 0; transform: translate(-50%, -55%) scale(0.95); }
   to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
