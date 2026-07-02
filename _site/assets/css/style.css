@@ -492,6 +492,8 @@ form textarea { min-height: 140px; }
 
 .modal-content { width: min(480px, 90vw); max-width: 480px; background: white; padding: 0.5rem; border-radius: 10px; overflow-y: auto; max-height: 80vh; }
 
+.modal.show { display: grid; /* only becomes grid when shown */ }
+
 .close { position: absolute; right: 15px; top: 10px; font-size: 1.5rem; cursor: pointer; color: #333; z-index: 10; padding: 8px; line-height: 1; }
 
 @keyframes popupFade { from { opacity: 0; transform: translate(-50%, -55%) scale(0.95); }

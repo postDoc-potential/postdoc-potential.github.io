@@ -1027,6 +1027,10 @@ form textarea {
   max-height: 80vh;
 }
 
+.modal.show {
+  display: grid;   /* only becomes grid when shown */
+}
+
 .close {
   position: absolute;
   right: 15px;
