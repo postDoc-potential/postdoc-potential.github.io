@@ -12,9 +12,6 @@ html, body {
   width: 100% !important;
 }
 
-.sd-body__page {
-  zoom: 0.8;
-}
 
 #surveyElement {
   position: relative !important;
@@ -26,8 +23,8 @@ html, body {
   min-height: auto !important;
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.sd-body__page {
+  zoom: 0.8;
 }
 
 .sd-root-modern,
