@@ -509,15 +509,19 @@ footer {
   }
 
   .sd-question__content {
-    margin-left: 8px; /* was 30px */
-  }
+    margin-left: 8px; 
+   }
 
-  [data-name="Intro"] .sd-html {
-    margin-left: 0 !important; /* was 5px, but the real gap is upstream of this */
-    margin-right: 8px !important;
+  .sd-question--table.sd-question--complex.sd-element--with-frame {
+    border: none !important;
+    padding-left: 20px !important;  /* match Q13's padding-left exactly */
+    padding-right: 0 !important;    /* match Q13's padding-right exactly */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
   }
-
   .sd-table__cell--row-text{
     font-weight: bold!important;
   }
+
 }
