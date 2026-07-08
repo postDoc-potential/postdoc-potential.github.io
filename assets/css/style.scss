@@ -84,47 +84,53 @@ footer {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  align-items: baseline;
   max-width: 1200px;
   margin:  auto;
   padding: 0 1rem 1rem 1rem;
   flex-wrap: wrap;
+  line-height: 1rem;
 }
 
-.footer-left p {
-  margin: auto;
-  text-align: left;
-}
+
 .footer-right {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   padding-right: 2rem;
+  line-height: 1rem;
 }
 
+.footer-left a,
 .footer-right a {
   color: white;
   text-align: left;
-  text-decoration: underline!important;
+  font-weight: normal;
 }
 
+.footer-left a:link,
 .footer-right a:link{
-  text-decoration: underline;
+  font-weight: bold;
 }
 
+.footer-left a:hover,
 .footer-right a:hover{
   color: inherit;
+  text-decoration: underline!important;  
 }
 
+.footer-left a:visited,
 .footer-right a:visited{
   color: inherit;
+  text-decoration: underline;  
 }
 
+.footer-left p,
 .footer-right p {
   color: white;
   text-decoration: none;
   text-align: left;
+  font-weight: normal;
 }
 
 
@@ -357,7 +363,7 @@ section {
   section {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 1rem 1rem;
+    padding: 1rem 0;
   }
 }
 
@@ -1089,7 +1095,7 @@ form textarea {
   transition: all 0.3s ease;
   display: block;
   position: fixed;
-  bottom: 5.5rem;
+  bottom: 6rem;
   right: 1rem;
   z-index: 99;
   font-size: 15px;

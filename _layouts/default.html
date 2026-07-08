@@ -17,17 +17,7 @@
   <body>
     {% include header.html %}
     <section>{{ content }}</section>
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-left"><p>© 2026 PostDoc Potential</p></div>
-        <div class="footer-right">
-          <p><small>Hosted on GitHub Pages<br>&mdash; Created by <a href="https://github.com/SRituparna">Rituparna</a></small></p>
-        </div>
-      </div>
-    </footer>
-    <button id="myBtn" onclick="topFunction()" title="Go to top">
-      ↑ Go to top
-    </button>
+    {% include footer.html %}
   <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
   <script src="assets/js/mybutton.js"></script>
   </body>
