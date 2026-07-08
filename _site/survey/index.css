@@ -55,9 +55,10 @@ html, body {
 }
 
 .sd-question__content {
-  margin-left: 24px;
+  margin-left: 30px;
   font-weight: 400 !important;
 }
+
 
 .sd-header {
   padding: 1rem 16px !important;
@@ -277,13 +278,13 @@ footer {
 }
 
 .sd-element__num {
-  font-size: 16px !important;
+  font-size: 19.2px !important;
   color: black !important;
   vertical-align: baseline !important;
   position: static !important;
   left: 0;
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 0px!important;
 }
 
 .sd-table__cell--header, .sd-table__row, .sd-table__cell--header span, .sd-matrix__cell{
@@ -326,10 +327,55 @@ footer {
   border-inline-end: 2px solid rgba(0, 0, 0, 0.16) !important;
 }
 
-.sd-item__decorator.sd-radio__decorator {
+/* .sd-item__decorator, .sd-radio__decorator {
   width: 20px !important;
   height: 20px !important;
+} */
+
+/* Base size (yours) */
+.sd-item__decorator, .sd-radio__decorator {
+  width: 20px !important;
+  height: 20px !important;
+  /* border-radius: 50% !important; */
+  /* border: 2px solid #999 !important; */
+  position: relative !important;
+  box-sizing: border-box !important;
 }
+
+/* Hover state (only when item allows hover, and isn't already checked) */
+.sd-radio--allowhover:hover .sd-radio__decorator {
+  border-color: #1a3e8c !important;
+  background-color: #1a3e8c !important;
+}
+
+/* Checked state */
+.sd-item--checked .sd-radio__decorator,
+.sd-radio--checked .sd-radio__decorator {
+  border-color: #1a3e8c !important;
+  background-color: #fff !important;
+}
+
+/* Inner dot when checked */
+.sd-item--checked .sd-radio__decorator::after,
+.sd-radio--checked .sd-radio__decorator::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background-color: #1a3e8c !important;
+}
+
+/* Keyboard focus ring for accessibility */
+.sd-item__control:focus-visible ~ .sd-item__decorator {
+  outline: 2px solid #1a3e8c !important;
+  outline-offset: 2px !important;
+}
+
 
 .sd-item__decorator.sd-checkbox__decorator {
   width: 20px !important;
@@ -371,7 +417,7 @@ footer {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
   padding-left: 20px !important;
-  padding-right: 40px !important;
+  padding-right: 20px !important;
   box-shadow: none !important;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
