@@ -74,9 +74,9 @@ html, body {
 
 .sv-header .sd-title {
   color: white !important;
-  font-size: clamp(1.5rem, 2vw, 2rem) !important;  /* same as .site-title */
-  font-weight: 600 !important;                      /* same as .site-title */
-  line-height: 1 !important;                        /* same as .site-title */
+  font-size: clamp(1.5rem, 2vw, 2rem) !important;  
+  font-weight: 600 !important;                     
+  line-height: 1 !important;                       
   margin: 0 !important;
   padding: 0 !important;
   text-align: left !important;
@@ -106,13 +106,13 @@ footer {
   width: 100%;
   background: #063D88;
   color: white;
-  margin-top: 0 !important;
+  margin-top: 1rem !important;
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -184,8 +184,9 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    gap: 0.5rem;
-    margin-left: 0;
+    gap: 0;
+    margin-left: 1.5rem;
+    padding-top: 1.5rem;
   }
 
   .footer-left,
@@ -209,6 +210,7 @@ footer {
   margin: 0 0 4px 0 !important;
   line-height: 1.25 !important;
 }
+
 
 .contact-cards {
   display: flex;
@@ -272,6 +274,16 @@ footer {
   text-decoration: underline;
 }
 
+@media (max-width: 780px) {
+  .contact-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sig-block {
+    max-width: 100%;
+  }
+}
 
 .sd-element--with-frame {
   padding-left: var(--survey-left-gutter) !important;
@@ -464,20 +476,48 @@ footer {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4) !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
   .sd-btn,
   .sd-navigation__complete-btn,
   .sd-navigation__next-btn,
   .sd-navigation__prev-btn,
   .sd-navigation__start-btn {
     width: auto !important;
-    display: inline-block !important;
+    display: block !important;
     max-width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
-
   .sd-action-bar {
     justify-content: center !important;
+  }
+  .sv-components-column.sv-components-container.sv-components-container--contentBottom {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
   }
 }
 
 
+@media (max-width: 780px) {
+  :root {
+    --survey-left-gutter: 8px; /* was 20px — tightens the frame padding on mobile */
+  }
+
+  .sd-question__header {
+    margin-left: 8px; /* was 24px */
+  }
+
+  .sd-question__content {
+    margin-left: 8px; /* was 30px */
+  }
+
+  [data-name="Intro"] .sd-html {
+    margin-left: 0 !important; /* was 5px, but the real gap is upstream of this */
+    margin-right: 8px !important;
+  }
+
+  .sd-table__cell--row-text{
+    font-weight: bold!important;
+  }
+}
