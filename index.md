@@ -3,7 +3,6 @@ layout: default
 ---
 {% include popup.html %}
 <section class="hero-section" >{% include hero.html %}</section>
-<!-- <section>{% include hero-CTA.html %}</section> -->
 <div class="card-story">
     <div class="card-story-left">
         <h2>Our Story</h2>
@@ -16,23 +15,21 @@ layout: default
     </div>
 </div>
 
-<div class="hero-image" style="border-radius: 15px;">
+<div class="hero-image"  style="border-radius: 15px;">
     <picture>
         <source srcset="{{ 'assets/img/hero-image-survey.webp' | relative_url }}" type="image/webp">
-        <img src="{{ 'assets/img/hero-image-survey.png' | relative_url }}" 
-            alt="Survey" 
-            width="1200" height="600" loading="lazy"
-            class="responsive">
+        <img style="zoom:1.2" src="{{ 'assets/img/hero-image-survey.png' | relative_url }}" 
+                alt="Postdoc Potential — popup survey on postdoctoral opportunities" 
+                width="1200" height="600" fetchpriority="high"
+                class="responsive">
     </picture>
-    <div class="hero-text">
-        <h1>Got A Minute?</h1>
+    <div class="hero-text" style="width: 90%;">
+        <h1 style="font-size: 2.5rem;">Share your views</h1>
         <br>
-        <p>
-            Share your views on postdoctoral opportunities
+        <p style="font-size: 1.2rem;">
+            We want to hear your opinion on postdoctoral opportunities in Earth Sciences 
         </p>
         <br>
-        <button>
-            <a href="/survey/" target="_blank" class="hero-button" >Take a quick survey</a>
-        </button>
+        <button><a href="/survey/" target="_blank" class="hero-button" >Tell us here</a></button>
     </div>
 </div>

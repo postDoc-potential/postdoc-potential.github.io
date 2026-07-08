@@ -380,7 +380,6 @@ section {
   display: block;
   object-fit: cover;    /* crops image nicely */
   object-position: center bottom;
-  display: block;
 }
 
 .hero-image::before {
@@ -1038,8 +1037,8 @@ form textarea {
 
 
 .modal-content {
-  width: min(480px, 90vw);
-  max-width: 480px;
+  width: min(600px, 90vw);
+  max-width: 600px;
   background: white;
   padding: 0.5rem;
   border-radius: 10px;
