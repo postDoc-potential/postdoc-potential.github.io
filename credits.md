@@ -63,18 +63,19 @@ of the open license entirely.
 The hero graphics were composed in Adobe Express, built around a photo
 licensed from **OneLineStock** on Adobe Stock:
 
-- `assets/img/hero-image.png` / `.webp` — Original composition created in
-  Adobe Express. Underlying stock photo by **OneLineStock** / stock.adobe.com.
-  Licensed via Adobe Stock (Limited License – Adobe Express). All rights to
-  the photo reserved by the original copyright holder. The layout/composition
-  is original work by Rituparna Sarkar; the underlying photo is **not** covered by
+- `assets/img/hero-image.png` / `.webp` — Original photo by **OneLineStock** /
+  stock.adobe.com, modified (cropped, composited, and adjusted) by
+  Rituparna Sarkar in Adobe Express. Licensed via Adobe Stock (Limited
+  License – Adobe Express). All rights to the original photo reserved by
+  the copyright holder. The modifications and composition are original
+  work by Rituparna Sarkar; the underlying photo is **not** covered by
   this site's CC license. Do not extract, reuse, or redistribute the
   photo independently of this project.
 
-- `assets/img/hero-image-survey.png` / `.webp` — Original composition created
-  in Adobe Express. Underlying stock photo by **OneLineStock** /
-  stock.adobe.com. Licensed via Adobe Stock (Limited License – Adobe
-  Express). Same restrictions as above.
+- `assets/img/hero-image-survey.png` / `.webp` — Original photo by
+  **OneLineStock** / stock.adobe.com, modified (cropped, composited, and
+  adjusted) by Rituparna Sarkar in Adobe Express. Licensed via Adobe Stock
+  (Limited License – Adobe Express). Same restrictions as above.
 
 
 ### Icons

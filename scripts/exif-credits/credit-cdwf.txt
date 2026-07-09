@@ -1,0 +1,3 @@
+-overwrite_original
+-Copyright=© CDWF - All rights reserved
+-Artist=CDWF
