@@ -1,15 +1,14 @@
 # PostDoc Potential
 
-A platform created for and by early-career researchers navigating postdoctoral research positions in Earth Science.
-
-🌐 **Live site:** [postdoc-potential.github.io](https://postdoc-potential.github.io/)
+[![Live Website](https://img.shields.io/badge/Website-Live-blue?style=flat-square)](https://postdoc-potential.github.io/)
+[![License](https://img.shields.io/github/license/postDoc-potential/postdoc-potential.github.io?style=flat-square)](LICENSE)
+[![Website Carbon](https://img.shields.io/badge/Website%20Carbon-View%20Report-2E8B57?style=flat-square)](https://www.websitecarbon.com/website/postdoc-potential-github-io/)
+[![Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-blue?style=flat-square)](https://pagespeed.web.dev/report?url=https://postdoc-potential.github.io/)
 
 ---
 
-📊 Live report: PageSpeed Insights for postdoc-potential.github.io
+A platform created for and by early-career researchers navigating postdoctoral research positions in Earth Science.
 
-<div id="wcb" class="carbonbadge"></div>
-<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 
 ---
 
