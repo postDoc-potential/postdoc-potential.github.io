@@ -17,4 +17,3 @@ jobs:
           urls: |
             https://postdoc-potential.github.io/
           uploadArtifacts: true
-          temporaryPublicStorage: true
