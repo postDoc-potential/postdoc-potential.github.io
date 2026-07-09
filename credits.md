@@ -9,6 +9,7 @@ layout: default
 <br>
 
 ## License
+{: #license}
 
 This site's original code, written content, and custom design work is 
 licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
@@ -20,7 +21,7 @@ The credits below cover third-party assets **not** included in that license.
 ---
 
 ## Third-Party Assets & Credits
-
+{: #credits}
 
 This repository's CC license applies to the original source code, written
 content, and custom design work created by Rituparna Sarkar, Postdoc Potential. It does **not**
@@ -124,6 +125,7 @@ Repository and license information:
 ---
 
 # Privacy & Data Handling
+{: #privacy}
 
 <br>
 
