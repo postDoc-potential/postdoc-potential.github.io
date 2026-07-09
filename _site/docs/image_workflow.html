@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="postdoc, phd, earth science, academia, research, fellowship">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>PostDoc Potential — From PhD to PostDoc in Earth Sciences | Find postdoc opportunities, career guidance, and community support for early-career researchers in Earth, atmospheric, ocean and climate science</title>
+<title>Image Optimization Workflow (with copyright metadata) | PostDoc Potential — From PhD to PostDoc in Earth Sciences</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="PostDoc Potential — From PhD to PostDoc in Earth Sciences" />
+<meta property="og:title" content="Image Optimization Workflow (with copyright metadata)" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Find postdoc opportunities, career guidance, and community support for early-career researchers in Earth, atmospheric, ocean and climate science" />
 <meta property="og:description" content="Find postdoc opportunities, career guidance, and community support for early-career researchers in Earth, atmospheric, ocean and climate science" />
@@ -17,9 +17,9 @@
 <meta property="og:site_name" content="PostDoc Potential — From PhD to PostDoc in Earth Sciences" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="PostDoc Potential — From PhD to PostDoc in Earth Sciences" />
+<meta property="twitter:title" content="Image Optimization Workflow (with copyright metadata)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Find postdoc opportunities, career guidance, and community support for early-career researchers in Earth, atmospheric, ocean and climate science","headline":"PostDoc Potential — From PhD to PostDoc in Earth Sciences","url":"http://localhost:4000/docs/image_workflow.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Find postdoc opportunities, career guidance, and community support for early-career researchers in Earth, atmospheric, ocean and climate science","headline":"Image Optimization Workflow (with copyright metadata)","url":"http://localhost:4000/docs/image_workflow.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/assets/css/style.css?v=59a29017fc75faf285a2848d128cbbe45e308a75">
@@ -43,7 +43,90 @@
 </nav>
   </div>
 </header>
-    <section>
+    <section><h1 id="image-optimization-workflow-with-copyright-metadata">Image Optimization Workflow (with copyright metadata)</h1>
+
+<p>A repeatable checklist for preparing images before adding them to the site.</p>
+
+<h2 id="1-resize--convert-to-webp">1. Resize + convert to WebP</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>imagemagick <span class="nt">-y</span>
+
+<span class="c"># Resize to 2x display size (retina-ready) + convert to WebP</span>
+<span class="c"># -background none preserves transparency</span>
+convert original.png <span class="nt">-resize</span> 300x300^ <span class="nt">-gravity</span> center <span class="nt">-background</span> none <span class="se">\</span>
+  <span class="nt">-extent</span> 300x300 <span class="nt">-quality</span> 80 output.webp
+</code></pre></div></div>
+
+<p>Check file size and transparency:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-lh</span> assets/img/<span class="k">*</span>.webp
+identify <span class="nt">-format</span> <span class="s2">"%[channels]</span><span class="se">\n</span><span class="s2">"</span> output.webp   <span class="c"># should include 'a' (alpha)</span>
+</code></pre></div></div>
+
+<h2 id="2-write-copyright--authorship-metadata">2. Write copyright / authorship metadata</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>libimage-exiftool-perl <span class="nt">-y</span>   <span class="c"># if not already installed</span>
+exiftool <span class="nt">-ver</span>                                <span class="c"># confirm install</span>
+</code></pre></div></div>
+
+<p><strong>Stock/licensed images (e.g. Adobe Stock via Adobe Express):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exiftool <span class="nt">-overwrite_original</span> <span class="se">\</span>
+  <span class="nt">-Copyright</span><span class="o">=</span><span class="s2">"Licensed via Adobe Stock/Adobe Express - Photo by OneLineStock"</span> <span class="se">\</span>
+  <span class="nt">-Credit</span><span class="o">=</span><span class="s2">"OneLineStock / stock.adobe.com"</span> <span class="se">\</span>
+  <span class="nt">-Artist</span><span class="o">=</span><span class="s2">"OneLineStock"</span> <span class="se">\</span>
+  assets/img/hero-image.webp
+</code></pre></div></div>
+
+<p><strong>Original assets you own (e.g. logo):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exiftool <span class="nt">-overwrite_original</span> <span class="se">\</span>
+  <span class="nt">-Copyright</span><span class="o">=</span><span class="s2">"© CDWF - All rights reserved"</span> <span class="se">\</span>
+  <span class="nt">-Artist</span><span class="o">=</span><span class="s2">"CDWF"</span> <span class="se">\</span>
+  assets/img/CDWF-dpv2.webp
+</code></pre></div></div>
+
+<p>Verify it was written:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exiftool assets/img/hero-image.webp | <span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"copyright</span><span class="se">\|</span><span class="s2">credit</span><span class="se">\|</span><span class="s2">artist"</span>
+</code></pre></div></div>
+
+<p>⚠️ <strong>WebP caveat:</strong> metadata support depends on the WebP container format
+(VP8 vs VP8L vs VP8X) — if tags don’t show up after writing, check
+exiftool’s WebP-specific notes; converting from a format with more
+reliable EXIF support before the WebP conversion is a common workaround.</p>
+
+<p><code class="language-plaintext highlighter-rouge">-overwrite_original</code> skips creating a <code class="language-plaintext highlighter-rouge">filename.webp_original</code> backup
+copy. Omit it if you’d rather keep backups and delete them manually later.</p>
+
+<h2 id="3-add-to-the-picture-tag-with-correct-priority">3. Add to the <code class="language-plaintext highlighter-rouge">&lt;picture&gt;</code> tag with correct priority</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;picture&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/assets/img/hero-image.webp"</span> <span class="na">type=</span><span class="s">"image/webp"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/img/hero-image.png"</span>
+       <span class="na">alt=</span><span class="s">"Descriptive alt text"</span>
+       <span class="na">width=</span><span class="s">"1200"</span> <span class="na">height=</span><span class="s">"600"</span>
+       <span class="na">fetchpriority=</span><span class="s">"high"</span>
+       <span class="na">class=</span><span class="s">"responsive"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/picture&gt;</span>
+</code></pre></div></div>
+
+<p>Only the actual LCP (hero) image gets <code class="language-plaintext highlighter-rouge">fetchpriority="high"</code>. Every other
+image gets <code class="language-plaintext highlighter-rouge">loading="lazy"</code> instead.</p>
+
+<h2 id="4-update-the-credits-page">4. Update the credits page</h2>
+
+<p>Add or confirm an entry for the new asset in <code class="language-plaintext highlighter-rouge">credits.md</code> under
+<strong>Design &amp; stock assets</strong>, <strong>Photographs and logo</strong>, or <strong>Icons</strong> as
+appropriate — see that file for the exact format used on this site.</p>
+
+<h2 id="5-test-before-pushing">5. Test before pushing</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll build
+bundle <span class="nb">exec </span>jekyll serve <span class="nt">--livereload</span>
+<span class="c"># visit http://127.0.0.1:4000 and check the image loads, alt text is correct</span>
+</code></pre></div></div>
+
+<p>Then run Lighthouse locally to confirm LCP/CLS aren’t regressed:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> lighthouse
+lighthouse http://127.0.0.1:4000 <span class="nt">--view</span>
+</code></pre></div></div>
 </section>
     <footer>
   <div class="footer-inner">
