@@ -1,13 +1,20 @@
-name: CI
-on: [push]
+name: Lighthouse Audit
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
-  lighthouseci:
+  lighthouse:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
         with:
-          node-version: 18
-      - run: npm install && npm install -g @lhci/cli@0.15.x
-      - run: npm run build
-      - run: lhci autorun
+          urls: |
+            https://postdoc-potential.github.io/
+          uploadArtifacts: true
+          temporaryPublicStorage: true
