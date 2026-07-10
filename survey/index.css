@@ -339,11 +339,6 @@ footer {
   border-inline-end: 2px solid rgba(0, 0, 0, 0.16) !important;
 }
 
-/* .sd-item__decorator, .sd-radio__decorator {
-  width: 20px !important;
-  height: 20px !important;
-} */
-
 /* Base size (yours) */
 .sd-item__decorator, .sd-radio__decorator {
   width: 20px !important;
@@ -365,6 +360,7 @@ footer {
 .sd-radio--checked .sd-radio__decorator {
   border-color: #1a3e8c !important;
   background-color: #fff !important;
+  border: 2px solid #063D88;
 }
 
 /* Inner dot when checked */

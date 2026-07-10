@@ -1,2 +1,0 @@
-  -Copyright="© Anila Sebastian - used with permission" \
-  -Artist="Anila Sebastian"

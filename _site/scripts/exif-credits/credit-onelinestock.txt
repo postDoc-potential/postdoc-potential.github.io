@@ -1,5 +1,0 @@
--overwrite_original
--Copyright=Licensed via Adobe Stock/Adobe Express - Photo by OneLineStock
--Credit=OneLineStock / stock.adobe.com
--Artist=OneLineStock
--ImageDescription=Original photo by OneLineStock, modified by Rituparna Sarkar for PostDoc Potential

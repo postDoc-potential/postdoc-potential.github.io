@@ -1,2 +1,0 @@
-  -Copyright="© Arindam Das - used with permission" \
-  -Artist="Arindam Das"
