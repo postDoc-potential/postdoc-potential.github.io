@@ -9,11 +9,57 @@ on:
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
-
     steps:
       - name: Run Lighthouse CI
+        id: lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
             https://postdoc-potential.github.io/
           uploadArtifacts: true
+
+      - name: Build badge JSON files
+        env:
+          LHCI_MANIFEST: ${{ steps.lighthouse.outputs.manifest }}
+        run: |
+          mkdir -p badges
+          node -e '
+            const fs = require("fs");
+            const manifest = JSON.parse(process.env.LHCI_MANIFEST);
+            const summary = manifest[0].summary;
+            const colorFor = v => (v >= 90 ? "brightgreen" : v >= 50 ? "orange" : "red");
+            const scores = {
+              performance: Math.round(summary.performance * 100),
+              accessibility: Math.round(summary.accessibility * 100),
+              best_practices: Math.round(summary["best-practices"] * 100),
+              seo: Math.round(summary.seo * 100),
+            };
+            const labels = { performance: "Performance", accessibility: "Accessibility", best_practices: "Best-practices", seo: "SEO" };
+            for (const [key, value] of Object.entries(scores)) {
+              fs.writeFileSync(`badges/${key}.json`, JSON.stringify({
+                schemaVersion: 1,
+                label: labels[key],
+                message: String(value),
+                color: colorFor(value),
+              }));
+            }
+          '
+
+      - name: Publish badges to Gist
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GIST_ID: f89587c48badb08ea3dff70b82d5e4c
+        run: |
+          PAYLOAD=$(node -e '
+            const fs = require("fs");
+            const files = {};
+            for (const f of fs.readdirSync("badges")) {
+              files[f] = { content: fs.readFileSync(`badges/${f}`, "utf8") };
+            }
+            console.log(JSON.stringify({ files }));
+          ')
+          curl -s -X PATCH \
+            -H "Authorization: token $GIST_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -d "$PAYLOAD" \
+            "https://api.github.com/gists/$GIST_ID"
