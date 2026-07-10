@@ -26,7 +26,8 @@ jobs:
           node -e '
             const fs = require("fs");
             const manifest = JSON.parse(process.env.LHCI_MANIFEST);
-            const summary = manifest[0].summary;
+            const run = manifest[0];
+            const summary = run.summary;
             const colorFor = v => (v >= 90 ? "brightgreen" : v >= 50 ? "orange" : "red");
             const scores = {
               performance: Math.round(summary.performance * 100),
