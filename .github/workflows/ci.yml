@@ -48,7 +48,7 @@ jobs:
       - name: Publish badges to Gist
         env:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-          GIST_ID: f89587c48badb08ea3dff70b82d5e4c
+          GIST_ID: 7f89587c48badb08ea3dff70b82d5e4c
         run: |
           PAYLOAD=$(node -e '
             const fs = require("fs");
@@ -58,7 +58,7 @@ jobs:
             }
             console.log(JSON.stringify({ files }));
           ')
-          curl -s -X PATCH \
+          curl -X PATCH \
             -H "Authorization: token $GIST_TOKEN" \
             -H "Accept: application/vnd.github+json" \
             -d "$PAYLOAD" \
