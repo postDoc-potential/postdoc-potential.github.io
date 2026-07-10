@@ -43,6 +43,7 @@ jobs:
                 color: colorFor(value),
               }));
             }
+            fs.copyFileSync(run.htmlPath, "badges/report.html");
           '
 
       - name: Publish badges to Gist
