@@ -22,7 +22,7 @@ form.addEventListener("submit", function(e) {
         body: json
     })
     .then(async (res) => {
-        let data = await res.json();
+        await res.json();
 
         if (res.status === 200) {
             result.style.background = "#dcfce7";
