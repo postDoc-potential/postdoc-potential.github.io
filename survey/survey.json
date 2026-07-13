@@ -98,25 +98,6 @@
           "otherText": "Other ",
           "placeholder": "Institute name",
           "autocomplete": "organization"
-        },
-        {
-          "type": "radiogroup",
-          "name": "Gender",
-          "width": "100%",
-          "indent": 1,
-          "title": "Which of the following best describes you?",
-          "isRequired": true,
-          "choices": [
-            "Woman",
-            "Man",
-            "Non-binary / Gender diverse",
-            "Prefer not to say"
-          ],
-          "separateSpecialChoices": true,
-          "showOtherItem": true,
-          "otherText": "Prefer to self-describe",
-          "colCount": 2,
-          "allowClear": true
         }
       ]
     },
@@ -288,6 +269,30 @@
           "otherText": "Any other, please mention",
           "showSelectAllItem": true,
           "minSelectedChoices": 1
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "Gender",
+          "width": "100%",
+          "indent": 1,
+          "title": "To help us understand diversity of our respondents, which option best describes you?",
+          "isRequired": true,
+          "choices": [
+            "Woman",
+            "Man",
+            "Non-binary / Gender diverse",
+            "Prefer not to say"
+          ],
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "otherText": "Prefer to self-describe",
+          "colCount": 2,
+          "allowClear": true
         }
       ]
     }

@@ -16,3 +16,4 @@ exclude:
   - _archive/
   - docs/
   - scripts/
+  - vendor
