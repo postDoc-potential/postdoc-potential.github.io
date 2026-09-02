@@ -1,0 +1,26 @@
+
+.site-title a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;   // space between logo and text
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.site-title a:link {
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: inherit;
+}
+
+.site-title a:visited {
+  color: inherit;
+}
+
+.site-logo {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
