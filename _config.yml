@@ -1,7 +1,10 @@
 theme: jekyll-theme-minimal
 title: "PostDoc Potential — From PhD to PostDoc in Earth Sciences"
 url: "https://postdoc-potential.github.io"
-# logo: /assets/kbush58-stick-people-2324013_1920.png
+image: /assets/img/logo.webp
+social:
+  name: "PostDoc Potential"
+logo: /assets/img/logo.webp
 description: "Find postdoc opportunities, career guidance, and community support for early-career researchers in Earth, atmospheric, ocean and climate science"
 avatar: true
 remote_theme: pages-themes/minimal@v0.2.0
