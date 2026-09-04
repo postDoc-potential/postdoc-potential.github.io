@@ -1,6 +1,14 @@
 <div id="popup" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
+    <picture>
+      <source srcset="{{ '/assets/img/popup-hero.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/img/popup-hero.png' | relative_url }}"
+           alt="Descriptive alt text"
+           width="600" height="600"
+           loading="lazy"
+           class="popup-hero">
+    </picture>
     {% include hero-CTA.html %}
   </div>
 </div>
