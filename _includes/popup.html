@@ -2,15 +2,15 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <picture>
-      <source srcset="{{ '/assets/img/popup-hero.webp' | relative_url }}" type="image/webp">
-      <img src="{{ '/assets/img/popup-hero.png' | relative_url }}"
-           alt="Descriptive alt text"
-           width="600" height="600"
+      <source srcset="{{ '/assets/img/webinar/coming_soon.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/img/webinar/coming_soon.png' | relative_url }}"
+           alt="What's the Next Step After Your PhD?"
+           width="1280" height="720"
            loading="lazy"
-           class="popup-hero">
+           class="responsive">
     </picture>
-    {% include hero-CTA.html %}
+    <a href="{{ '/webinar/s01e01' | relative_url }}" class="popup-cta">Learn More</a>
+    <!-- {% include hero-CTA.html %} -->
   </div>
 </div>
-
 <script src="assets/js/popup.js"></script>

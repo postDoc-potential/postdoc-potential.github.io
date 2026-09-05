@@ -993,6 +993,53 @@ form textarea {
   display: block;
 }
 
+.popup-cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--accent, #0550ae);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+.popup-cta:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color: white;
+}
+
+.popup-cta:visited {
+  opacity: 0.9;
+  text-decoration: none;
+  color: white;
+}
+
+.popup-cta:selected {
+  opacity: 0.9;
+  text-decoration: none;
+  color: white;
+}
+
+.webinar-intro {
+  width: 800px;
+  max-width: 100%;
+  font-size: 1.25rem;
+  text-align: justify;
+  margin: 1rem auto;
+}
+
+
+@media (max-width: 768px) {
+  .webinar-intro {
+    font-size: 1rem;
+    text-align: left; /* justify on narrow columns creates ugly, uneven word gaps */
+    padding: 0 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .row-contact {
     flex-direction: column;
@@ -1035,12 +1082,13 @@ form textarea {
 }
 
 .modal {
-  position: relative;
+  position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
   display: grid;
   place-items: center;
   padding: 0.5rem;
+  z-index: 1000;   /* add this too — make sure it sits above header/nav */
 }
 
 
@@ -1053,10 +1101,15 @@ form textarea {
   overflow-y: auto;
   max-height: 80vh;
 }
+.modal-content img.responsive {
+  width: 100%;
+  height: auto;   // preserves ratio at any container width
+}
 
 .modal.show {
   display: grid;   /* only becomes grid when shown */
 }
+
 
 .close {
   position: absolute;
@@ -1069,6 +1122,7 @@ form textarea {
   padding: 8px;
   line-height: 1;
 }
+
 
 @keyframes popupFade {
   from {

@@ -1,0 +1,31 @@
+---
+layout: default
+---
+   <article class="feature">
+     <h1>{{ page.title }}</h1>
+     {% if page.description %}<p class="subtitle">{{ page.description }}</p>{% endif %}
+
+     {% if page.video_embed %}
+     <div class="video-embed">
+        <iframe width="560" height="315" src="{{ page.video_embed }}" title="{{ page.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     </div>
+     {% endif %}
+
+     {{ content }}
+
+     {% if page.credits %}
+     <hr>
+     <h4>Credits</h4>
+     <ul>
+       {% for c in page.credits %}<li>{{ c }}</li>{% endfor %}
+     </ul>
+     {% endif %}
+
+     {% if page.references %}
+     <hr>
+     <h4>References</h4>
+     <ol>
+       {% for r in page.references %}<li>{{ r }}</li>{% endfor %}
+     </ol>
+     {% endif %}
+   </article>

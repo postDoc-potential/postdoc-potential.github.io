@@ -1,0 +1,38 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for group in site.data.webinar %}
+    
+    {% for talk in group.talks %}
+      <div class="col">
+        <div class="card h-100 hoverable">
+
+          {% if talk.img %}
+            <img
+              src="{{ talk.img | relative_url }}"
+              class="card-img-top"
+              alt="{{ talk.title }}"
+            >
+          {% endif %}
+
+          <div class="card-body">
+            <h2 class="card-title">{{ talk.title }}</h2>
+
+            {% if talk.description %}
+              <p class="card-text">{{ talk.description }}</p>
+            {% endif %}
+
+            {% if talk.url %}
+              <a
+                href="{{ talk.url }}"
+                ta_get="_blank"
+                rel="noopener"
+                class="stretched-link">
+              </a>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    {% endfor %}
+
+  {% endfor %}
+</div>
