@@ -14,9 +14,9 @@ This is the source repository of [postdoc-potential.github.io](https://postdoc-p
 - [Repository Structure](#repository-structure)
 - [Getting Started](#getting-started)
 - [Local Development](#local-development)
+- [Updating Website](#updating-website)
 - [Website Performance](#website-performance)
 - [Site Creator](#site-creator)
-- [Contributing](#to-become-a-contributor)
 - [Credits, License and Privacy](#credits-license-and-privacy)
 - [Reporting an Issue](#reporting-an-issue)
 
@@ -47,7 +47,9 @@ This is a Jekyll site. Key folders and files (build output in `_site/` and the `
 ```
 postdoc-potential.github.io/
 ├── _layouts/
-│   └── default.html          # Base page layout
+│   ├── default.html          # Base page layout
+│   ├── feature.html
+│   └──webinar.html
 ├── _includes/                # Reusable partials
 │   ├── header.html
 │   ├── footer.html
@@ -57,11 +59,17 @@ postdoc-potential.github.io/
 │   └── popup.html
 ├── _sass/
 │   └── jekyll-theme-minimal.scss   # Theme styling
+├── _data/          
+│   └── webinar.yml           # Webinar talks list, grouped by year — powers the /webinar/ index
 ├── assets/
 │   ├── css/style.scss        # Main stylesheet — edit here for site-wide style changes
 │   ├── img/                  # All images used in the site
+│   │   └── webinar/           # /webinar/ index page (layout: webinar), lists talks from _data/webinar.yml
 │   └── js/                   # Reusable JavaScripts
 ├── survey/                   # Survey page (HTML/JS/CSS + survey.json)
+├── webinar.md 
+|── webinar/                   # One .md file per webinar/episode page (layout: feature)
+│   └── s01e01.md
 ├── docs/
 │   └── image_workflow.md
 ├── scripts/exif-credits/     # Image credit/attribution files
@@ -105,6 +113,45 @@ The site will be available at `http://localhost:4000`. Jekyll will rebuild autom
 
 > If you don't have Ruby/Bundler set up yet, see the [GitHub Pages local Jekyll setup guide](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) for OS-specific installation steps.
 
+### macOS setup
+
+macOS ships with an outdated system Ruby, so install a current Ruby via [Homebrew](https://brew.sh/) rather than using `sudo gem install` against the system Ruby:
+
+```bash
+# Install Homebrew first if you don't have it: https://brew.sh/
+brew install ruby
+
+# Make sure Homebrew's Ruby (not the system Ruby) is first on your PATH
+echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc   # Apple Silicon
+# echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc   # Intel Macs
+source ~/.zshrc
+
+ruby -v      # confirm it's the Homebrew Ruby, not /usr/bin/ruby
+gem install bundler jekyll
+```
+Then clone the repo and run the same `bundle install` / `bundle exec jekyll serve` commands shown above. If `bundle install` fails with a permissions error, it usually means the system Ruby is still first on your `PATH` — re-check the `echo $PATH` output before retrying.
+
+## Updating Website
+### Quick Links
+
+Everything below is documented in full in [CONTRIBUTING.md](CONTRIBUTING.md) — these are the four things most contributors need first:
+
+| I want to... | Where to look |
+|---|---|
+| 🤝 **Contribute a change** (setup, branching, opening a PR) | [CONTRIBUTING.md](CONTRIBUTING.md) |
+| 🚀 **Push my changes** without touching `main` directly | [Branching Workflow](CONTRIBUTING.md#branching-workflow) |
+| 🖼️ **Add or update an image** (resize, metadata, WebP conversion) | [Adding Images](CONTRIBUTING.md#adding-images) |
+| 📄 **Add or update a page** (including webinar pages) | [Adding or Editing Content](CONTRIBUTING.md#adding-or-editing-content) · [Adding a Webinar Page](CONTRIBUTING.md#adding-a-webinar-page) |
+
+
+### To become a contributor
+
+Please see [CONTRIBUTING.md](https://github.com/postDoc-potential/postdoc-potential.github.io/blob/main/CONTRIBUTING.md) for getting started with contributions.
+Make sure that you follow the [CODE_OF_CONDUCT.md](https://github.com/postDoc-potential/postdoc-potential.github.io/blob/main/CODE_OF_CONDUCT.md) while contributing and engaging in discussions.
+
+When contributing, please first discuss the change you wish to make via an issue on this repository before making the actual change.
+
+
 ## Website Performance
 
 [![Carbon Rating](https://img.shields.io/badge/Website%20Carbon-View%20Report-2E8B57?style=flat-square)](https://www.websitecarbon.com/website/postdoc-potential-github-io/)
@@ -120,12 +167,6 @@ The site will be available at `http://localhost:4000`. Jekyll will rebuild autom
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SRituparna)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rituparnasindia)
 
-## To become a contributor
-
-Please see [CONTRIBUTING.md](https://github.com/postDoc-potential/postdoc-potential.github.io/blob/main/CONTRIBUTING.md) for getting started with contributions.
-Make sure that you follow the [CODE_OF_CONDUCT.md](https://github.com/postDoc-potential/postdoc-potential.github.io/blob/main/CODE_OF_CONDUCT.md) while contributing and engaging in discussions.
-
-When contributing, please first discuss the change you wish to make via an issue on this repository before making the actual change.
 
 ## Credits, License and Privacy
 

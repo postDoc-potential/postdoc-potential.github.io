@@ -18,6 +18,7 @@ _This guide covers everything from setting up the project locally to opening a p
   - [Running the Site Locally](#running-the-site-locally)
   - [Making Changes](#making-changes)
     - [Adding or Editing Content](#adding-or-editing-content)
+    - [Adding a Webinar Page](#adding-a-webinar-page)
     - [Updating Team Page](#updating-team-page)
     - [Adding Images](#adding-images)
     - [Editing Styles](#editing-styles)
@@ -82,6 +83,34 @@ Make sure you have the following installed:
   needed if you're adding/processing images)
 - **Git**
 
+**On macOS**, install everything via [Homebrew](https://brew.sh/) rather than
+using the outdated system Ruby with `sudo gem install`:
+
+ 
+```bash
+brew install ruby node imagemagick webp git
+ 
+# Put Homebrew's Ruby ahead of the system Ruby on your PATH
+echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc   # Apple Silicon
+# echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc   # Intel Macs
+source ~/.zshrc
+ 
+ruby -v   # confirm this is the Homebrew Ruby, not /usr/bin/ruby
+gem install bundler jekyll
+```
+ 
+If `gem install` or `bundle install` later fails with a permissions error,
+it almost always means the system Ruby is still first on your `PATH` —
+re-check `echo $PATH` before retrying.
+ 
+**On Ubuntu/WSL**, the same tools are available via `apt`:
+ 
+```bash
+sudo apt update
+sudo apt install ruby-full build-essential zlib1g-dev nodejs npm imagemagick webp git -y
+gem install bundler jekyll
+```
+
 ### Local Setup
 
 1. **Fork** the repository on GitHub.
@@ -125,6 +154,53 @@ bundle exec jekyll serve --livereload --incremental
 - **Team page:** edit `team.md`.
 - **New pages:** add a `.md` file with front matter (`title`, `description`, `permalink`, `layout`), following the pattern used in existing pages.
 - Front matter `title:` on a page **overrides** `site.title` from `_config.yml` — leave page-level `title:` out if you want the SEO-optimized site title to display instead.
+
+#### Adding a Webinar Page
+ 
+The `/webinar/` section has two parts working together:
+ 
+- `webinar.md` is the `/webinar/` index page (`layout: webinar`), which reads
+  `_data/webinar.yml` and renders a card for every talk.
+- Each individual talk gets its own file under `webinar/` (e.g.
+  `webinar/s01e01.md`) using `layout: feature`, with its own `permalink`.
+To add a new webinar/episode page:
+ 
+1. Create a new file under `webinar/`, e.g. `webinar/s01e02.md`:
+```yaml
+   ---
+   title: "Your Talk Title"
+   description: "One-line description of the talk"
+   permalink: "/webinar/s01e02"
+   layout: feature
+   img: "/assets/img/webinar/<filename>.png"
+   ---
+ 
+   Your talk content, intro paragraph, links, etc. go here.
+```
+   `layout: feature` (`_layouts/feature.html`) also supports optional
+   `video_embed` (an embeddable video URL), `credits`, and `references`
+   front matter fields — see `_layouts/feature.html` for the exact fields it
+   renders.
+2. If the page needs an image, run it through the [image pipeline](#adding-images)
+   below first and save the PNG/WebP pair under `assets/img/webinar/`.
+3. Add a matching entry to `_data/webinar.yml` so the talk shows up on the
+   `/webinar/` index page:
+```yaml
+   - year: 2026
+     talks:
+       - title: "Your Talk Title"
+         url: "/webinar/s01e02"
+         img: "/assets/img/webinar/<filename>.png"
+         description: "One-line description of the talk"
+         date: "2026-MM-DD"
+```
+   Only add a new `- year:` block if no entry for that year exists yet —
+   otherwise add your talk to the existing year's `talks:` list.
+4. Test locally (`bundle exec jekyll serve --livereload`): confirm the new
+   card renders on `/webinar/` and that the page itself loads at the
+   `permalink` you set.
+5. Open a pull request (see [below](#opening-a-pull-request)).
+ 
 
 #### Updating Team Page
 
@@ -199,7 +275,8 @@ Nothing goes live from your branch — only changes merged into whichever branch
    lighthouse http://127.0.0.1:4000 --view
    ```
    Targets: FCP < 1.8s · LCP < 2.5s · TBT 0–200ms · CLS < 0.1 · Speed Index < 3.4s.
-
+   > On macOS, `npm install -g` can hit an `EACCES` permissions error if Node was installed outside Homebrew. If that happens, reinstall Node via `brew install node` (see [Prerequisites](#prerequisites)) rather than using `sudo npm install -g`.
+   
 #### Commit Message Guidelines
 
 - Use a short, descriptive summary in the imperative mood (e.g. "Fix broken survey link", not "Fixed" or "Fixes").
