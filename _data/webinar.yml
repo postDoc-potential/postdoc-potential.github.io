@@ -1,5 +1,10 @@
    - year: 2026
+    #  talks:
+    #    - title: " Post-Doc Potential: Next Step After Your PhD"
+    #      url: "/webinar/s01e01"
+    #      img: "/assets/img/webinar/coming_soon.png"
+
      talks:
-       - title: " Post-Doc Potential: Next Step After Your PhD"
+       - title: " Introductory Session "
          url: "/webinar/s01e01"
-         img: "/assets/img/webinar/coming_soon.png"
+         img: "assets/img/webinar/EP_1_Thumbnail_v3.png"
