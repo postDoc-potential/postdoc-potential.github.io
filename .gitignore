@@ -1,3 +1,6 @@
 *:Zone.Identifier
 *.zone
 _site/
+.DS_Store
+**/.DS_Store
+.jekyll-metadata
