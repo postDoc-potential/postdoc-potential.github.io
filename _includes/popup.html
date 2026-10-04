@@ -1,16 +1,15 @@
+{% assign p = site.data.popup %}
 <div id="popup" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <picture>
-      <source srcset="{{ 'assets/img/webinar/EP_1_Poster_v3.png' | relative_url }}" type="image/webp">
-      <img src="{{ 'assets/img/webinar/EP_1_Poster_v3.png' | relative_url }}"
-           alt="What's the Next Step After Your PhD?"
+      <img src="{{ '/assets/img/webinar/' | append: p.image | relative_url }}"
+           alt="{{ p.alt }}"
            width="1280" height="720"
            loading="lazy"
            class="responsive">
     </picture>
-    <a href="{{ '/webinar/s01e01' | relative_url }}" class="popup-cta">Learn More</a>
-    <!-- {% include hero-CTA.html %} -->
+    <a href="{{ p.link | relative_url }}" class="popup-cta">Learn More</a>
   </div>
 </div>
-<script src="assets/js/popup.js"></script>
+<script src="{{ 'assets/js/popup.js' | relative_url }}"></script>
