@@ -2,8 +2,8 @@
 layout: default
 ---
    <article class="feature">
-     <h1>{{ page.title }}</h1>
-     {% if page.description %}<p class="subtitle">{{ page.description }}</p>{% endif %}
+     <h4 style="color: grey" align="center"><i>{{ page.title }}</i></h4>
+     {% if page.description %}<h3>{{ page.description }}</h3>{% endif %}
 
      {% if page.video_embed %}
      <div class="video-embed">
@@ -11,7 +11,10 @@ layout: default
      </div>
      {% endif %}
 
-     {{ content }}
+     
+     <div class="feature-content">
+       {{ content }}
+     </div>
 
      {% if page.credits %}
      <hr>

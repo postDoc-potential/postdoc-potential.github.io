@@ -12,6 +12,7 @@ layout: default
     {% endif %}
   </header>
 
+  {{content}}
 
   {% assign selected_layout = page.webinar_layout | default: "simple" %}
 
@@ -158,12 +159,54 @@ layout: default
         </div>
 
       </section>
-
     {% endfor %}
-
-  {% endif %}
-
-</main>
+    {% endif %}
+    <div class="webinar-details-block webinar-mailing">
+      <p>Find all past webinars archived on YouTube <a href="https://youtube.com/playlist?list=PLRtOX6h38q60&si=ijTDZKCEjSdIXPeH" target="_blank" rel="noopener">here</a>.</p>
+      <hr>
+      <h3>Want updates on future webinars?</h3>
+      <p>To receive webinar announcements and registration details, join our mailing list: <a href="http://groups.google.com/g/webinar-nsayp">groups.google.com/g/webinar-nsayp</a><br>
+        Or send a blank email to: <a href=mailto:webinar-nsayp+subscribe@googlegroups.com>webinar-nsayp+subscribe@googlegroups.com</a>.<br>
+        To unsubscribe, please send an email to <a href=mailto:webinar-nsayp+unsubscribe@googlegroups.com>webinar-nsayp+unsubscribe@googlegroups.com</a>.<br>
+      </p>
+    </div>    
+    {% if page.organisers %}
+    <hr>
+    <div class="webinar-details-block webinar-organisers">
+      <h3>Organisers</h3>
+      <div class="organiser-logos">
+        {% for o in page.organisers %}
+          <a class="organiser-logo" href="{{ o.url }}" target="_blank" rel="noopener" aria-label="{{ o.name | escape }}">
+            {% if o.logo %}
+              <img src="{{ o.logo | relative_url }}" alt="{{ o.name | escape }} logo" height="60" loading="lazy">
+            {% else %}
+              {{ o.name }}
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% if page.collaborators %}
+    <div class="webinar-details-block webinar-collaborators">
+      <h3>Collaborators</h3>
+      <div class="organiser-logos">
+        {% for c in page.collaborators %}
+          <a class="organiser-logo" href="{{ c.url }}" target="_blank" rel="noopener"
+            aria-label="{{ c.name | escape }}{% if c.role %} - {{ c.role | escape }}{% endif %}"
+            title="{{ c.role | default: c.name | escape }}">
+            {% if c.logo %}
+              <img src="{{ c.logo | relative_url }}" alt="{{ c.name | escape }} logo" height="60" loading="lazy">
+            {% else %}
+              {{ c.name }}
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  
+  </main>
 
 
 <style>
@@ -184,11 +227,11 @@ layout: default
    ========================================================= */
 
 .webinar-header {
-  text-align: center;
   margin-bottom: 55px;
 }
 
 .webinar-header h1 {
+  text-align: center;
   margin: 0 0 12px;
   font-size: 34px;
   font-weight: 500;
@@ -196,10 +239,10 @@ layout: default
 }
 
 .webinar-header p {
-  max-width: 750px;
   margin: 0 auto;
-  color: #666;
+  color: black;
   font-size: 16px;
+  text-align: justify;
 }
 
 
@@ -266,16 +309,15 @@ layout: default
    IMAGE
    ========================================================= */
 
+
 .webinar-card-image {
   width: 100%;
-  height: 210px;
-
+  aspect-ratio: 16 / 9;   /* box scales with card width */
+  height: auto;           /* remove the fixed 210px */
   display: block;
-
-  object-fit: cover;
+  object-fit: contain;    /* show the entire image, never crop */
+  background: #f4f6f8;    /* fills any empty bars */
 }
-
-
 /* =========================================================
    CARD BODY
    ========================================================= */
@@ -348,7 +390,74 @@ layout: default
   display: block;
 }
 
+/* =========================================================
+   DETAILS (organisers, collaborators, mailing list)
+   ========================================================= */
 
+.webinar-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin: 0 0 55px;
+  padding: 30px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+
+
+.webinar-details-block ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.webinar-details-block li { margin-bottom: 6px; }
+
+.webinar-details-block p { margin: 0 0 12px; color: #444; }
+
+.webinar-details-block a:link,
+.webinar-details-block a:visited {color: #0550ae; text-decoration: none !important;}
+
+
+.webinar-details a:link,
+.webinar-details a:visited {
+  color: #0550ae;
+  text-decoration: underline !important;
+}
+
+.organiser-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.webinar-details a.organiser-logo:link,
+.webinar-details a.organiser-logo:visited {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fff;
+  text-decoration: none !important;
+  color: #0550ae;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.webinar-details a.organiser-logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.organiser-logo img {
+  display: block;
+  height: 120px;
+  width: auto;       /* keeps each logo's own proportions */
+  max-width: 360px;
+  object-fit: contain;
+}
 /* =========================================================
    MOBILE
    ========================================================= */
@@ -381,10 +490,28 @@ layout: default
     grid-template-columns: 1fr;
   }
 
-  .webinar-card-image {
-    height: 200px;
-  }
 
 }
+/* Make the whole card clickable via the title link */
+.webinar-card {
+  position: relative;      /* anchor for the stretched link */
+}
 
+.webinar-card-body h4 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;                /* covers the entire card, image included */
+}
+
+.webinar-card:has(h4 a) {
+  cursor: pointer;
+}
+
+.webinar-card:has(a:focus-visible) {
+  outline: 2px solid #0077b6;   /* keyboard focus ring on the whole card */
+  outline-offset: 2px;
+}
+@media (max-width: 600px) {
+  .webinar-details-block p { text-align: left; }
+}
 </style>

@@ -1199,3 +1199,48 @@ form textarea {
   border: #063D88;
   }
 }
+
+/* Links inside the feature layout only (global link rules untouched) */
+.feature-content a:link,
+.feature-content a:visited,
+.feature-content a:hover,
+.feature-content a:focus,
+.feature-content a:active {
+  // text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+.feature-content a:link,
+.feature-content a:visited {
+  color: #0550ae;
+}
+
+.feature-content a:hover,
+.feature-content a:focus,
+.feature-content a:active {
+  color: #063D88;
+  text-decoration-thickness: 2px;
+}
+
+/* Favicon inside a link */
+.feature-content a img {
+  display: inline;
+  vertical-align: middle;
+  margin-right: 4px;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  max-width: none;
+}
+
+/* Justified paragraphs in the feature layout */
+.feature-content p {
+  text-align: justify;
+  hyphens: auto;          /* reduces ugly word gaps; needs lang="en" on <html> */
+}
+
+@media (max-width: 768px) {
+  .feature-content p {
+    text-align: left;     /* justify on narrow screens creates uneven gaps */
+  }
+}
